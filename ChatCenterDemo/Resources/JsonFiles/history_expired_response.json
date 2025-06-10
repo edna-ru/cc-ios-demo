@@ -1,0 +1,702 @@
+{
+	"agentInfo" : {
+		"thread" : {
+			"id" : 5116,
+			"state" : "UNASSIGNED"
+		},
+		"agent" : null,
+		"actionDate" : "2025-05-12T12:30:32.766Z",
+		"action" : "AGENT_LOOKUP"
+	},
+	"allowedToSendMessages" : true,
+	"messages" : [
+		{
+			"uuid" : "14ede346-b09d-4be2-a4fb-c6e65faa88ea",
+			"receivedDate" : "2025-04-11T05:30:42.392Z",
+			"read" : true,
+			"massPushMessage" : false,
+			"providerIds" : [
+
+			],
+			"settings" : {
+				"blockInput" : false,
+				"masked" : false
+			},
+			"type" : "MESSAGE",
+			"authorized" : true,
+			"personalOffer" : false,
+			"quickReplies" : [
+
+			],
+			"preRegister" : false,
+			"operator" : {
+				"status" : null,
+				"alias" : null,
+				"gender" : "FEMALE",
+				"id" : 9,
+				"role" : "OPERATOR",
+				"photoUrl" : "20250328-cmn-67da35a5-55cd-4721-8a25-4c8dd6e8e525.jpg",
+				"organizationUnit" : "Skill Credit",
+				"name" : "Оператор5 "
+			},
+			"threadId" : 4832,
+			"text" : "",
+			"attachments" : [
+				{
+					"result" : "20250411-50515d24-7d8d-44d3-823a-35799a692084.jpg",
+					"optional" : {
+						"name" : "фото на аву.jpg",
+						"size" : 155525,
+						"type" : "image\/jpeg"
+					},
+					"fileId" : "20250411-50515d24-7d8d-44d3-823a-35799a692084.jpg",
+					"id" : 2442,
+					"name" : "фото на аву.jpg",
+					"size" : 155525,
+					"type" : "image\/jpeg",
+					"error" : false,
+					"state" : "EXPIRED",
+					"url" : "20250411-50515d24-7d8d-44d3-823a-35799a692084.jpg"
+				}
+			],
+			"quotes" : [
+
+			],
+			"origin" : "threads"
+		},
+		{
+			"uuid" : "c4758437-8517-4539-a8a4-a7d6420d013b",
+			"receivedDate" : "2025-04-11T05:31:51.637Z",
+			"read" : true,
+			"massPushMessage" : false,
+			"providerIds" : [
+
+			],
+			"settings" : {
+				"blockInput" : false,
+				"masked" : false
+			},
+			"type" : "MESSAGE",
+			"authorized" : true,
+			"personalOffer" : false,
+			"quickReplies" : [
+
+			],
+			"preRegister" : false,
+			"text" : "",
+			"threadId" : 4832,
+			"attachments" : [
+				{
+					"result" : "20250411-17f07323-d513-4e6f-80aa-8a3e586a65b6.jpg",
+					"optional" : {
+						"name" : "фото на аву.jpg",
+						"size" : 155525,
+						"type" : "image\/jpeg"
+					},
+					"fileId" : "20250411-17f07323-d513-4e6f-80aa-8a3e586a65b6.jpg",
+					"id" : 2443,
+					"name" : "фото на аву.jpg",
+					"size" : 155525,
+					"type" : "image\/jpeg",
+					"error" : false,
+					"state" : "EXPIRED",
+					"url" : "20250411-17f07323-d513-4e6f-80aa-8a3e586a65b6.jpg"
+				}
+			],
+			"origin" : "threads",
+			"quotes" : [
+
+			]
+		},
+		{
+			"uuid" : "db21b57d-0eb7-4888-9879-eea1326286f0",
+			"receivedDate" : "2025-04-11T09:57:57.645Z",
+			"read" : true,
+			"massPushMessage" : false,
+			"providerIds" : [
+
+			],
+			"settings" : {
+				"blockInput" : false,
+				"masked" : false
+			},
+			"type" : "MESSAGE",
+			"authorized" : true,
+			"personalOffer" : false,
+			"quickReplies" : [
+
+			],
+			"preRegister" : false,
+			"operator" : {
+				"status" : null,
+				"alias" : null,
+				"gender" : "MALE",
+				"id" : 14,
+				"role" : "OPERATOR",
+				"photoUrl" : "20250425-cmn-a4b47af3-d45f-48e6-9959-b449530d7a31.jpg",
+				"organizationUnit" : "Skill Credit",
+				"name" : "Ковбой Мальборо"
+			},
+			"threadId" : 4832,
+			"text" : "",
+			"attachments" : [
+				{
+					"result" : "20250411-bec3d230-3cbb-45bf-b0c0-be13e6af55b6.pdf",
+					"optional" : {
+						"name" : "!7.pdf",
+						"size" : 26604,
+						"type" : "application\/pdf"
+					},
+					"fileId" : "20250411-bec3d230-3cbb-45bf-b0c0-be13e6af55b6.pdf",
+					"id" : 2444,
+					"name" : "!7.pdf",
+					"size" : 26604,
+					"type" : "application\/pdf",
+					"error" : false,
+					"state" : "EXPIRED",
+					"url" : "20250411-bec3d230-3cbb-45bf-b0c0-be13e6af55b6.pdf"
+				}
+			],
+			"quotes" : [
+
+			],
+			"origin" : "threads"
+		},
+		{
+			"uuid" : "7fefcd4b-8f32-4fd4-aa23-a55c8b64e2a8",
+			"receivedDate" : "2025-04-11T09:58:18.007Z",
+			"read" : true,
+			"massPushMessage" : false,
+			"providerIds" : [
+
+			],
+			"settings" : {
+				"blockInput" : false,
+				"masked" : false
+			},
+			"type" : "MESSAGE",
+			"authorized" : true,
+			"personalOffer" : false,
+			"quickReplies" : [
+
+			],
+			"preRegister" : false,
+			"operator" : {
+				"status" : null,
+				"alias" : null,
+				"gender" : "MALE",
+				"id" : 14,
+				"role" : "OPERATOR",
+				"photoUrl" : "20250425-cmn-a4b47af3-d45f-48e6-9959-b449530d7a31.jpg",
+				"organizationUnit" : "Skill Credit",
+				"name" : "Ковбой Мальборо"
+			},
+			"threadId" : 4832,
+			"text" : "",
+			"attachments" : [
+				{
+					"result" : "20250411-dade3e44-6abb-4a7c-ae0d-3b328fc97695.jpg",
+					"optional" : {
+						"name" : "9.jpg",
+						"size" : 8290,
+						"type" : "image\/jpeg"
+					},
+					"fileId" : "20250411-dade3e44-6abb-4a7c-ae0d-3b328fc97695.jpg",
+					"id" : 2445,
+					"name" : "9.jpg",
+					"size" : 8290,
+					"type" : "image\/jpeg",
+					"error" : false,
+					"state" : "EXPIRED",
+					"url" : "20250411-dade3e44-6abb-4a7c-ae0d-3b328fc97695.jpg"
+				}
+			],
+			"quotes" : [
+
+			],
+			"origin" : "threads"
+		},
+		{
+			"uuid" : "74C623BF-3E69-4B18-8F81-DA4CF055D42E",
+			"receivedDate" : "2025-04-11T09:58:24.667Z",
+			"read" : true,
+			"massPushMessage" : false,
+			"providerIds" : [
+
+			],
+			"settings" : {
+				"blockInput" : false,
+				"masked" : false
+			},
+			"type" : "MESSAGE",
+			"authorized" : true,
+			"personalOffer" : false,
+			"quickReplies" : [
+
+			],
+			"preRegister" : false,
+			"text" : "Rrr",
+			"threadId" : 4832,
+			"attachments" : [
+
+			],
+			"origin" : "threads",
+			"quotes" : [
+				{
+					"uuid" : "7fefcd4b-8f32-4fd4-aa23-a55c8b64e2a8",
+					"receivedDate" : "2025-04-11T09:58:18.007Z",
+					"read" : true,
+					"massPushMessage" : false,
+					"providerIds" : [
+
+					],
+					"authorized" : true,
+					"type" : "MESSAGE",
+					"personalOffer" : false,
+					"quickReplies" : [
+
+					],
+					"preRegister" : false,
+					"operator" : {
+						"status" : null,
+						"alias" : null,
+						"gender" : "MALE",
+						"id" : 14,
+						"role" : "OPERATOR",
+						"photoUrl" : "20250425-cmn-a4b47af3-d45f-48e6-9959-b449530d7a31.jpg",
+						"organizationUnit" : "Skill Credit",
+						"name" : "Ковбой Мальборо"
+					},
+					"threadId" : 4832,
+					"text" : "",
+					"attachments" : [
+						{
+							"result" : "20250411-dade3e44-6abb-4a7c-ae0d-3b328fc97695.jpg",
+							"optional" : {
+								"name" : "9.jpg",
+								"size" : 8290,
+								"type" : "image\/jpeg"
+							},
+							"fileId" : "20250411-dade3e44-6abb-4a7c-ae0d-3b328fc97695.jpg",
+							"id" : 2445,
+							"name" : "9.jpg",
+							"size" : 8290,
+							"type" : "image\/jpeg",
+							"error" : false,
+							"state" : "EXPIRED",
+							"url" : "20250411-dade3e44-6abb-4a7c-ae0d-3b328fc97695.jpg"
+						}
+					],
+					"quotes" : [
+
+					],
+					"origin" : "threads"
+				}
+			]
+		},
+		{
+			"uuid" : "425a1a64-459f-45ba-87f6-5ff29c73f331",
+			"receivedDate" : "2025-04-25T06:48:52.982Z",
+			"read" : true,
+			"massPushMessage" : false,
+			"providerIds" : [
+
+			],
+			"settings" : {
+				"blockInput" : false,
+				"masked" : false
+			},
+			"type" : "MESSAGE",
+			"authorized" : true,
+			"personalOffer" : false,
+			"quickReplies" : [
+
+			],
+			"preRegister" : false,
+			"text" : "при",
+			"threadId" : 5032,
+			"attachments" : [
+
+			],
+			"origin" : "threads",
+			"quotes" : [
+				{
+					"uuid" : "69d2c346-9c41-4323-81bd-12062e80ce24",
+					"receivedDate" : "2025-02-21T07:42:17.671Z",
+					"read" : true,
+					"massPushMessage" : false,
+					"providerIds" : [
+
+					],
+					"authorized" : true,
+					"type" : "MESSAGE",
+					"personalOffer" : false,
+					"quickReplies" : [
+
+					],
+					"preRegister" : false,
+					"operator" : {
+						"status" : null,
+						"alias" : null,
+						"gender" : "MALE",
+						"id" : 14,
+						"role" : "OPERATOR",
+						"photoUrl" : "20250425-cmn-a4b47af3-d45f-48e6-9959-b449530d7a31.jpg",
+						"organizationUnit" : "Skill Credit",
+						"name" : "Ковбой Мальборо"
+					},
+					"threadId" : 3584,
+					"text" : "",
+					"attachments" : [
+						{
+							"result" : "20250221-b2777600-3fc0-4cb1-99c7-04a3e1b825a1.jpeg",
+							"optional" : {
+								"name" : "154141af5c9bea6feac1a0a24653af6e.jpeg",
+								"size" : 65696,
+								"type" : "image\/jpeg"
+							},
+							"fileId" : "20250221-b2777600-3fc0-4cb1-99c7-04a3e1b825a1.jpeg",
+							"id" : 1996,
+							"name" : "154141af5c9bea6feac1a0a24653af6e.jpeg",
+							"size" : 65696,
+							"type" : "image\/jpeg",
+							"error" : false,
+							"state" : "EXPIRED",
+							"url" : "20250221-b2777600-3fc0-4cb1-99c7-04a3e1b825a1.jpeg"
+						}
+					],
+					"quotes" : [
+
+					],
+					"origin" : "threads"
+				}
+			]
+		},
+
+
+		{
+			"uuid" : "ecdf067c-f041-48e1-900b-2ae3aa72d758",
+			"receivedDate" : "2025-04-25T06:49:52.077Z",
+			"display" : true,
+			"massPushMessage" : false,
+			"providerIds" : [
+
+			],
+			"authorized" : true,
+			"type" : "THREAD_IN_PROGRESS",
+			"personalOffer" : false,
+			"preRegister" : false,
+			"text" : "Оператор4 Андреевич работает над вашим вопросом",
+			"threadId" : 5032,
+			"origin" : "threads",
+			"aps\/sound" : "default"
+		},
+		{
+			"uuid" : "b9d2c60b-87e7-47db-a645-de0ee94381fd",
+			"receivedDate" : "2025-04-25T06:51:24.814Z",
+			"read" : true,
+			"massPushMessage" : false,
+			"providerIds" : [
+
+			],
+			"settings" : {
+				"blockInput" : false,
+				"masked" : false
+			},
+			"type" : "MESSAGE",
+			"authorized" : true,
+			"personalOffer" : false,
+			"quickReplies" : [
+
+			],
+			"preRegister" : false,
+			"operator" : {
+				"status" : null,
+				"alias" : null,
+				"gender" : "MALE",
+				"id" : 8,
+				"role" : "OPERATOR",
+				"photoUrl" : "20250402-cmn-643c2838-5c0b-415e-9976-bd69b4446c1b.jpg",
+				"organizationUnit" : "Skill Credit",
+				"name" : "Оператор4 Андреевич"
+			},
+			"threadId" : 5032,
+			"text" : "888",
+			"attachments" : [
+
+			],
+			"quotes" : [
+
+			],
+			"origin" : "threads"
+		},
+		{
+			"uuid" : "0f00493c-a73e-40fb-b099-f2776b5ceb34",
+			"receivedDate" : "2025-04-25T06:51:39.979Z",
+			"read" : true,
+			"massPushMessage" : false,
+			"providerIds" : [
+
+			],
+			"settings" : {
+				"blockInput" : false,
+				"masked" : false
+			},
+			"type" : "MESSAGE",
+			"authorized" : true,
+			"personalOffer" : false,
+			"quickReplies" : [
+
+			],
+			"preRegister" : false,
+			"operator" : {
+				"status" : null,
+				"alias" : null,
+				"gender" : "MALE",
+				"id" : 8,
+				"role" : "OPERATOR",
+				"photoUrl" : "20250402-cmn-643c2838-5c0b-415e-9976-bd69b4446c1b.jpg",
+				"organizationUnit" : "Skill Credit",
+				"name" : "Оператор4 Андреевич"
+			},
+			"threadId" : 5032,
+			"text" : "",
+			"attachments" : [
+				{
+					"result" : "https:\/\/dev4app.edna.io\/beta3\/files\/20250425-d80cbd9c-a6e0-44d0-9fe0-b0dba9457155.jpg",
+					"optional" : {
+						"name" : "на аватар фото.jpg",
+						"size" : 230952,
+						"type" : "image\/jpeg"
+					},
+					"fileId" : "20250425-d80cbd9c-a6e0-44d0-9fe0-b0dba9457155.jpg",
+					"id" : 2688,
+					"name" : "на аватар фото.jpg",
+					"size" : 230952,
+					"type" : "image\/jpeg",
+					"error" : false,
+					"state" : "READY",
+					"url" : "https:\/\/dev4app.edna.io\/beta3\/files\/20250425-d80cbd9c-a6e0-44d0-9fe0-b0dba9457155.jpg"
+				}
+			],
+			"quotes" : [
+
+			],
+			"origin" : "threads"
+		},
+		{
+			"uuid" : "c8c67b5f-305e-439a-b121-b0916439eb96",
+			"receivedDate" : "2025-04-25T06:51:48.133Z",
+			"read" : true,
+			"massPushMessage" : false,
+			"providerIds" : [
+
+			],
+			"settings" : {
+				"blockInput" : false,
+				"masked" : false
+			},
+			"type" : "MESSAGE",
+			"authorized" : true,
+			"personalOffer" : false,
+			"quickReplies" : [
+
+			],
+			"preRegister" : false,
+			"text" : "",
+			"threadId" : 5032,
+			"attachments" : [
+				{
+					"result" : "https:\/\/dev4app.edna.io\/beta3\/files\/20250425-cd01c099-8812-414e-9428-fad15784c270.jpg",
+					"optional" : {
+						"name" : "1000024305.jpg",
+						"size" : 136988,
+						"type" : "image\/jpeg"
+					},
+					"fileId" : "20250425-cd01c099-8812-414e-9428-fad15784c270.jpg",
+					"id" : 2689,
+					"name" : "1000024305.jpg",
+					"size" : 136988,
+					"type" : "image\/jpeg",
+					"error" : false,
+					"state" : "READY",
+					"url" : "https:\/\/dev4app.edna.io\/beta3\/files\/20250425-cd01c099-8812-414e-9428-fad15784c270.jpg"
+				}
+			],
+			"origin" : "threads",
+			"quotes" : [
+
+			]
+		},
+		{
+			"uuid" : "4f5198b0-1a21-4113-9177-fae4713f5575",
+			"receivedDate" : "2025-04-25T06:52:17.813Z",
+			"read" : true,
+			"massPushMessage" : false,
+			"providerIds" : [
+
+			],
+			"settings" : {
+				"blockInput" : false,
+				"masked" : false
+			},
+			"type" : "MESSAGE",
+			"authorized" : true,
+			"personalOffer" : false,
+			"quickReplies" : [
+
+			],
+			"preRegister" : false,
+			"text" : "",
+			"threadId" : 5032,
+			"attachments" : [
+				{
+					"result" : "https:\/\/dev4app.edna.io\/beta3\/files\/20250425-e2c1ad0c-7a8b-46ff-95b3-dd7c9ad93141.docx",
+					"optional" : {
+						"name" : "!Doc.docx",
+						"size" : 13419,
+						"type" : "application\/vnd.openxmlformats-officedocument.wordprocessingml.document"
+					},
+					"fileId" : "20250425-e2c1ad0c-7a8b-46ff-95b3-dd7c9ad93141.docx",
+					"id" : 2690,
+					"name" : "!Doc.docx",
+					"size" : 13419,
+					"type" : "application\/vnd.openxmlformats-officedocument.wordprocessingml.document",
+					"error" : false,
+					"state" : "READY",
+					"url" : "https:\/\/dev4app.edna.io\/beta3\/files\/20250425-e2c1ad0c-7a8b-46ff-95b3-dd7c9ad93141.docx"
+				}
+			],
+			"origin" : "threads",
+			"quotes" : [
+
+			]
+		},
+		{
+			"uuid" : "a500c03d-12b5-4f08-9443-bb487e1219de",
+			"receivedDate" : "2025-04-25T07:32:32.928Z",
+			"read" : true,
+			"massPushMessage" : false,
+			"providerIds" : [
+
+			],
+			"settings" : {
+				"blockInput" : false,
+				"masked" : false
+			},
+			"type" : "MESSAGE",
+			"authorized" : true,
+			"personalOffer" : false,
+			"quickReplies" : [
+
+			],
+			"preRegister" : false,
+			"text" : "привет",
+			"threadId" : 5032,
+			"attachments" : [
+
+			],
+			"origin" : "threads",
+			"quotes" : [
+
+			]
+		},
+		{
+			"uuid" : "acbc84dd-a6d5-4875-a902-5e3f45394004",
+			"receivedDate" : "2025-04-25T09:25:49.501Z",
+			"read" : true,
+			"massPushMessage" : false,
+			"providerIds" : [
+
+			],
+			"settings" : {
+				"blockInput" : false,
+				"masked" : false
+			},
+			"type" : "MESSAGE",
+			"authorized" : true,
+			"personalOffer" : false,
+			"quickReplies" : [
+
+			],
+			"preRegister" : false,
+			"operator" : {
+				"status" : null,
+				"alias" : null,
+				"gender" : "MALE",
+				"id" : 14,
+				"role" : "OPERATOR",
+				"photoUrl" : "20250425-cmn-a4b47af3-d45f-48e6-9959-b449530d7a31.jpg",
+				"organizationUnit" : "Skill Credit",
+				"name" : "Ковбой Мальборо"
+			},
+			"threadId" : 5032,
+			"text" : "Литера работает только при длине сообщения о 32 символов. Если есть ошибка, то мы её увидим. \nТакже в ошибки можно занести исключения, они настраиваются в БД ",
+			"attachments" : [
+
+			],
+			"quotes" : [
+
+			],
+			"origin" : "threads"
+		},
+		{
+			"uuid" : "7AD9B1AE-C100-4D92-AADC-BC9C69628B9B",
+			"receivedDate" : "2025-04-29T12:46:36.478Z",
+			"read" : true,
+			"massPushMessage" : false,
+			"providerIds" : [
+
+			],
+			"settings" : {
+				"blockInput" : false,
+				"masked" : false
+			},
+			"type" : "MESSAGE",
+			"authorized" : true,
+			"personalOffer" : false,
+			"quickReplies" : [
+
+			],
+			"preRegister" : false,
+			"text" : "Тест",
+			"threadId" : 5116,
+			"attachments" : [
+
+			],
+			"origin" : "threads",
+			"quotes" : [
+
+			]
+		},
+		{
+			"uuid" : "8FA3E4C0-A413-48E3-9F30-9FACF7EEE19A",
+			"receivedDate" : "2025-04-29T12:47:01.768Z",
+			"read" : true,
+			"massPushMessage" : false,
+			"providerIds" : [
+
+			],
+			"settings" : {
+				"blockInput" : false,
+				"masked" : false
+			},
+			"type" : "MESSAGE",
+			"authorized" : true,
+			"personalOffer" : false,
+			"quickReplies" : [
+
+			],
+			"preRegister" : false,
+			"text" : "Чек",
+			"threadId" : 5116,
+			"attachments" : [
+
+			],
+			"origin" : "threads",
+			"quotes" : [
+
+			]
+		}
+	]
+}

@@ -1,0 +1,296 @@
+{
+  "messages": [
+      {
+          "type": "MESSAGE",
+          "threadId": 147,
+          "providerIds": [],
+          "uuid": "60109085-25bb-45be-8dd5-ca72c2408cea",
+          "text": "",
+          "receivedDate": "2023-03-29T10:39:37.476Z",
+          "attachments" : [
+              {
+                  "result" : "clock.pdf",
+                  "optional" : {
+                      "name" : "clock.pdf",
+                      "size" : 1667,
+                      "type" : "multipart\/form-data"
+                  },
+                  "fileId" : "clock.pdf",
+                  "id" : 512,
+                  "url" : "clock.pdf",
+                  "size" : 1667,
+                  "type" : "multipart\/form-data",
+                  "state" : "PENDING",
+                  "name" : "clock.pdf"
+              }
+          ],
+          "quotes": [],
+          "quickReplies": [],
+          "read": false,
+          "settings": {
+              "blockInput": false,
+              "masked": false
+          },
+          "authorized": true,
+          "massPushMessage": false,
+          "origin": "threads"
+      },
+    {
+      "type": "MESSAGE",
+      "threadId": 147,
+      "providerIds": [],
+      "uuid": "40109085-25bb-45be-8dd5-ca72c2408cea",
+      "text": "",
+      "receivedDate": "2023-03-29T11:39:37.476Z",
+      "attachments" : [
+          {
+              "result" : "clock.pdf",
+              "optional" : {
+                  "name" : "clock.pdf",
+                  "size" : 1667,
+                  "type" : "multipart\/form-data"
+              },
+              "fileId" : "clock.pdf",
+              "id" : 512,
+              "url" : "clock.pdf",
+              "size" : 1667,
+              "type" : "multipart\/form-data",
+              "state" : "READY",
+              "name" : "clock.pdf"
+          }
+      ],
+      "quotes": [],
+      "quickReplies": [],
+      "read": true,
+      "settings": {
+        "blockInput": false,
+        "masked": false
+      },
+      "authorized": true,
+      "massPushMessage": false,
+      "origin": "threads"
+    },
+    {
+      "type": "MESSAGE",
+      "threadId": 147,
+      "providerIds": [],
+      "uuid": "297ad109-4d01-4d01-bfbf-a18ad01140af",
+      "operator": {
+        "id": 4,
+        "name": "Оператор Елена",
+        "alias": null,
+        "status": null,
+        "photoUrl": null,
+        "gender": "FEMALE",
+        "organizationUnit": "Skill Credit",
+        "role": "OPERATOR"
+      },
+      "text": "",
+      "receivedDate": "2023-03-29T11:41:10.914Z",
+      "attachments" : [
+          {
+              "result" : "micro.pdf",
+              "optional" : {
+                  "name" : "micro.pdf",
+                  "size" : 1667,
+                  "type" : "multipart\/form-data"
+              },
+              "fileId" : "micro.pdf",
+              "id" : 512,
+              "url" : "micro.pdf",
+              "size" : 1667,
+              "type" : "multipart\/form-data",
+              "state" : "READY",
+              "name" : "clock.pdf"
+          }
+      ],
+      "quotes": [],
+      "quickReplies": [],
+      "read": true,
+      "settings": {
+        "blockInput": false,
+        "masked": false
+      },
+      "authorized": true,
+      "massPushMessage": false,
+      "origin": "threads"
+    },
+    {
+      "type": "MESSAGE",
+      "threadId": 147,
+      "providerIds": [],
+      "uuid": "ff7102ce-4f32-479b-9888-be01ce5cb3a1",
+      "text": "Интересный файл",
+      "receivedDate": "2023-03-29T11:42:14.006Z",
+      "attachments": [],
+      "quotes": [
+        {
+          "type": "MESSAGE",
+          "threadId": 147,
+          "providerIds": [],
+          "uuid": "297ad109-4d01-4d01-bfbf-a18ad01140af",
+          "operator": {
+            "id": 4,
+            "name": "Оператор Елена",
+            "alias": null,
+            "status": null,
+            "photoUrl": null,
+            "gender": "FEMALE",
+            "organizationUnit": "Skill Credit",
+            "role": "OPERATOR"
+          },
+          "text": "",
+          "receivedDate": "2023-03-29T11:41:10.914Z",
+          "attachments" : [
+              {
+                  "result" : "micro.pdf",
+                  "optional" : {
+                      "name" : "micro.pdf",
+                      "size" : 1667,
+                      "type" : "multipart\/form-data"
+                  },
+                  "fileId" : "micro.pdf",
+                  "id" : 512,
+                  "url" : "micro.pdf",
+                  "size" : 1667,
+                  "type" : "multipart\/form-data",
+                  "state" : "READY",
+                  "name" : "clock.pdf"
+              }
+          ],
+          "quotes": [],
+          "quickReplies": [],
+          "read": true,
+          "settings": {
+            "blockInput": false,
+            "masked": false
+          },
+          "authorized": true,
+          "massPushMessage": false,
+          "origin": "threads"
+        }
+      ],
+      "quickReplies": [],
+      "read": true,
+      "settings": {
+        "blockInput": false,
+        "masked": false
+      },
+      "authorized": true,
+      "massPushMessage": false,
+      "origin": "threads"
+    },
+    {
+      "type": "MESSAGE",
+      "threadId": 147,
+      "providerIds": [],
+      "uuid": "edc2d064-133f-4465-894a-65d1967fa1f1",
+      "operator": {
+        "id": 4,
+        "name": "Оператор Елена",
+        "alias": null,
+        "status": null,
+        "photoUrl": null,
+        "gender": "FEMALE",
+        "organizationUnit": "Skill Credit",
+        "role": "OPERATOR"
+      },
+      "text": "Ваш тоже!",
+      "receivedDate": "2023-03-29T11:42:48.727Z",
+      "attachments": [],
+      "quotes": [
+        {
+          "type": "MESSAGE",
+          "threadId": 147,
+          "providerIds": [],
+          "uuid": "297ad109-4d01-4d01-bfbf-a18ad01140af",
+          "operator": {
+            "id": 4,
+            "name": "Оператор Елена",
+            "alias": null,
+            "status": null,
+            "photoUrl": null,
+            "gender": "FEMALE",
+            "organizationUnit": "Skill Credit",
+            "role": "OPERATOR"
+          },
+          "text": "",
+          "receivedDate": "2023-03-29T11:41:10.914Z",
+          "attachments" : [
+              {
+                  "result" : "clock.pdf",
+                  "optional" : {
+                      "name" : "clock.pdf",
+                      "size" : 1667,
+                      "type" : "multipart\/form-data"
+                  },
+                  "fileId" : "clock.pdf",
+                  "id" : 512,
+                  "url" : "clock.pdf",
+                  "size" : 1667,
+                  "type" : "multipart\/form-data",
+                  "state" : "READY",
+                  "name" : "clock.pdf"
+              }
+          ],
+          "quotes": [],
+          "quickReplies": [],
+          "read": true,
+          "settings": {
+            "blockInput": false,
+            "masked": false
+          },
+          "authorized": true,
+          "massPushMessage": false,
+          "origin": "threads"
+        }
+      ],
+      "quickReplies": [],
+      "read": false,
+      "settings": {
+        "blockInput": false,
+        "masked": false
+      },
+      "authorized": true,
+      "massPushMessage": false,
+      "origin": "threads"
+    },
+    {
+        "type": "MESSAGE",
+        "threadId": 147,
+        "providerIds": [],
+        "uuid": "50109085-25bb-45be-8dd5-ca72c2408cea",
+        "text": "",
+        "receivedDate": "2023-03-29T12:39:37.476Z",
+        "attachments" : [
+            {
+                "result" : "123.pdf",
+                "optional" : {
+                    "name" : "123.pdf",
+                    "size" : 1667,
+                    "type" : "multipart\/form-data"
+                },
+                "fileId" : "123.pdf",
+                "id" : 512,
+                "url" : "123.pdf",
+                "size" : 1667,
+                "type" : "multipart\/form-data",
+                "state" : "ERROR",
+                "name" : "123.pdf"
+            }
+        ],
+        "quotes": [],
+        "quickReplies": [],
+        "read": false,
+        "settings": {
+            "blockInput": false,
+            "masked": false
+        },
+        "authorized": true,
+        "massPushMessage": false,
+        "origin": "threads"
+    }
+  ],
+  "agentInfo": null,
+  "allowedToSendMessages": true
+}

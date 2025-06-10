@@ -1,0 +1,99 @@
+{
+  "scenario" : null,
+  "settings" : {
+    "typingMessagesIntervalSeconds" : 3,
+    "pingIntervalMillis" : 10000,
+    "pingRetries" : 3,
+    "messageRetryCount" : 3,
+    "retryIntervalMillis" : 500,
+    "hideOnUrls" : [
+
+    ],
+    "pingEnabled" : true,
+    "retryMultiplier" : 1,
+    "registerAtFirstStart" : false,
+    "greetingConfigured" : false,
+    "sendClientInfoAfterMillis" : 5000,
+    "clientNotificationDisplayType" : "ALL"
+  },
+  "schedule" : {
+    "content" : {
+      "type" : "SCHEDULE",
+      "content" : {
+        "id" : 3,
+        "active" : true,
+        "sendDuringInactive" : true,
+        "isVisibleOutOfHours" : true,
+        "intervals" : [
+          {
+            "startTime" : 0,
+            "id" : 15,
+            "endTime" : 86399,
+            "weekDay" : 1
+          },
+          {
+            "startTime" : 0,
+            "id" : 16,
+            "endTime" : 86399,
+            "weekDay" : 2
+          },
+          {
+            "startTime" : 0,
+            "id" : 17,
+            "endTime" : 86399,
+            "weekDay" : 3
+          },
+          {
+            "startTime" : 0,
+            "id" : 18,
+            "endTime" : 86399,
+            "weekDay" : 4
+          },
+          {
+            "startTime" : 0,
+            "id" : 19,
+            "endTime" : 86399,
+            "weekDay" : 5
+          },
+          {
+            "startTime" : 0,
+            "id" : 20,
+            "endTime" : 86399,
+            "weekDay" : 6
+          },
+          {
+            "startTime" : 0,
+            "id" : 21,
+            "endTime" : 86399,
+            "weekDay" : 7
+          }
+        ],
+        "serverTime" : "2025-03-06T16:12:51.438Z"
+      }
+    }
+  },
+  "attachmentSettings" : {
+    "content" : {
+      "type" : "ATTACHMENT_SETTINGS",
+      "content" : {
+        "maxSize" : 10,
+        "fileExtensions" : [
+          "jpeg",
+          "jpg",
+          "png",
+          "pdf",
+          "doc",
+          "docx",
+          "rtf",
+          "bmp",
+          "ogg",
+          "oga",
+          "mp3",
+          "mov",
+          "wav",
+          "fb2"
+        ]
+      }
+    }
+  }
+}
