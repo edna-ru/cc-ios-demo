@@ -10,43 +10,46 @@ import UIKit
 
 /// Настройки тем оформления
 extension MainViewController {
-    /*
-
-     В СДК 3 уровня кастомизации интерфейса:
-
-     1. Минимальный. Настройка цветов, шрифтов и/или изображений (например, под корпоративные цвета)
-
-     2. Покомпонентный. Настройка компонентов дизайн системы СДК (переиспользуемые элементы, например кнопка)
-
-     3. Точечный. Детальная настройка flow (экраны чата или поиска), в этом случае настраивается внешний вид конкретного элемента на экране
-
-     Уровни имеют вложенную структуру:
-
-     let components = ChatComponents(images: ChatImages(), colors: ChatColors(), typography: ChatTypography())
-     let flows = ChatFlows(components: components)
-     let theme = ChatTheme(flows: flows)
-
-     Приоритет у нижних выше, т.е если в ChatFlow установить цвет элемента, он заменит цвет заданнный в компоненте ChatColors
-     */
-
     func makeLightTheme() -> ChatTheme {
-        // переопределяем шрифты в теме
-        let flow = ChatFlow(components: ChatComponents(typography: typography))
-        // меняем отображение аватаров
-        flow.incomeMessages.showAvatar = showIncomeAvatar
-        flow.outcomeMessages.showAvatar = showOutcomeAvatar
-        return ChatTheme(flows: ChatFlows(chatFlow: flow))
+        // Создание компонентов дизайн системы
+        let components = ChatComponents(typography: typography)
+        components.searchBarStyle.cancelButtonStyle.tintColor = .black
+
+        // Создание темы
+        let theme = ChatTheme(components: components)
+
+        // Получение настроек экрана чата
+        let chatFlow = theme.flows.chatFlow
+        chatFlow.systemMessages.surveyMessageStyle.type = showSurveyInUserStyle ? .user : .system
+        chatFlow.incomeMessages.showAvatar = showIncomeAvatar
+        chatFlow.outcomeMessages.showAvatar = showOutcomeAvatar
+
+        return theme
     }
 
     func makeDarkTheme() -> ChatTheme {
-        // переопределяем компоненты в теме
-        let flow = ChatFlow(components: ChatComponents(images: darkImages,
-                                                       colors: colors,
-                                                       typography: typography))
-        // меняем отображение аватаров
-        flow.incomeMessages.showAvatar = showIncomeAvatar
-        flow.outcomeMessages.showAvatar = showOutcomeAvatar
-        return ChatTheme(flows: ChatFlows(chatFlow: flow))
+        // Создание компонентов дизайн системы
+        let components = ChatComponents(images: darkImages,
+                                        colors: colors,
+                                        typography: typography)
+        components.searchBarStyle.cancelButtonStyle.tintColor = .white
+
+        // Создание темы из компонентов
+        let theme = ChatTheme(components: components)
+
+        // Получение настроек экрана чата
+        let chatFlow = theme.flows.chatFlow
+        chatFlow.systemMessages.surveyMessageStyle.type = showSurveyInUserStyle ? .user : .system
+        chatFlow.incomeMessages.showAvatar = showIncomeAvatar
+        chatFlow.outcomeMessages.showAvatar = showOutcomeAvatar
+        let alignment = ChatInputAlignment(rawValue: inputAlignment) ?? .bottom
+        chatFlow.inputViewStyle.inputText.alignment = alignment
+
+        // Получение настроек экрана поиска
+        let searchFlow = theme.flows.searchFlow
+        searchFlow.searchMessageStyle.messageMatchStyle.color = .red
+
+        return theme
     }
 
     private var colors: ChatColors {
@@ -76,6 +79,7 @@ extension MainViewController {
     private var darkImages: ChatImages {
         let images = ChatImages()
         images.avatarPlaceholderImage = ChatImage(system: "person.circle.fill", tintColor: UIColor.white)
+        images.errorInfoImage = ChatImage(system: "repeat.circle", tintColor: .white)
         return images
     }
 }

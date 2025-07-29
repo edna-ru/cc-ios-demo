@@ -26,7 +26,6 @@ import os
 @objc @objcMembers public class ChatTheme : ObjectiveC.NSObject {
   @objc public init(colors: ChatCenterUI.ChatColors = .init(), images: ChatCenterUI.ChatImages = .init(), typography: ChatCenterUI.ChatTypography = .init())
   @objc convenience public init(components: ChatCenterUI.ChatComponents)
-  @objc convenience public init(flows: ChatCenterUI.ChatFlows)
   @objc override dynamic public var debugDescription: Swift.String {
     @objc get
   }
@@ -82,7 +81,7 @@ import os
   @objc public var failed: ChatCenterUI.TextChatStyle
   @objc public var failedBubbleColor: UIKit.UIColor
   @objc public var deletedText: ChatCenterUI.TextChatStyle
-  @objc public var editedStatusImage: UIKit.UIImage? {
+  @objc public var editedStatusImage: UIKit.UIImage {
     @objc get
     @objc set
   }
@@ -144,13 +143,16 @@ import os
   @objc public var keyboardHideButtonStyle: ChatCenterUI.IconButtonChatStyle
   @objc deinit
 }
-@objc @objcMembers public class THRJSQFile : ObjectiveC.NSObject, Swift.Codable {
+@objc @objcMembers public class THRJSQFile : ObjectiveC.NSObject, Foundation.NSSecureCoding, Swift.Codable {
+  @objc required public init?(coder aDecoder: Foundation.NSCoder)
   @objc public init(name: Swift.String?, url: Swift.String?)
+  @objc public static var supportsSecureCoding: Swift.Bool
   @objc public var name: Swift.String?
   @objc public var url: Foundation.URL?
   @objc public var isCached: Swift.Bool {
     @objc get
   }
+  @objc public func encode(with coder: Foundation.NSCoder)
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -436,9 +438,10 @@ extension ChatCenterUI.CCChatModel {
     get
   }
 }
-@objc @objcMembers public class THRParticipant : ObjectiveC.NSObject, Foundation.NSCoding {
+@objc @objcMembers public class THRParticipant : ObjectiveC.NSObject, Foundation.NSSecureCoding {
   @objc public init(identifier: Swift.String, name: Swift.String? = nil, sex: ChatCenterUI.THRParticipantSex = .unknown)
   @objc required convenience public init?(coder: Foundation.NSCoder)
+  @objc public static var supportsSecureCoding: Swift.Bool
   @objc final public let identifier: Swift.String
   @objc final public let name: Swift.String?
   public var sex: ChatCenterUI.THRParticipantSex?
@@ -458,9 +461,11 @@ extension UIKit.UIColor {
   @objc var avatarHighlightedImage: UIKit.UIImage? { get set }
   @objc var avatarPlaceholderImage: UIKit.UIImage { get }
 }
-@objc @_hasMissingDesignatedInitializers @objcMembers public class THRJSQPhotoMediaItem : ChatCenterUI.THRJSQMediaItem {
+@objc @_hasMissingDesignatedInitializers @objcMembers public class THRJSQPhotoMediaItem : ChatCenterUI.THRJSQMediaItem, Foundation.NSSecureCoding {
   @objc public init(image: UIKit.UIImage?, messageId: Swift.String?, maskImage: UIKit.UIImage, strokedMask: UIKit.UIImage, emptyImageColor: UIKit.UIColor, dataProvider: ChatCenterUI.CCDataProvider, errorColor: UIKit.UIColor)
   @objc convenience public init(url: Foundation.URL?, link: Swift.String?, messageId: Swift.String?, maskImage: UIKit.UIImage, strokedMask: UIKit.UIImage, emptyImageColor: UIKit.UIColor, errorColor: UIKit.UIColor, dataProvider: ChatCenterUI.CCDataProvider, shouldDownloadInitially: Swift.Bool, state: ChatCenterUI.THRJSQMessageAttachmentState)
+  @objc required public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public static var supportsSecureCoding: Swift.Bool
   @objc override public var appliesMediaViewMaskAsOutgoing: Swift.Bool {
     @objc get
     @objc set
@@ -489,8 +494,8 @@ extension UIKit.UIColor {
   @objc override public func mediaDataType() -> Swift.String
   @objc override public func mediaData() -> Any?
   @objc override public func toDictionary() -> [Swift.String : Any]
-  @objc override public func encode(with aCoder: Foundation.NSCoder)
   @objc override public func sentSuccessfully(_ success: Swift.Bool)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
   @objc public func downloadImage()
   @objc deinit
 }
@@ -598,11 +603,11 @@ public struct ChatNetworkConfig : Swift.CustomDebugStringConvertible {
 @objc public protocol THRJSQAudioMediaItemDelegate {
   @objc func audioMediaItem(_ audioMediaItem: ChatCenterUI.THRJSQAudioMediaItem, didChangeAudioCategory category: AVFAudio.AVAudioSession.Category, options: AVFAudio.AVAudioSession.CategoryOptions, error: (any Swift.Error)?)
 }
-@objc @_hasMissingDesignatedInitializers @objcMembers public class THRJSQAudioMediaItem : ChatCenterUI.THRJSQMediaItem, AVFAudio.AVAudioPlayerDelegate {
+@objc @_hasMissingDesignatedInitializers @objcMembers public class THRJSQAudioMediaItem : ChatCenterUI.THRJSQMediaItem, AVFAudio.AVAudioPlayerDelegate, Foundation.NSSecureCoding {
+  @objc required public init?(coder: Foundation.NSCoder)
   @objc public init(audioData: Foundation.Data, audioViewAttributes: ChatCenterUI.THRJSQAudioMediaViewAttributes, dataProvider: ChatCenterUI.CCDataProvider)
   @objc public init(audioUrl: Foundation.URL?, audioViewAttributes: ChatCenterUI.THRJSQAudioMediaViewAttributes, dataProvider: ChatCenterUI.CCDataProvider)
-  @available(*, unavailable)
-  @objc required public init?(coder _: Foundation.NSCoder)
+  @objc public static var supportsSecureCoding: Swift.Bool
   @objc override public var fileData: Foundation.Data? {
     @objc get
     @objc set
@@ -615,7 +620,6 @@ public struct ChatNetworkConfig : Swift.CustomDebugStringConvertible {
   @objc public var speechStatus: ChatCenterUI.THRJSQAudioMediaStatus
   @objc public var cachedMediaView: UIKit.UIView?
   @objc override public func mediaData() -> Any?
-  @objc override public func encode(with aCoder: Foundation.NSCoder)
   @objc override public func fileName() -> Swift.String?
   @objc override public func mediaView() -> UIKit.UIView?
   @objc override public func mediaQuotedView() -> UIKit.UIImageView
@@ -625,6 +629,7 @@ public struct ChatNetworkConfig : Swift.CustomDebugStringConvertible {
   @objc override public func toDictionary() -> [Swift.String : Any]
   @objc override public func failedText() -> Swift.String?
   @objc public class func convertStatusByName(_ name: Swift.String?) -> ChatCenterUI.THRJSQAudioMediaStatus
+  @objc public func encode(with aCoder: Foundation.NSCoder)
   @objc public func downloadAudio()
   @objc public func audioPlayerDidFinishPlaying(_ player: AVFAudio.AVAudioPlayer, successfully _: Swift.Bool)
   @objc deinit
@@ -716,9 +721,9 @@ public enum ChatMessage {
   @objc override dynamic public init()
   @objc deinit
 }
-public protocol THRJSQFileMediaData : ChatCenterUI.THRJSQMessageMediaData {
-  func fileName() -> Swift.String?
-  var fileData: Foundation.Data? { get set }
+@objc public protocol THRJSQFileMediaData : ChatCenterUI.THRJSQMessageMediaData {
+  @objc func fileName() -> Swift.String?
+  @objc var fileData: Foundation.Data? { get set }
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class THRJSQSystemMessageItem : ChatCenterUI.THRJSQMediaItem {
   @objc public init(image: UIKit.UIImage?, title: Swift.String?, subTitle: Swift.String?)
@@ -845,6 +850,7 @@ public struct MultipartFormData {
   @objc public static func formatFrom(date: Foundation.Date) -> Swift.String
   @objc public static func formatFrom(string: Swift.String) -> Foundation.Date
   @objc public static let timeOnlyFormatter: Foundation.DateFormatter
+  @objc public static let dateOnlyFormatter: Foundation.DateFormatter
   @objc public static let dateAndTimeFormatter: Foundation.DateFormatter
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class InputViewStyle : ChatCenterUI.ChatStyle {
@@ -904,13 +910,13 @@ public struct ChatLocalizationConfig {
   @objc deinit
 }
 @objc @objcMembers final public class SystemFilePickerViewController : ObjectiveC.NSObject {
-  @objc public init(viewController: UIKit.UIViewController, hasAccessToPhotos: Swift.Bool, hasAccessFile: Swift.Bool, documentTypes: [Swift.String], fileSizeLimit: Swift.Double)
+  @objc public init(hasAccessToPhotos: Swift.Bool, hasAccessFile: Swift.Bool, documentTypes: [Swift.String], fileSizeLimit: Swift.Double)
   @objc final public var dismissAction: (() -> Swift.Void)?
   @objc final public var selectImageAction: ((UIKit.UIImage) -> Swift.Void)?
   @objc final public var selectFileAction: ((Foundation.URL) -> Swift.Void)?
   @objc final public var maxImagesCount: Swift.Int
   @objc final public var maxPhotoSide: CoreFoundation.CGFloat
-  @objc final public func show()
+  @objc final public func show(in viewController: UIKit.UIViewController)
   @objc deinit
 }
 extension ChatCenterUI.SystemFilePickerViewController : PhotosUI.PHPickerViewControllerDelegate {
@@ -928,9 +934,10 @@ extension ChatCenterUI.SystemFilePickerViewController : UIKit.UIDocumentPickerDe
   @objc override public init(images: ChatCenterUI.ChatImages, colors: ChatCenterUI.ChatColors, typography: ChatCenterUI.ChatTypography)
   @objc deinit
 }
-@objc @objcMembers public class THRJSQAttachmentUpdateItem : ObjectiveC.NSObject, Foundation.NSCoding, Foundation.NSCopying {
+@objc @objcMembers public class THRJSQAttachmentUpdateItem : ObjectiveC.NSObject, Foundation.NSSecureCoding {
   @objc public init(attachmentId: Swift.Int, originalUrl: Foundation.URL?, url: Swift.String?, result: Swift.String?, state: ChatCenterUI.THRJSQMessageAttachmentState, errorMessage: Swift.String?, errorType: ChatCenterUI.THRJSQMessageAttachmentErrorType, localGUID: Swift.String?, name: Swift.String?, type: Swift.String?, size: Swift.Int, speechStatus: Swift.String?)
   @objc required public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public static var supportsSecureCoding: Swift.Bool
   @objc override dynamic public var hash: Swift.Int {
     @objc get
   }
@@ -949,7 +956,6 @@ extension ChatCenterUI.SystemFilePickerViewController : UIKit.UIDocumentPickerDe
   @objc public static func parseAttachmentStateByName(_ name: Swift.String?) -> ChatCenterUI.THRJSQMessageAttachmentState
   @objc public static func parseAttachmentErrorTypeByName(_ name: Swift.String?) -> ChatCenterUI.THRJSQMessageAttachmentErrorType
   @objc public func encode(with aCoder: Foundation.NSCoder)
-  @objc public func copy(with _: ObjectiveC.NSZone? = nil) -> Any
   @objc deinit
 }
 extension ChatCenterUI.CCDataProvider {
@@ -981,9 +987,10 @@ public struct ChatSSLCertificate {
   @objc @_Concurrency.MainActor @preconcurrency public func getSize(width: CoreFoundation.CGFloat) -> CoreFoundation.CGSize
   @objc deinit
 }
-@objc @objcMembers public class THRJSQMessageMediaOptional : ObjectiveC.NSObject, Foundation.NSCoding, Foundation.NSCopying {
+@objc @objcMembers public class THRJSQMessageMediaOptional : ObjectiveC.NSObject, Foundation.NSSecureCoding {
   @objc public init(type: Swift.String?, name: Swift.String?, size: Swift.Int, lastModified: Swift.Int)
   @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public static var supportsSecureCoding: Swift.Bool
   @objc override dynamic public var description: Swift.String {
     @objc get
   }
@@ -991,7 +998,6 @@ public struct ChatSSLCertificate {
   @objc public var name: Swift.String?
   @objc public var size: Swift.Int
   @objc public func encode(with aCoder: Foundation.NSCoder)
-  @objc public func copy(with _: ObjectiveC.NSZone? = nil) -> Any
   @objc deinit
 }
 @objc @objcMembers public class THRSpecialist : ChatCenterUI.THRParticipant {
@@ -1050,6 +1056,7 @@ public struct ChatSSLCertificate {
   @objc public var sentStatusImage: ChatCenterUI.ChatImage
   @objc public var pendingStatusImage: ChatCenterUI.ChatImage
   @objc public var readStatusImage: ChatCenterUI.ChatImage
+  @objc public var errorInfoImage: ChatCenterUI.ChatImage
   @objc public var alertImage: ChatCenterUI.ChatImage
   @objc public var shieldImage: ChatCenterUI.ChatImage
   @objc public var editImage: ChatCenterUI.ChatImage
@@ -1087,7 +1094,17 @@ public struct ChatSSLCertificate {
   @objc final public let full: ChatCenterUI.ChatImage
   @objc deinit
 }
+@objc public enum SurveyMessageType : Swift.Int {
+  case system
+  case user
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc @_hasMissingDesignatedInitializers @objcMembers public class SurveyMessageStyle : ChatCenterUI.MessageStyle {
+  @objc public var type: ChatCenterUI.SurveyMessageType
   @objc public var questionTopLabel: ChatCenterUI.TextChatStyle?
   @objc public var questionBottomLabel: ChatCenterUI.TextChatStyle?
   @objc public var voteLikeIcon: ChatCenterUI.ChatSurveyIcon?
@@ -1113,8 +1130,6 @@ public struct ChatSSLCertificate {
     @objc get
     @objc set
   }
-  @objc public var surveyCompletionColor: UIKit.UIColor
-  @objc public var surveyCompletionFont: UIKit.UIFont
   @objc public var buttonsText: UIKit.UIColor
   @objc public var buttonsBackground: UIKit.UIColor
   @objc deinit
@@ -1227,7 +1242,6 @@ public struct ChatUser {
   @objc func finishReceivingPhotoMessage(_ item: Any)
   @objc func showQuickReplies(_ quickReplies: [Any]?)
   @objc func hideQuickRepliesIfNeeded()
-  @objc func addAvatarForSpecialist(_ specialist: ChatCenterUI.THRSpecialist?)
   @objc func finishReceivingOldMessages(_ count: Swift.Int, options: Any)
   @objc func finishSendingMessageAnimated(_ animated: Swift.Bool, clearInputText: Swift.Bool)
   @objc func didTapToScroll(_ message: ChatCenterUI.THRMessage, animated: Swift.Bool)
@@ -1306,7 +1320,18 @@ public struct ChatUser {
   @objc public var minimumHeight: CoreFoundation.CGFloat
   @objc public var maximumHeight: CoreFoundation.CGFloat
   @objc public var cursorColor: UIKit.UIColor
+  @objc public var alignment: ChatCenterUI.ChatInputAlignment
   @objc deinit
+}
+@objc public enum ChatInputAlignment : Swift.Int {
+  case top = 2
+  case center = 1
+  case bottom = 0
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
 }
 @objc @_hasMissingDesignatedInitializers final public class CCWebSocketDataProvider : ObjectiveC.NSObject {
   @objc deinit
@@ -1412,7 +1437,10 @@ public typealias MessagesReadCompletion = ChatCenterUI.Completion<[ChatCenterUI.
   @objc public init(inputText: ChatCenterUI.InputChatStyle, components: ChatCenterUI.ChatComponents)
   @objc public var searchButtonStyle: ChatCenterUI.IconButtonChatStyle
   @objc public var inputTextStyle: ChatCenterUI.InputChatStyle
-  @objc public var cancelButtonStyle: ChatCenterUI.ButtonChatStyle?
+  @objc public var cancelButtonStyle: ChatCenterUI.ButtonChatStyle {
+    @objc get
+    @objc set
+  }
   @objc public var clearButtonStyle: ChatCenterUI.ButtonChatStyle?
   @objc deinit
 }
@@ -1467,13 +1495,8 @@ public struct ChatTransportConfig : Swift.CustomDebugStringConvertible {
 @objc public protocol THRJSQMediaItemDelegate {
   @objc func dataDidUpdate(_ data: Foundation.Data)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class THRJSQMediaItem : ObjectiveC.NSObject, ChatCenterUI.THRJSQFileMediaData, Foundation.NSCoding, Foundation.NSCopying {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class THRJSQMediaItem : ObjectiveC.NSObject, ChatCenterUI.THRJSQFileMediaData {
   @objc deinit
-  @objc required public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic public var description: Swift.String {
-    @objc get
-  }
-  @objc public var fileData: Foundation.Data?
   @objc weak public var mediaItemDelegate: (any ChatCenterUI.THRJSQMediaItemDelegate)?
   @objc public var state: ChatCenterUI.THRJSQMessageAttachmentState
   @objc public var errorMessage: Swift.String?
@@ -1483,6 +1506,10 @@ public struct ChatTransportConfig : Swift.CustomDebugStringConvertible {
   @objc public var sentStatus: Swift.Bool
   @objc public var localGUID: Swift.String
   @objc public var appliesMediaViewMaskAsOutgoing: Swift.Bool
+  @objc public var fileData: Foundation.Data? {
+    @objc get
+    @objc set
+  }
   @objc public func fileName() -> Swift.String?
   @objc public func mediaDataType() -> Swift.String
   @objc public func toDictionary() -> [Swift.String : Any]
@@ -1494,8 +1521,6 @@ public struct ChatTransportConfig : Swift.CustomDebugStringConvertible {
   @objc public func sentSuccessfully(_ success: Swift.Bool)
   @objc public func isInProgressForUI() -> Swift.Bool
   @objc public func failedText() -> Swift.String?
-  @objc public func encode(with aCoder: Foundation.NSCoder)
-  @objc public func copy(with _: ObjectiveC.NSZone? = nil) -> Any
   @objc public func mediaItemInfo() -> Swift.String
   @objc public func mediaViewTitle() -> Swift.String
 }
@@ -1523,8 +1548,8 @@ public struct ChatTransportConfig : Swift.CustomDebugStringConvertible {
   @objc convenience public init(json: [Swift.String : Any])
   @objc public init(identifier: Swift.Int = 0, sendingId: Swift.Int = 0, questions: [ChatCenterUI.THRSurveyQuestion]? = [], hideAfter: Swift.Int = 0)
   @objc convenience public init(fromAnswer json: [Swift.String : Any])
-  @available(*, unavailable)
-  @objc required public init?(coder _: Foundation.NSCoder)
+  @objc @available(*, unavailable)
+  required public init?(coder _: Foundation.NSCoder)
   @objc public var identifier: Swift.Int
   @objc public var sendingId: Swift.Int
   @objc public var questions: [ChatCenterUI.THRSurveyQuestion]
@@ -1596,8 +1621,8 @@ extension Foundation.NSURL {
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class TextChatStyle : ChatCenterUI.ChatStyle {
   @objc public init(font: UIKit.UIFont, color: UIKit.UIColor, backgroundColor: UIKit.UIColor = .clear)
-  @objc final public let font: UIKit.UIFont
-  @objc final public let color: UIKit.UIColor
+  @objc public var font: UIKit.UIFont
+  @objc public var color: UIKit.UIColor
   @objc deinit
 }
 extension Swift.String {
@@ -1633,7 +1658,7 @@ extension ChatCenterUI.CCWebSocketDataProvider : Foundation.URLSessionWebSocketD
   @objc override public func mediaData() -> Any?
   @objc override public func mediaView() -> UIKit.UIView?
   @objc override public func mediaViewDisplaySize() -> CoreFoundation.CGSize
-  @objc override public func encode(with aCoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
   @objc public func isAvailableNow() -> Swift.Bool
   @objc public func getIntervalToNextAvailabilityChange() -> Swift.Int
   @objc deinit
@@ -1641,9 +1666,15 @@ extension ChatCenterUI.CCWebSocketDataProvider : Foundation.URLSessionWebSocketD
 @objc extension Foundation.NSPredicate {
   @objc dynamic public class func unreadMessages() -> Foundation.NSPredicate
 }
-@objc @_hasMissingDesignatedInitializers @objcMembers public class THRJSQFileMediaItem : ChatCenterUI.THRJSQMediaItem {
+@objc @_hasMissingDesignatedInitializers @objcMembers public class THRJSQFileMediaItem : ChatCenterUI.THRJSQMediaItem, Foundation.NSSecureCoding {
   @objc public init(files: [ChatCenterUI.THRJSQFile]? = nil, maskImage: UIKit.UIImage?)
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public static var supportsSecureCoding: Swift.Bool
   @objc override public var appliesMediaViewMaskAsOutgoing: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc override public var fileData: Foundation.Data? {
     @objc get
     @objc set
   }
@@ -1651,8 +1682,6 @@ extension ChatCenterUI.CCWebSocketDataProvider : Foundation.URLSessionWebSocketD
   @objc public var files: [ChatCenterUI.THRJSQFile]?
   @objc public var fileUrl: Foundation.URL?
   @objc public var mediaURL: Foundation.URL?
-  @objc override public func encode(with aCoder: Foundation.NSCoder)
-  @objc override public func copy(with _: ObjectiveC.NSZone? = nil) -> Any
   @objc override public func mediaViewDisplaySize() -> CoreFoundation.CGSize
   @objc override public func mediaQuotedView() -> UIKit.UIImageView
   @objc override public func mediaHash() -> Swift.UInt
@@ -1661,6 +1690,7 @@ extension ChatCenterUI.CCWebSocketDataProvider : Foundation.URLSessionWebSocketD
   @objc override public func toDictionary() -> [Swift.String : Any]
   @objc override public func fileName() -> Swift.String?
   @objc override public func failedText() -> Swift.String?
+  @objc public func encode(with aCoder: Foundation.NSCoder)
   @objc public func startDownloading()
   @objc public func stopDownloading()
   @objc public func isFileExist() -> Swift.Bool
@@ -1938,7 +1968,8 @@ public enum ChatCenterUIError : Swift.Error {
   @objc dynamic public func saveData(data: Foundation.Data, toCacheFile name: Swift.String) -> Foundation.URL?
   @objc dynamic public func getURL(forCachedFile name: Swift.String) -> Foundation.URL?
   @objc dynamic public func getData(forCachedFile name: Swift.String) -> Foundation.Data?
-  @objc dynamic public func saveToTemporaryDirectory(image: UIKit.UIImage) -> Foundation.URL
+  @objc dynamic public func saveToTemporaryDirectory(image: UIKit.UIImage) -> Foundation.URL?
+  @objc dynamic public func getFromTemporaryDirectory(for url: Foundation.URL) -> Foundation.Data?
   @objc dynamic public func cleanCache()
   @objc dynamic public var temporaryImagesCache: Foundation.URL? {
     @objc get
@@ -1974,12 +2005,18 @@ extension ChatCenterUI.THRParticipantSex : Swift.RawRepresentable {}
 extension ChatCenterUI.THRJSQAudioMediaStatus : Swift.Equatable {}
 extension ChatCenterUI.THRJSQAudioMediaStatus : Swift.Hashable {}
 extension ChatCenterUI.THRJSQAudioMediaStatus : Swift.RawRepresentable {}
+extension ChatCenterUI.SurveyMessageType : Swift.Equatable {}
+extension ChatCenterUI.SurveyMessageType : Swift.Hashable {}
+extension ChatCenterUI.SurveyMessageType : Swift.RawRepresentable {}
 extension ChatCenterUI.Position : Swift.Equatable {}
 extension ChatCenterUI.Position : Swift.Hashable {}
 extension ChatCenterUI.Position : Swift.RawRepresentable {}
 extension ChatCenterUI.CCChatModelConfigState : Swift.Equatable {}
 extension ChatCenterUI.CCChatModelConfigState : Swift.Hashable {}
 extension ChatCenterUI.CCChatModelConfigState : Swift.RawRepresentable {}
+extension ChatCenterUI.ChatInputAlignment : Swift.Equatable {}
+extension ChatCenterUI.ChatInputAlignment : Swift.Hashable {}
+extension ChatCenterUI.ChatInputAlignment : Swift.RawRepresentable {}
 extension ChatCenterUI.ChatTransportConfig.APIVersion : Swift.Equatable {}
 extension ChatCenterUI.ChatTransportConfig.APIVersion : Swift.Hashable {}
 extension ChatCenterUI.ChatTransportConfig.APIVersion : Swift.RawRepresentable {}

@@ -16,8 +16,8 @@ extension UIImage {
         let frameCount = CGImageSourceGetCount(source)
         var images: [UIImage] = []
 
-        for image in 0 ..< frameCount {
-            if let cgImage = CGImageSourceCreateImageAtIndex(source, image, nil) {
+        for frame in 0 ..< frameCount {
+            if let cgImage = CGImageSourceCreateImageAtIndex(source, frame, nil) {
                 let image = UIImage(cgImage: cgImage)
                 images.append(image)
             }

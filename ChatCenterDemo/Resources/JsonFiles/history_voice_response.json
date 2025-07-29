@@ -343,6 +343,74 @@
             "massPushMessage": false,
             "origin": "threads"
         },
+		{
+			"uuid" : "d4dbcb02-0e92-4438-a5ed-35506f6cab54",
+			"receivedDate" : "2025-06-18T07:06:47.664Z",
+			"read" : false,
+			"providerIds" : [
+
+			],
+			"settings" : {
+				"blockInput" : false,
+				"masked" : false
+			},
+			"type" : "MESSAGE",
+			"speechStatus" : "processing",
+			"text" : "ghjdth",
+			"operator" : {
+				"status" : null,
+				"alias" : null,
+				"gender" : "MALE",
+				"id" : 14,
+				"role" : "OPERATOR",
+				"photoUrl" : "20250425-cmn-a4b47af3-d45f-48e6-9959-b449530d7a31.jpg",
+				"organizationUnit" : "Skill Credit",
+				"name" : "Ковбой Мальборо"
+			},
+			"threadId" : 5630,
+			"attachments" : [
+				{
+					"id": 45,
+					"result": "priroda.jpeg",
+					"optional": {
+						"size": 3457653,
+						"name": "priroda.jpeg",
+						"type": "image/jpeg"
+					},
+					"state": "READY",
+					"name": "priroda.jpeg",
+					"type": "image/jpeg",
+					"size": 3457653,
+					"wellDefined": true,
+					"url": "priroda.jpeg",
+					"link" : null,
+					"contentType" : null,
+					"errorMessage" : null,
+					"errorCode" : "",
+					"result" : "https://dev4app.edna.io/files/priroda.jpeg",
+					"name": "priroda.jpeg",
+				},
+				{
+					"id" : 3084,
+					"state" : "READY",
+					"optional" : {
+						"name" : "Голосовое сообщение.wav",
+						"type" : "audio\/vnd.wave",
+						"size" : 2254892
+					},
+					"originalUrl" : null,
+					"link" : null,
+					"contentType" : "SPEECH",
+					"type" : "audio\/vnd.wave",
+					"size" : 2254892,
+					"errorMessage" : null,
+					"errorCode" : "",
+					"result" : "https:\/\/dev4app.edna.io\/beta3\/files\/20250618-1156b553-d0b5-480f-b0ed-671d6d194dc9.wav",
+					"name" : "Голосовое сообщение.wav"
+				}
+			],
+			"isPersonalOffer" : false
+		},
         {
             "type": "REQUEST_CLOSE_THREAD",
             "threadId": 182,

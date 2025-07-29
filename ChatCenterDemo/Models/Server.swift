@@ -15,4 +15,5 @@ public struct Server: Codable, Hashable {
     var restURL: String
     var dataStoreURL: String
     var appMarker: String?
+    var apiVersion: UInt = 17
 }

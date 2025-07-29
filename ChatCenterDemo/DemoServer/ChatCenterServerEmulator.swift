@@ -18,17 +18,18 @@ class ChatCenterServerEmulator {
                 return
             }
             if model.action == Actions.registerDevice.rawValue {
-                session.writeText(ConstantsResponse.testResponse.getResponse(correlationId: model.correlationId))
+                session.writeText(ConstantsResponse.registerDevice.getResponse(correlationId: model.correlationId))
             }
             if model.action == Actions.sendMessage.rawValue {
                 switch model.data?.content?.type {
-                case "INIT_CHAT":
-                    session.writeText(ConstantsResponse.initChat.getResponse(correlationId: model.correlationId))
                 case "CLIENT_INFO":
-                    session.writeText(ConstantsResponse.initChat.getResponse(correlationId: model.correlationId))
+                    session.writeText(ConstantsResponse.messageResponse.getResponse(correlationId: model.correlationId))
                 default:
                     break
                 }
+            }
+            if self.selectedUseCase == .system, model.action == Actions.sendMessage.rawValue {
+                session.writeText(ConstantsResponse.messageResponse.getResponse(correlationId: model.correlationId))
             }
         })
 

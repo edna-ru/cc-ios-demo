@@ -13,11 +13,17 @@ import UIKit
 final class MainViewController: UIViewController {
     // MARK: Internal
 
+    @AppStorage(SettingsKeys.userStyleSurvey.rawValue)
+    var showSurveyInUserStyle: Bool = false
+
     @AppStorage(SettingsKeys.showIncomeAvatar.rawValue)
     var showIncomeAvatar: Bool = false
 
     @AppStorage(SettingsKeys.showOutcomeAvatar.rawValue)
     var showOutcomeAvatar: Bool = false
+
+    @AppStorage(SettingsKeys.inputAlignment.rawValue)
+    var inputAlignment: Int = 0
 
     let imageView = UIImageView()
     let titleLabel = UILabel()
@@ -40,7 +46,7 @@ final class MainViewController: UIViewController {
             /// Вызываем тут, т.к меняется сервер и нужно переинициализировать СДК с новыми данными
             setupSDK()
 
-            /// Если меняется сервер при уже выбраннмо пользователе
+            /// Если меняется сервер при уже выбранном пользователе
             if let selectedUser {
                 authUser(user: selectedUser)
             }
@@ -101,9 +107,12 @@ final class MainViewController: UIViewController {
         // 1. Настройка подключения к серверу
         let chatTransportConfig = ChatTransportConfig(rest: selectedServer.restURL,
                                                       webSocket: selectedServer.webSocketURL,
-                                                      dataStore: selectedServer.dataStoreURL)
+                                                      dataStore: selectedServer.dataStoreURL,
+                                                      apiVersion: ChatTransportConfig.APIVersion(rawValue: selectedServer.apiVersion) ?? .api17)
+
         // 2. Настройка параметров сетевого подключения
         var chatNetworkConfig = ChatNetworkConfig()
+        chatNetworkConfig.httpConfig.uploadTimeout = 10
         chatNetworkConfig.sslPinning.allowUntrustedSSLCertificate = true
 
         // 3. Настройка параметров работы чата

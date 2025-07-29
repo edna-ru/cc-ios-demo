@@ -8,5 +8,4 @@
 #ifndef ChatCenterUISDK_h
 #define ChatCenterUISDK_h
 
-
 #endif /* ChatCenterUISDK_h */

@@ -13,8 +13,7 @@ extension String {
         let decoder = JSONDecoder()
 
         do {
-            let object = try decoder.decode(type, from: data)
-            return object
+            return try decoder.decode(type, from: data)
 
         } catch {
             return nil

@@ -1,10 +1,11 @@
 [
 {
     "name": "server",
-    "isSelected": true,
-    "webSocketURL": "wss://host/socket",
-    "providerUid": "NzTBr5nwnTGIGJ9ehYRI1HXtqDhRWNx6mJSgLN",
-    "restURL": "https://host",
-    "dataStoreURL": "https://host/files"
+	"isSelected": true,
+	"webSocketURL": "wss://host/socket",
+	"providerUid": "NzTBr5nwnTGIGJ9ehYRI1HXtqDhRWNx6mJSgLN",
+	"restURL": "https://host",
+	"dataStoreURL": "https://host/files"
+	"apiVersion": 17
 }
 ]

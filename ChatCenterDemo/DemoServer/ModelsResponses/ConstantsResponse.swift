@@ -10,16 +10,15 @@ import Foundation
 // swiftlint:disable all
 
 enum ConstantsResponse {
-    case testResponse
-    case initChat
+    case registerDevice
+    case messageResponse
     case schedule
-    case attachments
 
     // MARK: Internal
 
     func getResponse(correlationId: String = "", idMessage _: String = "") -> String {
         switch self {
-        case .testResponse:
+        case .registerDevice:
             """
             {
             "data" : {
@@ -29,7 +28,7 @@ enum ConstantsResponse {
             "correlationId" : "\(correlationId)"
             }
             """
-        case .initChat:
+        case .messageResponse:
             """
             {
             "data" : {
@@ -122,60 +121,6 @@ enum ConstantsResponse {
             }
             ]
             }
-            }
-            """
-        case .attachments:
-            """
-            {
-              "action" : "getMessages",
-              "data" : {
-                "messages" : [
-                  {
-                    "messageId" : "adf04adc-d579-4147-b2cd-17ed4bb93537",
-                    "sentAt" : "2023-07-20T04:00:04.671Z",
-                    "content" : {
-                      "externalClientId" : "id1",
-                      "content" : {
-                        "maxSize" : 30,
-                        "fileExtensions" : [
-                          "jpeg",
-                          "jpg",
-                          "png",
-                          "pdf",
-                          "doc",
-                          "docx",
-                          "rtf",
-                          "bmp",
-                          "tar.gz",
-                          "tar",
-                          "gz",
-                          "tgz",
-                          "mp4",
-                          "webp",
-                          "webm",
-                          "tgs",
-                          "ogg",
-                          "txt",
-                          "xls",
-                          "oga",
-                          "mp3"
-                        ]
-                      },
-                      "aps/sound" : "default",
-                      "massPushMessage" : false,
-                      "origin" : "threads",
-                      "clientId" : "id1",
-                      "authorized" : true,
-                      "type" : "ATTACHMENT_SETTINGS",
-                      "providerIds" : []
-                    },
-                    "notification" : null,
-                    "important" : false,
-                    "attributes" : "{\\"clientId\\":\\"id1\\",\\"aps/sound\\":\\"default\\",\\"origin\\":\\"threads\\"}",
-                    "messageType" : "NORMAL"
-                  }
-                ]
-              }
             }
             """
         }

@@ -18,6 +18,7 @@
 		4149382C2D91755200D15773 /* MainViewController+Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4149382B2D91754400D15773 /* MainViewController+Themes.swift */; };
 		418880CF2DA42ECD002708BC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418880CE2DA42EC4002708BC /* SettingsView.swift */; };
 		418880D32DA7A031002708BC /* MainViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418880D22DA7A02E002708BC /* MainViewController+UI.swift */; };
+		41B014D02E38E3D500027B4C /* ContainerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B014CF2E38E3D500027B4C /* ContainerTableView.swift */; };
 		41BDD4C62A2E4AAE0010C3BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDD4C52A2E4AAE0010C3BD /* AppDelegate.swift */; };
 		41BDD4CF2A2E4AB00010C3BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41BDD4CE2A2E4AB00010C3BD /* Assets.xcassets */; };
 		41BDD4D22A2E4AB00010C3BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BDD4D02A2E4AB00010C3BD /* LaunchScreen.storyboard */; };
@@ -53,7 +54,6 @@
 		B56C69492A5A82BB000D748B /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = B56C69482A5A82BB000D748B /* Swifter */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B56C694B2A5A8334000D748B /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56C694A2A5A8334000D748B /* DemoViewController.swift */; };
 		B56C694E2A63C050000D748B /* history_bot_response.json in Resources */ = {isa = PBXBuildFile; fileRef = B56C694D2A63C050000D748B /* history_bot_response.json */; };
-		B581FFFC2A3EE21C0008CE1A /* ContainerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581FFFB2A3EE21C0008CE1A /* ContainerTableView.swift */; };
 		B5B3D4542A2F41D0000291BA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B3D4532A2F41D0000291BA /* MainViewController.swift */; };
 		B5B3D4582A302C89000291BA /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B3D4572A302C89000291BA /* UIView+Ext.swift */; };
 		B5B3D45F2A303D8E000291BA /* SelectedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B3D45E2A303D8E000291BA /* SelectedButton.swift */; };
@@ -102,6 +102,7 @@
 		4149382B2D91754400D15773 /* MainViewController+Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Themes.swift"; sourceTree = "<group>"; };
 		418880CE2DA42EC4002708BC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		418880D22DA7A02E002708BC /* MainViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+UI.swift"; sourceTree = "<group>"; };
+		41B014CF2E38E3D500027B4C /* ContainerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTableView.swift; sourceTree = "<group>"; };
 		41BDD4C22A2E4AAE0010C3BD /* ChatCenterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatCenterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BDD4C52A2E4AAE0010C3BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41BDD4CE2A2E4AB00010C3BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -141,7 +142,6 @@
 		B5439D152A693C340078E062 /* history_voice_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = history_voice_response.json; sourceTree = "<group>"; };
 		B56C694A2A5A8334000D748B /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		B56C694D2A63C050000D748B /* history_bot_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = history_bot_response.json; sourceTree = "<group>"; };
-		B581FFFB2A3EE21C0008CE1A /* ContainerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTableView.swift; sourceTree = "<group>"; };
 		B5B3D4532A2F41D0000291BA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B5B3D4572A302C89000291BA /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		B5B3D45E2A303D8E000291BA /* SelectedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedButton.swift; sourceTree = "<group>"; };
@@ -323,6 +323,7 @@
 			children = (
 				B53EF9452A330BB100D5A072 /* AddDataViewController.swift */,
 				B53EF9472A3433D100D5A072 /* TextFieldTabelViewCell.swift */,
+				41B014CF2E38E3D500027B4C /* ContainerTableView.swift */,
 			);
 			path = AddDataViewController;
 			sourceTree = "<group>";
@@ -386,7 +387,6 @@
 		B5B3D45D2A303D7B000291BA /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				B581FFFB2A3EE21C0008CE1A /* ContainerTableView.swift */,
 				B5B3D45E2A303D8E000291BA /* SelectedButton.swift */,
 				B53EF9382A31925200D5A072 /* BaseButtons.swift */,
 			);
@@ -612,10 +612,10 @@
 				B5B3D4542A2F41D0000291BA /* MainViewController.swift in Sources */,
 				B53EF93E2A32DBC200D5A072 /* SelectDataViewController.swift in Sources */,
 				B53EF9672A38586A00D5A072 /* String+Ext.swift in Sources */,
-				B581FFFC2A3EE21C0008CE1A /* ContainerTableView.swift in Sources */,
 				B53EF94D2A36F1A600D5A072 /* DemoUser.swift in Sources */,
 				B5439D0A2A68E4260078E062 /* ConstantsResponse.swift in Sources */,
 				B53EF94A2A36F12400D5A072 /* SelectedTableViewCell.swift in Sources */,
+				41B014D02E38E3D500027B4C /* ContainerTableView.swift in Sources */,
 				B5439D082A68E3EA0078E062 /* Models.swift in Sources */,
 				414937C32D88410F00D15773 /* ChatCenterServerEmulator.swift in Sources */,
 				411B85012A7D1820009076F7 /* Preferences.swift in Sources */,
@@ -794,8 +794,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				ASSETCATALOG_WARNINGS = NO;
-				CODE_SIGN_ENTITLEMENTS = ChatCenterDemo/Resources/ChatCenterDemo.entitlements;
 				CURRENT_PROJECT_VERSION = 35;
+				DEVELOPMENT_TEAM = D54N9JXN8Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -839,8 +839,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				ASSETCATALOG_WARNINGS = NO;
-				CODE_SIGN_ENTITLEMENTS = ChatCenterDemo/Resources/ChatCenterDemo.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 35;
+				DEVELOPMENT_TEAM = D54N9JXN8Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -868,7 +870,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.advisa.chatcenter.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ChatCenterDemo;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

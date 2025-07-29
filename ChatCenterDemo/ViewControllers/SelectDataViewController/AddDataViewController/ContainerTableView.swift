@@ -68,7 +68,8 @@ final class ContainerTableView: UIView {
             guard
                 let webSocketURL = URL(string: allCells[2].getTextFieldValue()),
                 let restURL = URL(string: allCells[3].getTextFieldValue()),
-                let dataStoreURL = URL(string: allCells[4].getTextFieldValue())
+                let dataStoreURL = URL(string: allCells[4].getTextFieldValue()),
+                let apiVersion = UInt(allCells[6].getTextFieldValue())
             else {
                 viewController?.validErrorFields()
                 return
@@ -78,7 +79,8 @@ final class ContainerTableView: UIView {
                                 providerUid: allCells[1].getTextFieldValue(),
                                 restURL: restURL.absoluteString,
                                 dataStoreURL: dataStoreURL.absoluteString,
-                                appMarker: allCells[5].getTextFieldValue())
+                                appMarker: allCells[5].getTextFieldValue(),
+                                apiVersion: apiVersion)
 
             if index != -1 {
                 server.isSelected = isSelected
@@ -160,7 +162,7 @@ extension ContainerTableView: UITableViewDataSource {
             if numberOfRowsInSection == 0 {
                 return 1
             }
-            return 5
+            return 6
         }
         /// экран выбора - количество серверов/пользователей
         switch type {
@@ -190,6 +192,8 @@ extension ContainerTableView: UITableViewDataSource {
                     cell.setupCell(type: .url, text: servers[index].dataStoreURL, placeholder: "Data Store URL")
                 case 4:
                     cell.setupCell(type: .text, text: servers[index].appMarker, placeholder: "App Marker")
+                case 5:
+                    cell.setupCell(type: .text, text: servers[index].apiVersion.description, placeholder: "Версия API")
                 default:
                     cell.setupCell(type: .url)
                 }
@@ -236,6 +240,8 @@ extension ContainerTableView: UITableViewDataSource {
                     cell.setupCell(type: .url, placeholder: "Data Store URL")
                 case 4:
                     cell.setupCell(type: .text, placeholder: "App Marker")
+                case 5:
+                    cell.setupCell(type: .text, placeholder: "Версия API")
                 default:
                     cell.setupCell(type: .url)
                 }

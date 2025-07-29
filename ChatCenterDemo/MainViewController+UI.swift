@@ -180,7 +180,7 @@ extension MainViewController {
 
     func checkMainButtonAvailability() {
         let newSelectedServer = (Preferences().get(type: [Server].self, forKey: .servers) ?? []).first { $0.isSelected == true }
-        if selectedServer?.name != newSelectedServer?.name {
+        if selectedServer != newSelectedServer {
             selectedServer = newSelectedServer
         }
 
