@@ -6,7 +6,7 @@
 //
 
 import ChatCenterUI
-import UIKit
+import UIKit.UIColor
 
 /// Настройки тем оформления
 extension MainViewController {
@@ -14,13 +14,16 @@ extension MainViewController {
         // Создание компонентов дизайн системы
         let components = ChatComponents(typography: typography)
         components.searchBarStyle.cancelButtonStyle.tintColor = .black
+        components.loadingChatStyle.loadingIndicatorStyle.backgroundColor = .systemGray3
+        components.loadingChatStyle.loadingIndicatorStyle.cornerRadius = 20.0
 
         // Создание темы
         let theme = ChatTheme(components: components)
 
         // Получение настроек экрана чата
         let chatFlow = theme.flows.chatFlow
-        chatFlow.systemMessages.surveyMessageStyle.type = showSurveyInUserStyle ? .user : .system
+        chatFlow.pullToRefreshColor = .systemBlue
+        chatFlow.outcomeMessages.imageMessageStyle.timeStyle.backgroundColor = .white
         chatFlow.incomeMessages.showAvatar = showIncomeAvatar
         chatFlow.outcomeMessages.showAvatar = showOutcomeAvatar
 
@@ -55,13 +58,13 @@ extension MainViewController {
     private var colors: ChatColors {
         let colors = ChatColors()
         colors.main = UIColor(named: "MainColor") ?? .black
-        colors.secondary = UIColor(named: "SecondaryColor") ?? .systemGreen
+        colors.secondary = UIColor(named: "SecondColor") ?? .systemGreen
         colors.disabled = .systemGray3
         colors.background = .systemBackground
         colors.backgroundWhite = .systemFill
         colors.link = .systemBlue
         colors.linkLight = .systemBlue.withAlphaComponent(0.7)
-        colors.positive = UIColor(named: "SecondaryColor") ?? .systemTeal
+        colors.positive = UIColor(named: "SecondColor") ?? .systemTeal
         colors.warning = .systemOrange
         colors.error = .systemRed
         colors.errorLight = .systemRed.withAlphaComponent(0.7)

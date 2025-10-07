@@ -344,6 +344,50 @@
             "origin": "threads"
         },
 		{
+			"uuid" : "603F9501-6F5F-4C47-A1D5-995DFE725E49",
+			"receivedDate" : "2025-09-18T07:26:46.248Z",
+			"read" : true,
+			"massPushMessage" : false,
+			"providerIds" : [
+
+			],
+			"speechStatus" : "error",
+			"type" : "MESSAGE",
+			"settings" : {
+				"blockInput" : false,
+				"masked" : false
+			},
+			"authorized" : true,
+			"personalOffer" : false,
+			"quickReplies" : [
+
+			],
+			"preRegister" : false,
+			"attachments" : [
+				{
+					"result" : "https:\/\/edna.io\/beta3\/files\/20250918-2b192316-27fd-45ed-8f85-efaa90798d39.wav",
+					"optional" : {
+						"name" : "voice18.09.2025.10:26:45.729.wav",
+						"size" : 446300,
+						"type" : "audio\/wav"
+					},
+					"fileId" : "20250918-2b192316-27fd-45ed-8f85-efaa90798d39.wav",
+					"id" : 4261,
+					"name" : "voice18.09.2025.10:26:45.729.wav",
+					"size" : 446300,
+					"type" : "audio\/wav",
+					"error" : false,
+					"state" : "READY",
+					"url" : "https:\/\/edna.io\/beta3\/files\/20250918-2b192316-27fd-45ed-8f85-efaa90798d39.wav"
+				}
+			],
+			"threadId" : 7501,
+			"origin" : "threads",
+			"quotes" : [
+
+			]
+		},
+		{
 			"uuid" : "d4dbcb02-0e92-4438-a5ed-35506f6cab54",
 			"receivedDate" : "2025-06-18T07:06:47.664Z",
 			"read" : false,

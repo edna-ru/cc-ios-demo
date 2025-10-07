@@ -42,6 +42,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    func application(_: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: any Error) {
+        print("Failed to register: \(error)")
+    }
+
     func application(_: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         /// Передача токена  устройства для отправки пуш уведомлений из СДК
         ChatCenterUISDK.setDeviceToken(deviceToken)

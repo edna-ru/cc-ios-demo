@@ -184,10 +184,7 @@ extension MainViewController {
             selectedServer = newSelectedServer
         }
 
-        let newSelectedUser = (Preferences().get(type: [DemoUser].self, forKey: .users) ?? []).first { $0.isSelected == true }
-        if selectedUser?.id != newSelectedUser?.id {
-            selectedUser = newSelectedUser
-        }
+        selectedUser = (Preferences().get(type: [DemoUser].self, forKey: .users) ?? []).first { $0.isSelected == true }
 
         mainButton.isEnabled = selectedUser != nil && selectedServer != nil
     }

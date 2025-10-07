@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ChatCenterUI
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ChatCenterUI
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import AVFoundation
 @_exported import ChatCenterUI
 import CryptoKit
@@ -57,13 +57,9 @@ import os
 @objc @_hasMissingDesignatedInitializers @objcMembers public class ChatMessagesStyles : ChatCenterUI.ChatStyle {
   @objc public init(components: ChatCenterUI.ChatComponents, text: ChatCenterUI.TextMessageStyle, image: ChatCenterUI.ImageMessageStyle, audio: ChatCenterUI.AudioMessageStyle, file: ChatCenterUI.FileMessageStyle, quote: ChatCenterUI.QuoteStyle, showAvatar: Swift.Bool, bubbleColor: UIKit.UIColor)
   @objc public var isStroked: Swift.Bool
-  @objc final public let bubbleColor: UIKit.UIColor
-  @objc public var text: UIKit.UIColor {
-    @objc get
-    @objc set
-  }
-  @objc public var link: UIKit.UIColor
-  @objc public var time: ChatCenterUI.TextChatStyle
+  @objc public var bubbleColor: UIKit.UIColor
+  @objc public var linkColor: UIKit.UIColor
+  @objc public var timeStyle: ChatCenterUI.TextChatStyle
   @objc public var quoteStyle: ChatCenterUI.QuoteStyle
   @objc public var headerStyle: ChatCenterUI.TextChatStyle
   @objc public var filledMaskImage: UIKit.UIImage
@@ -80,20 +76,19 @@ import os
   }
   @objc public var failed: ChatCenterUI.TextChatStyle
   @objc public var failedBubbleColor: UIKit.UIColor
-  @objc public var deletedText: ChatCenterUI.TextChatStyle
+  @objc public var deletedTextStyle: ChatCenterUI.TextChatStyle
   @objc public var editedStatusImage: UIKit.UIImage {
     @objc get
     @objc set
   }
   @objc public var showAvatar: Swift.Bool
-  @objc final public let timeBackgroundColor: UIKit.UIColor
-  @objc public var textMessage: ChatCenterUI.TextMessageStyle
-  @objc public var imageMessage: ChatCenterUI.ImageMessageStyle
-  @objc public var audioMessage: ChatCenterUI.AudioMessageStyle
-  @objc public var fileMessage: ChatCenterUI.FileMessageStyle
-  @objc public var pendingStatus: UIKit.UIColor
-  @objc public var deliveredStatus: UIKit.UIColor
-  @objc public var readStatus: UIKit.UIColor
+  @objc public var textMessageStyle: ChatCenterUI.TextMessageStyle
+  @objc public var imageMessageStyle: ChatCenterUI.ImageMessageStyle
+  @objc public var audioMessageStyle: ChatCenterUI.AudioMessageStyle
+  @objc public var fileMessageStyle: ChatCenterUI.FileMessageStyle
+  @objc public var pendingStatusColor: UIKit.UIColor
+  @objc public var deliveredStatusColor: UIKit.UIColor
+  @objc public var readStatusColor: UIKit.UIColor
   @objc public var pendingStatusImage: UIKit.UIImage {
     @objc get
     @objc set
@@ -159,13 +154,13 @@ import os
 }
 @objc public enum CCState : Swift.Int {
   case notConnected = 0
-  case connecting
   case loadingHistory
+  case connecting
   case ready
   case waitingForSpecialist
   case working
-  case closed
   case disconnected
+  case closed
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -232,7 +227,6 @@ extension ChatCenterUI.CCChatModel {
   @objc dynamic public var surveyCompletionDelay: Swift.Int {
     @objc get
   }
-  @objc dynamic public func loadHistoryObjc()
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class MigrationServiceLocator : ObjectiveC.NSObject {
   @objc public static var shared: ChatCenterUI.MigrationServiceLocator
@@ -311,7 +305,6 @@ extension ChatCenterUI.CCChatModel {
   case operatorJoined
   case operatorLeft
   case typing
-  case messagesRead
   case survey
   case surveyQuestionAnswer
   case requestCloseThread
@@ -537,6 +530,7 @@ public struct ChatConfig : Swift.CustomDebugStringConvertible {
   public var searchEnabled: Swift.Bool
   public var userInputEnabled: Swift.Bool
   public var keepSocketActive: Swift.Bool
+  public var keepSocketActiveDuringOperatorSession: Swift.Bool
   public var scrollToLatest: Swift.Bool
   public var linkPreviewEnabled: Swift.Bool
   public var surveyCompletionDelay: Swift.Int
@@ -652,10 +646,9 @@ public enum ChatMessage {
 @objc @objcMembers public class ChatFlow : ObjectiveC.NSObject {
   @objc public init(components: ChatCenterUI.ChatComponents)
   @objc public var navigationBarStyle: ChatCenterUI.NavigationBarStyle
-  @objc public var loadingChat: ChatCenterUI.LoadingChatStyle
-  @objc public var typing: ChatCenterUI.ChatText?
-  @objc public var loaderChatController: ChatCenterUI.ErrorPlaceholderChatStyle
-  @objc public var chatPlaceholder: ChatCenterUI.PlaceholderChatStyle
+  @objc public var loadingChatStyle: ChatCenterUI.LoadingChatStyle
+  @objc public var errorPlaceholderStyle: ChatCenterUI.ErrorPlaceholderChatStyle
+  @objc public var chatPlaceholderStyle: ChatCenterUI.PlaceholderChatStyle
   @objc public var incomeMessages: ChatCenterUI.ChatMessagesStyles {
     @objc get
     @objc set
@@ -691,7 +684,13 @@ public enum ChatMessage {
     @objc get
     @objc set
   }
-  @objc public func messageStyles(for isOutgoing: Swift.Bool) -> ChatCenterUI.ChatMessagesStyles
+  @objc public var pullToRefreshColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc public var audioPlayerStyle: ChatCenterUI.AudioPlayerChatStyle
+  @objc final public let components: ChatCenterUI.ChatComponents
+  @objc public func messageStyle(for isOutgoing: Swift.Bool) -> ChatCenterUI.ChatMessagesStyles
   @objc deinit
 }
 @objc extension UIKit.UIImage {
@@ -709,14 +708,14 @@ public enum ChatMessage {
 @objc @_inheritsConvenienceInitializers @objcMembers public class CCFileSettings : ObjectiveC.NSObject {
   @objc public static let shared: ChatCenterUI.CCFileSettings
   @objc public static func isSupportedExtension(for url: Foundation.URL?) -> Swift.Bool
-  @objc public static func getDocumentTypes() -> [Swift.String]
+  @objc public static func getDocumentTypes() -> [UniformTypeIdentifiers.UTType]
   @objc public static func getFileUTI(by url: Foundation.URL) -> Swift.String?
   @objc public static func isImageUTI(_ fileUTI: Swift.String) -> Swift.Bool
   @objc public static func mimeType(for url: Foundation.URL) -> Swift.String
   @objc public func setConfig(_ dictionary: [Swift.String : Any]?)
   @objc public func fileSizeLimit() -> Swift.Int
   @objc public func showAccessDeniedAlert(in viewController: UIKit.UIViewController) -> Swift.Bool
-  @objc public func fileExtensions() -> Swift.Set<Swift.String>
+  @objc public func fileExtensions() -> Swift.Set<UniformTypeIdentifiers.UTType>
   @objc public func hasAccessToPhotos() -> Swift.Bool
   @objc override dynamic public init()
   @objc deinit
@@ -780,6 +779,10 @@ public struct MultipartFormData {
     @objc set
   }
   @objc public var loadingChatStyle: ChatCenterUI.LoadingChatStyle {
+    @objc get
+    @objc set
+  }
+  @objc public var loadingIndicatorStyle: ChatCenterUI.LoadingIndicatorChatStyle {
     @objc get
     @objc set
   }
@@ -890,8 +893,8 @@ public struct ChatLocalizationConfig {
 }
 @objc @objcMembers public class ChatText : ObjectiveC.NSObject {
   @objc public init(text: Swift.String? = nil, style: ChatCenterUI.TextChatStyle)
-  @objc final public let text: Swift.String?
-  @objc final public let style: ChatCenterUI.TextChatStyle
+  @objc public var text: Swift.String?
+  @objc public var style: ChatCenterUI.TextChatStyle
   @objc deinit
 }
 @objc public protocol THRJSQMessageBubbleImageDataSource : ObjectiveC.NSObjectProtocol {
@@ -910,13 +913,13 @@ public struct ChatLocalizationConfig {
   @objc deinit
 }
 @objc @objcMembers final public class SystemFilePickerViewController : ObjectiveC.NSObject {
-  @objc public init(hasAccessToPhotos: Swift.Bool, hasAccessFile: Swift.Bool, documentTypes: [Swift.String], fileSizeLimit: Swift.Double)
+  @objc public init(viewController: UIKit.UIViewController, hasAccessToPhotos: Swift.Bool, hasAccessFile: Swift.Bool, documentTypes: [UniformTypeIdentifiers.UTType], fileSizeLimit: Swift.Double)
   @objc final public var dismissAction: (() -> Swift.Void)?
   @objc final public var selectImageAction: ((UIKit.UIImage) -> Swift.Void)?
   @objc final public var selectFileAction: ((Foundation.URL) -> Swift.Void)?
   @objc final public var maxImagesCount: Swift.Int
   @objc final public var maxPhotoSide: CoreFoundation.CGFloat
-  @objc final public func show(in viewController: UIKit.UIViewController)
+  @objc final public func show()
   @objc deinit
 }
 extension ChatCenterUI.SystemFilePickerViewController : PhotosUI.PHPickerViewControllerDelegate {
@@ -1064,7 +1067,8 @@ public struct ChatSSLCertificate {
   @objc deinit
 }
 @objc @objcMembers public class ChatImage : ObjectiveC.NSObject {
-  @objc public init(named: Swift.String, tintColor: UIKit.UIColor? = nil)
+  @objc public init(image: UIKit.UIImage, tintColor: UIKit.UIColor? = nil)
+  @objc public init(named: Swift.String, bundle: Foundation.Bundle = Bundle(for: ChatImage.self), tintColor: UIKit.UIColor? = nil)
   @objc public init(system name: Swift.String, tintColor: UIKit.UIColor? = nil)
   @objc public init(system name: Swift.String, size: CoreFoundation.CGFloat = 14, tintColor: UIKit.UIColor? = nil)
   @objc final public let image: UIKit.UIImage
@@ -1234,31 +1238,26 @@ public struct ChatUser {
 }
 @objc public protocol CCChatModelDelegate : ObjectiveC.NSObjectProtocol {
   @objc func initChat()
-  @objc func initChatNoClearHistory()
   @objc func messagesUpdated()
   @objc func specialistConnected()
   @objc func specialistDisconnected()
   @objc func searchingForSpecialist(_ searching: Swift.Bool)
-  @objc func finishReceivingPhotoMessage(_ item: Any)
   @objc func showQuickReplies(_ quickReplies: [Any]?)
   @objc func hideQuickRepliesIfNeeded()
   @objc func finishReceivingOldMessages(_ count: Swift.Int, options: Any)
   @objc func finishSendingMessageAnimated(_ animated: Swift.Bool, clearInputText: Swift.Bool)
-  @objc func didTapToScroll(_ message: ChatCenterUI.THRMessage, animated: Swift.Bool)
   @objc func updateMessages(_ messages: [ChatCenterUI.THRMessage])
   @objc func collectionViewReloadData()
   @objc func collectionViewUpdateItemsAtIndexPaths(_ paths: [Foundation.NSIndexPath])
-  @objc func markIncomingMessagesRead(_ messages: [ChatCenterUI.THRMessage], completion: (() -> Swift.Void)?)
   @objc func movedItem(from: Swift.Int, toIdx: Swift.Int)
   @objc func clientConnected(_ client: ChatCenterUI.THRClient)
   @objc func specialistTyping(_: Swift.Bool)
   @objc func removeSurvey(_ survey: ChatCenterUI.THRSurvey?)
   @objc func setInputToolbarEnabledIfPossible(_ enabled: Swift.Bool)
-  @objc func setScheduleTitleMessage(_ title: Swift.String?)
-  @objc func inputToolbarSetChatInactive(_ state: Swift.Bool)
   @objc func finishReceivingMessage()
   @objc func preloadChatViewControllerSet(error: (any Swift.Error)?)
   @objc func checkLaunchViewVisibility(_ isLoadedHistory: Swift.Bool)
+  @objc func showPreloadChatError(_ error: Foundation.NSError)
   @objc func addFile(_ file: ChatCenterUI.THRJSQFile)
 }
 @objc @objcMembers public class CCChatModel : ObjectiveC.NSObject {
@@ -1267,7 +1266,7 @@ public struct ChatUser {
   @objc weak public var viewDelegate: (any ChatCenterUI.CCChatModelDelegate)?
   @objc public var historyIsLoaded: Swift.Bool
   @objc public var cellSizeCache: Foundation.NSMutableDictionary
-  @objc public var state: ChatCenterUI.CCChatState
+  @objc public var stateModel: ChatCenterUI.CCChatState
   @objc public var specialist: ChatCenterUI.THRSpecialist?
   @objc public var configState: ChatCenterUI.CCChatModelConfigState
   @objc public var messages: [ChatCenterUI.THRMessage]
@@ -1279,13 +1278,11 @@ public struct ChatUser {
     @objc get
   }
   @objc public func initChat()
-  @objc public func reinitChat()
   @objc public func sendMessage(_ message: ChatCenterUI.THRMessage, completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
   @objc public func complete(survey: ChatCenterUI.THRSurvey)
   @objc public func sendFileMessage(_ newMessage: ChatCenterUI.THRMessage, retry: Swift.Bool = false, completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
   @objc public func connectClient()
   @objc public func markIncomingMessagesAsRead(_ messages: [ChatCenterUI.THRMessage], completion: (() -> Swift.Void)?)
-  @objc public func clearHistory()
   @objc public func cleanCache()
   @objc public func closeChat()
   @objc public func isAvailable() -> Swift.Bool
@@ -1296,13 +1293,10 @@ public struct ChatUser {
   @objc public func retrySendMessage(_ message: ChatCenterUI.THRMessage)
   @objc public func message(at index: Swift.Int) -> ChatCenterUI.THRMessage?
   @objc public func deleteMessage(_ message: ChatCenterUI.THRMessage)
-  @objc public func specialistById(specialist: ChatCenterUI.THRSpecialist) -> ChatCenterUI.THRSpecialist?
   @objc public func checkAndShowQuickReplies()
-  @objc public func initializeChat(completion: @escaping ((any Swift.Error)?) -> Swift.Void)
-  @objc public func sendClientInfo(preRegistration: Swift.Bool, withCompletion completion: (((any Swift.Error)?) -> Swift.Void)?)
-  @objc public func loadServerConfigIfNeeded(completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
   @objc public func notifyUnreadCounterChanged(newCount: Swift.Int)
   @objc public func removeFailed(_ message: ChatCenterUI.THRMessage)
+  @objc public func specialistById(specialist: ChatCenterUI.THRSpecialist) -> ChatCenterUI.THRSpecialist?
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class PhotoPickerChatStyle : ChatCenterUI.ChatStyle {
   @objc override public init(images _: ChatCenterUI.ChatImages, colors: ChatCenterUI.ChatColors, typography: ChatCenterUI.ChatTypography)
@@ -1392,7 +1386,6 @@ extension ChatCenterUI.CCChatModel {
   @objc deinit
 }
 public typealias Completion<T> = (T?, (any Swift.Error)?) -> Swift.Void
-public typealias MessagesReadCompletion = ChatCenterUI.Completion<[ChatCenterUI.THRMessage]>
 @_hasMissingDesignatedInitializers final public class CCRestDataProvider {
   @objc deinit
   final public let chatConfig: ChatCenterUI.ChatConfig
@@ -1426,8 +1419,7 @@ public typealias MessagesReadCompletion = ChatCenterUI.Completion<[ChatCenterUI.
   @objc public var emptyFillerColor: UIKit.UIColor?
   @objc public var timeAboveImageColor: UIKit.UIColor?
   @objc public var timeAboveImageBackgroundColor: UIKit.UIColor?
-  @objc final public let timeBackgroundColor: UIKit.UIColor
-  @objc public var time: UIKit.UIColor
+  @objc public var timeStyle: ChatCenterUI.TextChatStyle
   @objc public var imageEdgesActivated: Swift.Bool
   @objc public var imageEdges: UIKit.UIEdgeInsets
   @objc public var imageCornerRadius: CoreFoundation.CGFloat
@@ -1795,7 +1787,7 @@ extension Foundation.URLRequest {
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class LoadingIndicatorChatStyle : ChatCenterUI.ChatStyle {
   @objc override public init(components: ChatCenterUI.ChatComponents)
-  @objc final public let loaderColor: UIKit.UIColor
+  @objc public var indicatorColor: UIKit.UIColor
   @objc deinit
 }
 public struct ChatAuth {
@@ -1927,18 +1919,10 @@ final public class ChatCenterUISDK {
   public static func setDeviceToken(_ deviceToken: Foundation.Data)
   final public func authorize(user: ChatCenterUI.ChatUser, auth: ChatCenterUI.ChatAuth = ChatAuth())
   final public func deauthorizeUser()
-  #if compiler(>=5.3) && $TypedThrows
   final public func logout() throws(ChatCenterUI.ChatCenterUIError)
-  #endif
-  #if compiler(>=5.3) && $TypedThrows
   final public func getChat(userInfo: [Swift.String : Any]? = nil) throws(ChatCenterUI.ChatCenterUIError) -> UIKit.UIViewController
-  #endif
-  #if compiler(>=5.3) && $TypedThrows
   final public func send(message: ChatCenterUI.ChatMessage) throws(ChatCenterUI.ChatCenterUISendMessageError)
-  #endif
-  #if compiler(>=5.3) && $TypedThrows
   final public func handleNotification(userInfo: [Swift.String : Any]) throws(ChatCenterUI.ChatCenterUIError)
-  #endif
 }
 public enum ChatCenterUISendMessageError : Swift.Error {
   case userNotAuthorized

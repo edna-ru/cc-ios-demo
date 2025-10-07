@@ -168,7 +168,7 @@ final class SelectDataViewController: UIViewController {
 
 // MARK: - DismissActionOutput
 
-extension SelectDataViewController: RemoveActionOutput {
+extension SelectDataViewController: @preconcurrency RemoveActionOutput {
     func removeAll() {
         setupContainerView()
         containerView.isHidden = false

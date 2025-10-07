@@ -59,12 +59,11 @@ final class DemoViewController: UIViewController, UINavigationControllerDelegate
                                                       webSocket: ChatCenterServerEmulator.URLS.websocket,
                                                       dataStore: ChatCenterServerEmulator.URLS.dataStore)
 
-        var chatConfig = ChatConfig(transportConfig: chatTransportConfig,
+        let chatConfig = ChatConfig(transportConfig: chatTransportConfig,
                                     networkConfig: ChatNetworkConfig(sslPinning: ChatNetworkConfig.SSLPinningConfig(allowUntrustedSSLCertificate: true)))
-        chatConfig.linkPreviewEnabled = true
         chatCenterSdk = ChatCenterUISDK(providerUid: "edna_demo",
                                         chatConfig: chatConfig,
-                                        loggerConfig: ChatLoggerConfig(logLevel: .all))
+                                        loggerConfig: ChatLoggerConfig(logLevel: .off))
 
         if let lightTheme {
             chatCenterSdk?.theme = lightTheme

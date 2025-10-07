@@ -90,27 +90,33 @@ final class ContainerTableView: UIView {
             }
             Preferences().save(servers, forKey: .servers)
         case .user:
-            if allCells[0].getTextFieldValue().isEmpty {
-                viewController?.validErrorFields()
-                return
-            }
-            var user = DemoUser(id: allCells[0].getTextFieldValue(),
-                                name: allCells[1].getTextFieldValue(),
-                                data: allCells[2].getTextFieldValue().toDictionary,
-                                signature: allCells[3].getTextFieldValue(),
-                                authToken: allCells[4].getTextFieldValue(),
-                                authSchema: allCells[5].getTextFieldValue(),
-                                authMethod: allCells[6].getTextFieldValue())
-            if index != -1 {
-                user.isSelected = isSelected
-                users[index] = user
-            } else {
-                users.append(user)
-            }
-            Preferences().save(users, forKey: .users)
+            saveUser()
         }
         viewController?.navigationController?.popViewController(animated: true)
         viewController?.dismiss(animated: true, completion: nil)
+    }
+
+    // MARK: Fileprivate
+
+    fileprivate func saveUser() {
+        if allCells[0].getTextFieldValue().isEmpty {
+            viewController?.validErrorFields()
+            return
+        }
+        var user = DemoUser(id: allCells[0].getTextFieldValue(),
+                            name: allCells[1].getTextFieldValue(),
+                            data: allCells[2].getTextFieldValue().toDictionary,
+                            signature: allCells[3].getTextFieldValue(),
+                            authToken: allCells[4].getTextFieldValue(),
+                            authSchema: allCells[5].getTextFieldValue(),
+                            authMethod: allCells[6].getTextFieldValue())
+        if index != -1 {
+            user.isSelected = isSelected
+            users[index] = user
+        } else {
+            users.append(user)
+        }
+        Preferences().save(users, forKey: .users)
     }
 
     // MARK: Private

@@ -44,6 +44,7 @@ enum SettingsKeys: String {
     case voiceRecordingEnabled
     case linkPreviewEnabled
     case keepWebSocketActive
+    case keepSocketActiveDuringOperatorSession
     case showIncomeAvatar
     case showOutcomeAvatar
     case inputAlignment
@@ -79,6 +80,7 @@ struct SettingsView: View {
         BooleanSetting(title: "Голосовые сообщения", key: SettingsKeys.voiceRecordingEnabled.rawValue),
         BooleanSetting(title: "Отображение OpenGraph", key: SettingsKeys.linkPreviewEnabled.rawValue),
         BooleanSetting(title: "Оставлять WebSocket активным (тест счетчика)", key: SettingsKeys.keepWebSocketActive.rawValue),
+        BooleanSetting(title: "Оставлять WebSocket активным пока есть диалог", key: SettingsKeys.keepSocketActiveDuringOperatorSession.rawValue),
     ]
     let uiSettings: [BooleanSetting] = [
         BooleanSetting(title: "Завершение опроса в старом стиле", key: SettingsKeys.userStyleSurvey.rawValue),

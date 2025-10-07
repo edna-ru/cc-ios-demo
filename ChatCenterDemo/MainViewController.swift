@@ -72,15 +72,15 @@ final class MainViewController: UIViewController {
 
         setupUI()
 
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { granted, _ in
-            guard granted else {
-                return
-            }
-
-            UNUserNotificationCenter.current().getNotificationSettings { settings in
-                guard settings.authorizationStatus == .authorized else {
+        DispatchQueue.global().async {
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: [.alert, .badge, .sound])
+            { success, error in
+                guard success else {
+                    print(error?.localizedDescription ?? "")
                     return
                 }
+
                 DispatchQueue.main.async {
                     UIApplication.shared.registerForRemoteNotifications()
                 }
@@ -122,6 +122,7 @@ final class MainViewController: UIViewController {
         chatConfig.voiceRecordingEnabled = voiceRecordingEnabled
         chatConfig.linkPreviewEnabled = linkPreviewEnabled
         chatConfig.keepSocketActive = keepWebSocketActive
+        chatConfig.keepSocketActiveDuringOperatorSession = keepSocketActiveDuringOperatorSession
 
         // 4. Инициализация СДК
         let chatCenterSdk = ChatCenterUISDK(providerUid: selectedServer.providerUid,
@@ -204,14 +205,26 @@ final class MainViewController: UIViewController {
     @AppStorage(SettingsKeys.keepWebSocketActive.rawValue)
     private var keepWebSocketActive: Bool = false
 
+    @AppStorage(SettingsKeys.keepSocketActiveDuringOperatorSession.rawValue)
+    private var keepSocketActiveDuringOperatorSession: Bool = false
+
     /// Экземпляр СДК
     private var chatCenterSDK: ChatCenterUISDK?
 }
 
 /// Реализация делегата ChatCenterUI SDK
-extension MainViewController: ChatCenterUISDKDelegate {
+extension MainViewController: @preconcurrency ChatCenterUISDKDelegate {
     /// Реализация метода оповещения о новых сообщениях
     func chatCenterUI(chatCenter _: ChatCenterUI.ChatCenterUISDK, didChangeUnreadMessages count: Int) {
         mainButton.setBadgeCount(count)
+    }
+
+    func chatCenterUI(chatCenter _: ChatCenterUISDK, didReceiveNetwork error: any Error) {
+        // показываем в демо ошибки запросов до открытия чата
+        if navigationController?.topViewController == self {
+            let alert = UIAlertController(title: "Сетевая ошибка в СДК", message: error.localizedDescription, preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "ОК", style: .cancel, handler: nil))
+            present(alert, animated: true)
+        }
     }
 }

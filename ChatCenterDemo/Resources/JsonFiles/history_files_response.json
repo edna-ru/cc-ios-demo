@@ -289,7 +289,61 @@
         "authorized": true,
         "massPushMessage": false,
         "origin": "threads"
-    }
+    },
+	{
+		"uuid" : "6bd2cf9b-f3e0-40c1-854f-7e758651857d",
+		"receivedDate" : "2025-10-06T07:50:03.406Z",
+		"read" : true,
+		"massPushMessage" : false,
+		"providerIds" : [
+
+		],
+		"settings" : {
+			"blockInput" : false,
+			"masked" : false
+		},
+		"type" : "MESSAGE",
+		"authorized" : true,
+		"personalOffer" : false,
+		"quickReplies" : [
+
+		],
+		"preRegister" : false,
+		"operator" : {
+			"status" : null,
+			"alias" : null,
+			"gender" : "FEMALE",
+			"id" : 4,
+			"role" : "OPERATOR",
+			"photoUrl" : null,
+			"organizationUnit" : "Skill Credit",
+			"name" : "Оператор1 Петровна"
+		},
+		"threadId" : 1733,
+		"text" : "text & pdf",
+		"attachments" : [
+			{
+				"result" : "https:\/\/arm-mobile4-ecc.edna.ru\/files\/20251006-372a641a-8b12-4a7e-b151-5ae2d2431a61.pdf",
+				"optional" : {
+					"name" : "pdf.pdf",
+					"size" : 662407,
+					"type" : "application\/pdf"
+				},
+				"fileId" : "20251006-372a641a-8b12-4a7e-b151-5ae2d2431a61.pdf",
+				"id" : 678,
+				"name" : "pdf.pdf",
+				"size" : 662407,
+				"type" : "application\/pdf",
+				"error" : false,
+				"state" : "READY",
+				"url" : "https:\/\/arm-mobile4-ecc.edna.ru\/files\/20251006-372a641a-8b12-4a7e-b151-5ae2d2431a61.pdf"
+			}
+		],
+		"quotes" : [
+
+		],
+		"origin" : "threads"
+	},
   ],
   "agentInfo": null,
   "allowedToSendMessages": true
