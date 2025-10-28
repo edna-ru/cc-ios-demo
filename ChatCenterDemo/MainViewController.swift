@@ -133,6 +133,7 @@ final class MainViewController: UIViewController {
         // 5. Настройка тем оформления
         chatCenterSdk.theme = makeLightTheme()
         chatCenterSdk.darkTheme = makeDarkTheme()
+        chatCenterSdk.localizationConfig = ChatLocalizationConfig(bundle: Bundle.main, tableName: "DemoLocalizable")
 
         // 6. Подписка на события делегата (если нужно, в этом примере для обработки счетчика непрочитанных)
         chatCenterSdk.delegate = self

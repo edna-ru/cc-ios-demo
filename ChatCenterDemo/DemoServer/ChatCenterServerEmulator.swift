@@ -58,7 +58,9 @@ final class ChatCenterServerEmulator: @unchecked Sendable {
         case images
         case system
         case text
+        case longHistory
         case voice
+        case phones
         case bot
         case errors
         case errorHistory
@@ -80,6 +82,10 @@ final class ChatCenterServerEmulator: @unchecked Sendable {
                 "Системные сообщения"
             case .text:
                 "Текстовые сообщения"
+            case .longHistory:
+                "Длинная история"
+            case .phones:
+                "Номера телефонов"
             case .voice:
                 "Голосовые сообщения"
             case .bot:
@@ -110,6 +116,8 @@ final class ChatCenterServerEmulator: @unchecked Sendable {
                 "history_system_response"
             case .text:
                 "history_text_response"
+            case .longHistory:
+                "history_long_response"
             case .voice:
                 "history_voice_response"
             case .bot:
@@ -126,6 +134,8 @@ final class ChatCenterServerEmulator: @unchecked Sendable {
                 "history_empty_response"
             case .chatStates:
                 "history_text_response"
+            case .phones:
+                "history_phones_response"
             }
         }
     }

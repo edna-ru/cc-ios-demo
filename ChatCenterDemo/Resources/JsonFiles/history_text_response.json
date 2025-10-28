@@ -1,343 +1,566 @@
 {
-  "messages": [
-    {
-      "type": "MESSAGE",
-      "threadId": 304,
-      "providerIds": [],
-      "uuid": "ad279408-a236-4fac-823b-a65a460dcb77",
-      "text": "Добрый день! Мы создаем экосистему бизнеса для качественного диалога между компанией и клиентами, встраиваем в нее новые удобные для потребителей цифровые каналы. Наш сайт: https://edna.ru/",
-      "receivedDate": "2023-03-22T08:42:02.061Z",
-      "attachments": [],
-      "quotes": [],
-      "quickReplies": [],
-      "read": true,
-      "settings": {
-        "blockInput": false,
-        "masked": false
-      },
-      "authorized": true,
-      "massPushMessage": false,
-      "origin": "threads"
-    },
-    {
-      "type": "AVERAGE_WAIT_TIME",
-      "threadId": 304,
-      "providerIds": [],
-      "uuid": "f583f7b4-fd6d-41af-8d59-8fd39ecee3bd",
-      "text": "Среднее время ожидания ответа составляет 2 минуты",
-      "receivedDate": "2023-03-22T08:42:02.392Z",
-      "display": true,
-      "authorized": true,
-      "massPushMessage": false,
-      "aps/sound": "default",
-      "origin": "threads"
-    },
-    {
-      "type": "OPERATOR_JOINED",
-      "threadId": 304,
-      "providerIds": [],
-      "uuid": "46c00e2e-3e65-4ea2-86d9-429c0726867e",
-      "operator": {
-        "id": 9,
-        "name": "Оператор Елена",
-        "alias": null,
-        "status": null,
-        "photoUrl": null,
-        "gender": "FEMALE",
-        "organizationUnit": "Skill Debet",
-        "role": "OPERATOR"
-      },
-      "text": "Вам ответит Оператор Елена",
-      "receivedDate": "2023-03-22T08:42:38.526Z",
-      "display": true,
-      "authorized": true,
-      "massPushMessage": false,
-      "aps/sound": "default",
-      "origin": "threads"
-    },
-    {
-      "type": "MESSAGE",
-      "threadId": 304,
-      "providerIds": [],
-      "uuid": "eda36c57-7286-4360-bb42-0cf3d7932113",
-      "operator": {
-        "id": 9,
-        "name": "Оператор Елена",
-        "alias": null,
-        "status": null,
-        "photoUrl": null,
-        "gender": "FEMALE",
-        "organizationUnit": "Skill Debet",
-        "role": "OPERATOR"
-      },
-      "text": "Добро пожаловать в наш чат! А кто такие Edna?",
-      "receivedDate": "2023-03-22T08:42:44.275Z",
-      "attachments": [],
-      "quotes": [],
-      "quickReplies": [],
-      "read": true,
-      "settings": {
-        "blockInput": false,
-        "masked": false
-      },
-      "authorized": true,
-      "massPushMessage": false,
-      "origin": "threads"
-    },
-    {
-      "type": "MESSAGE",
-      "threadId": 304,
-      "providerIds": [],
-      "uuid": "110c8a46-8c38-45df-9949-5f12b7922f01",
-      "text": "Edna – современное решение для построения диалога с клиентом",
-      "receivedDate": "2023-03-22T08:43:19.497Z",
-      "attachments": [],
-      "quotes": [
-        {
-          "type": "MESSAGE",
-          "threadId": 304,
-          "providerIds": [],
-          "uuid": "eda36c57-7286-4360-bb42-0cf3d7932113",
-          "operator": {
-            "id": 9,
-            "name": "Оператор Елена",
-            "alias": null,
-            "status": null,
-            "photoUrl": null,
-            "gender": "FEMALE",
-            "organizationUnit": "Skill Debet",
-            "role": "OPERATOR"
-          },
-          "text": "Добро пожаловать в наш чат! А кто такие Edna?",
-          "receivedDate": "2023-03-22T08:42:44.275Z",
-          "attachments": [],
-          "quotes": [],
-          "quickReplies": [],
-          "read": true,
-          "settings": {
-            "blockInput": false,
-            "masked": false
-          },
-          "authorized": true,
-          "massPushMessage": false,
-          "origin": "threads"
-        }
-      ],
-      "quickReplies": [],
-      "read": true,
-      "settings": {
-        "blockInput": false,
-        "masked": false
-      },
-      "authorized": true,
-      "massPushMessage": false,
-      "origin": "threads"
-    },
-    {
-      "type": "MESSAGE",
-      "threadId": 304,
-      "providerIds": [],
-      "uuid": "f78114b1-65c3-483e-a2c1-691c3d519b7d",
-      "operator": {
-        "id": 9,
-        "name": "Оператор Елена",
-        "alias": null,
-        "status": null,
-        "photoUrl": null,
-        "gender": "FEMALE",
-        "organizationUnit": "Skill Debet",
-        "role": "OPERATOR"
-      },
-      "text": "",
-      "formattedText": "То есть это все про вас?\n- **Цифровая трансформация клиентов**. Использование мессенджеров в качестве основного канала связи стало нормой. Потребители предпочитают обмен сообщениями, а не телефонные звонки. Это принесло брендам новые возможности для привлечения потребителей в удобную для них среду.\n- **Цифровая трансформация бизнеса**. Множество различных каналов требует качественной инфраструктуры со стороны бизнеса и единого центра управления, в котором собраны вся информация о клиенте, история его обращений и профиль, доступны все инструменты для управления процессами, контроль над ними, сбор статистики и аналитики.\n- **Системный подход к цифровым коммуникациям**. edna позволяет организовать бесшовный диалог между бизнесом и клиентом. Бизнес получает решение для системной работы с текстовыми каналами: от приема обращений и рабочего места оператора до внедрения чат-ботов и сквозных сценариев автоматизации. Клиент получает качественный сервис, быструю обработку запросов и удобный формат общения с брендом.",
-      "receivedDate": "2023-03-22T08:44:01.005Z",
-      "attachments": [],
-      "quotes": [
-        {
-          "type": "MESSAGE",
-          "threadId": 304,
-          "providerIds": [],
-          "uuid": "110c8a46-8c38-45df-9949-5f12b7922f01",
-          "text": "Добро пожаловать в наш чат! А кто такие Edna?",
-          "receivedDate": "2023-03-22T08:43:19.497Z",
-          "attachments": [],
-          "quotes": [
-            {
-              "type": "MESSAGE",
-              "threadId": 304,
-              "providerIds": [],
-              "uuid": "eda36c57-7286-4360-bb42-0cf3d7932113",
-              "operator": {
-                "id": 9,
-                "name": "Оператор Елена",
-                "alias": null,
-                "status": null,
-                "photoUrl": null,
-                "gender": "FEMALE",
-                "organizationUnit": "Skill Debet",
-                "role": "OPERATOR"
-              },
-              "text": "Прежде всего, постоянное информационно-пропагандистское обеспечение нашей деятельности предопределяет высокую востребованность форм воздействия!",
-              "receivedDate": "2023-03-22T08:42:44.275Z",
-              "attachments": [],
-              "quotes": [],
-              "quickReplies": [],
-              "read": true,
-              "settings": {
-                "blockInput": false,
-                "masked": false
-              },
-              "authorized": true,
-              "massPushMessage": false,
-              "origin": "threads"
-            }
-          ],
-          "quickReplies": [],
-          "read": true,
-          "settings": {
-            "blockInput": false,
-            "masked": false
-          },
-          "authorized": true,
-          "massPushMessage": false,
-          "origin": "threads"
-        }
-      ],
-      "quickReplies": [],
-      "read": true,
-      "settings": {
-        "blockInput": false,
-        "masked": false
-      },
-      "authorized": true,
-      "massPushMessage": false,
-      "origin": "threads"
-    },
-    {
-      "type": "MESSAGE",
-      "threadId": 304,
-      "providerIds": [],
-      "uuid": "309153f8-d58e-4e8d-bdae-592670c93333",
-      "text": "Именно! А еще у нас есть различные каналы коммуникации с клиентами! Подробнее: https://edna.ru/channels/",
-      "receivedDate": "2023-03-22T08:44:21.741Z",
-      "attachments": [],
-      "quotes": [],
-      "quickReplies": [],
-      "read": true,
-      "settings": {
-        "blockInput": false,
-        "masked": false
-      },
-      "authorized": true,
-      "massPushMessage": false,
-      "origin": "threads"
-    },
-    {
-      "type": "MESSAGE",
-      "threadId": 304,
-      "providerIds": [],
-      "uuid": "a30877eb-3b79-4203-bc14-a622be9acc90",
-      "operator": {
-        "id": 9,
-        "name": "Оператор Елена",
-        "alias": null,
-        "status": null,
-        "photoUrl": null,
-        "gender": "FEMALE",
-        "organizationUnit": "Skill Debet",
-        "role": "OPERATOR"
-      },
-      "text": "Отлично! Давайте проверим ваши контакты. Ваш email: info@edna.ru, телефон: +7 (495) 609-60-80. Верно?",
-      "receivedDate": "2023-03-22T08:45:08.649Z",
-      "attachments": [],
-      "quotes": [],
-      "quickReplies": [],
-      "read": true,
-      "settings": {
-        "blockInput": false,
-        "masked": false
-      },
-      "authorized": true,
-      "massPushMessage": false,
-      "origin": "threads"
-    },
-    {
-      "type": "MESSAGE",
-      "threadId": 304,
-      "providerIds": [],
-      "uuid": "3aee0831-12b9-43ed-9e08-03a6dcd96843",
-      "text": "Да, все верно!",
-      "receivedDate": "2023-03-22T08:45:37.630Z",
-      "attachments": [],
-      "quotes": [],
-      "quickReplies": [],
-      "read": true,
-      "settings": {
-        "blockInput": false,
-        "masked": false
-      },
-      "authorized": true,
-      "massPushMessage": false,
-      "origin": "threads"
-    },
-    {
-      "type": "MESSAGE",
-      "threadId": 304,
-      "providerIds": [],
-      "uuid": "20f8f1a3-6edb-4aa9-8d98-27e2dde324f0",
-      "operator": {
-        "id": 9,
-        "name": "Оператор Елена",
-        "alias": null,
-        "status": null,
-        "photoUrl": null,
-        "gender": "FEMALE",
-        "organizationUnit": "Skill Debet",
-        "role": "OPERATOR"
-      },
-      "text": "",
-      "formattedText": "Тогда ***до связи***!",
-      "receivedDate": "2023-03-22T08:46:18.047Z",
-      "attachments": [],
-      "quotes": [],
-      "quickReplies": [],
-      "read": true,
-      "settings": {
-        "blockInput": false,
-        "masked": false
-      },
-      "authorized": true,
-      "massPushMessage": false,
-      "origin": "threads"
-    },
-    {
-        "type": "MESSAGE",
-        "threadId": 304,
-        "providerIds": [],
-        "uuid": "4aee0831-12b9-43ed-9e08-03a6dcd96843",
-        "text": "Прием!",
-        "receivedDate": "2023-03-22T09:45:37.630Z",
-        "attachments": [],
-        "quotes": [],
-        "quickReplies": [],
-        "read": false,
-        "settings": {
-            "blockInput": false,
-            "masked": false
-        },
-        "authorized": true,
-        "massPushMessage": false,
-        "origin": "threads"
-    }
-  ],
-  "agentInfo": {
-    "action": "AGENT_LOOKUP",
-    "actionDate": "2023-03-22T08:51:43.124Z",
-    "thread": {
-      "id": 304,
-      "state": "UNASSIGNED"
-    },
-    "agent": null
-  },
-  "allowedToSendMessages": true
+	"messages": [
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "ad279408-a236-4fac-823b-a65a460dcb77",
+			"text": "Добрый день! Мы создаем экосистему бизнеса для качественного диалога между компанией и клиентами, встраиваем в нее новые удобные для потребителей цифровые каналы. Наш сайт: https://edna.ru/",
+			"formattedText": "Добрый день! Мы создаем экосистему бизнеса для качественного диалога между компанией и клиентами, встраиваем в нее новые удобные для потребителей цифровые каналы. Наш сайт: https://edna.ru/",
+			"receivedDate": "2023-03-22T08:42:02.061Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "AVERAGE_WAIT_TIME",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "f583f7b4-fd6d-41af-8d59-8fd39ecee3bd",
+			"text": "Среднее время ожидания ответа составляет 2 минуты",
+			"receivedDate": "2023-03-22T08:42:02.392Z",
+			"display": true,
+			"authorized": true,
+			"massPushMessage": false,
+			"aps/sound": "default",
+			"origin": "threads"
+		},
+		{
+			"type": "OPERATOR_JOINED",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "46c00e2e-3e65-4ea2-86d9-429c0726867e",
+			"operator": {
+				"id": 9,
+				"name": "Оператор Елена",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "FEMALE",
+				"organizationUnit": "Skill Debet",
+				"role": "OPERATOR"
+			},
+			"text": "Вам ответит Оператор Елена",
+			"receivedDate": "2023-03-22T08:42:38.526Z",
+			"display": true,
+			"authorized": true,
+			"massPushMessage": false,
+			"aps/sound": "default",
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "eda36c57-7286-4360-bb42-0cf3d7932113",
+			"operator": {
+				"id": 9,
+				"name": "Оператор Елена",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "FEMALE",
+				"organizationUnit": "Skill Debet",
+				"role": "OPERATOR"
+			},
+			"text": "Добро пожаловать в наш чат! А кто такие Edna?",
+			"receivedDate": "2023-03-22T08:42:44.275Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "110c8a46-8c38-45df-9949-5f12b7922f01",
+			"text": "Edna – современное решение для построения диалога с клиентом",
+			"receivedDate": "2023-03-22T08:43:19.497Z",
+			"attachments": [],
+			"quotes": [
+				{
+					"type": "MESSAGE",
+					"threadId": 304,
+					"providerIds": [],
+					"uuid": "eda36c57-7286-4360-bb42-0cf3d7932113",
+					"operator": {
+						"id": 9,
+						"name": "Оператор Елена",
+						"alias": null,
+						"status": null,
+						"photoUrl": null,
+						"gender": "FEMALE",
+						"organizationUnit": "Skill Debet",
+						"role": "OPERATOR"
+					},
+					"text": "Добро пожаловать в наш чат! А кто такие Edna?",
+					"receivedDate": "2023-03-22T08:42:44.275Z",
+					"attachments": [],
+					"quotes": [],
+					"quickReplies": [],
+					"read": true,
+					"settings": {
+						"blockInput": false,
+						"masked": false
+					},
+					"authorized": true,
+					"massPushMessage": false,
+					"origin": "threads"
+				}
+			],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "f78114b1-65c3-483e-a2c1-691c3d519b7d",
+			"operator": {
+				"id": 9,
+				"name": "Оператор Елена",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "FEMALE",
+				"organizationUnit": "Skill Debet",
+				"role": "OPERATOR"
+			},
+			"text": "",
+			"formattedText": "То есть это все про вас?\n- **Цифровая трансформация клиентов**. Использование мессенджеров в качестве основного канала связи стало нормой. Потребители предпочитают обмен сообщениями, а не телефонные звонки. Это принесло брендам новые возможности для привлечения потребителей в удобную для них среду.\n- **Цифровая трансформация бизнеса**. Множество различных каналов требует качественной инфраструктуры со стороны бизнеса и единого центра управления, в котором собраны вся информация о клиенте, история его обращений и профиль, доступны все инструменты для управления процессами, контроль над ними, сбор статистики и аналитики.\n- **Системный подход к цифровым коммуникациям**. edna позволяет организовать бесшовный диалог между бизнесом и клиентом. Бизнес получает решение для системной работы с текстовыми каналами: от приема обращений и рабочего места оператора до внедрения чат-ботов и сквозных сценариев автоматизации. Клиент получает качественный сервис, быструю обработку запросов и удобный формат общения с брендом.",
+			"receivedDate": "2023-03-22T08:44:01.005Z",
+			"attachments": [],
+			"quotes": [
+				{
+					"type": "MESSAGE",
+					"threadId": 304,
+					"providerIds": [],
+					"uuid": "110c8a46-8c38-45df-9949-5f12b7922f01",
+					"text": "Добро пожаловать в наш чат! А кто такие Edna?",
+					"receivedDate": "2023-03-22T08:43:19.497Z",
+					"attachments": [],
+					"quotes": [
+						{
+							"type": "MESSAGE",
+							"threadId": 304,
+							"providerIds": [],
+							"uuid": "eda36c57-7286-4360-bb42-0cf3d7932113",
+							"operator": {
+								"id": 9,
+								"name": "Оператор Елена",
+								"alias": null,
+								"status": null,
+								"photoUrl": null,
+								"gender": "FEMALE",
+								"organizationUnit": "Skill Debet",
+								"role": "OPERATOR"
+							},
+							"text": "Прежде всего, постоянное информационно-пропагандистское обеспечение нашей деятельности предопределяет высокую востребованность форм воздействия!",
+							"receivedDate": "2023-03-22T08:42:44.275Z",
+							"attachments": [],
+							"quotes": [],
+							"quickReplies": [],
+							"read": true,
+							"settings": {
+								"blockInput": false,
+								"masked": false
+							},
+							"authorized": true,
+							"massPushMessage": false,
+							"origin": "threads"
+						}
+					],
+					"quickReplies": [],
+					"read": true,
+					"settings": {
+						"blockInput": false,
+						"masked": false
+					},
+					"authorized": true,
+					"massPushMessage": false,
+					"origin": "threads"
+				}
+			],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "309153f8-d58e-4e8d-bdae-592670c93333",
+			"text": "Именно! А еще у нас есть различные каналы коммуникации с клиентами! Подробнее: https://edna.ru/channels/",
+			"formattedText": "Именно! А еще у нас есть различные каналы коммуникации с клиентами! Подробнее: https://edna.ru/channels/",
+			"receivedDate": "2023-03-22T08:44:21.741Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "a30877eb-3b79-4203-bc14-a622be9acc90",
+			"operator": {
+				"id": 9,
+				"name": "Оператор Елена",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "FEMALE",
+				"organizationUnit": "Skill Debet",
+				"role": "OPERATOR"
+			},
+			"text": "Отлично! Давайте проверим ваши контакты. Ваш email: info@edna.ru, телефон: +7 (495) 609-60-80. Верно?",
+			"formattedText": "Отлично! Давайте проверим ваши контакты. Ваш email: info@edna.ru, телефон: +7 (495) 609-60-80. Верно?",
+			"receivedDate": "2023-03-22T08:45:08.649Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "3aee0831-12b9-43ed-9e08-03a6dcd96843",
+			"text": "Да, все верно!",
+			"receivedDate": "2023-03-22T08:45:37.630Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "20f8f1a3-6edb-4aa9-8d98-27e2dde324f0",
+			"operator": {
+				"id": 9,
+				"name": "Оператор Елена",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "FEMALE",
+				"organizationUnit": "Skill Debet",
+				"role": "OPERATOR"
+			},
+			"text": "",
+			"formattedText": "Тогда ***до связи***!",
+			"receivedDate": "2023-03-22T08:46:18.047Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "4aee0831-12b9-43ed-9e08-03a6dcd96843",
+			"text": "Прием!",
+			"receivedDate": "2023-03-22T09:45:37.630Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": false,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "98765432-1234-5678-9012-345678901234",
+			"text": "Здравствуйте, я хочу задать длинный вопрос. У меня возникла проблема с доставкой заказа №123456, который я оформила 15 октября. Трек-номер: TR123456789RU. Согласно информации на сайте, посылка должна была прийти 18 октября, но до сих пор не доставлена. Я звонила в службу доставки, но мне не смогли ничего толком объяснить. Мой номер телефона для связи: +7 (987) 654-32-10. Также могу предоставить фото квитанции об оплате. Пожалуйста, помогите разобраться. В заказе были важные документы. Могу ли я как-то ускорить процесс поиска посылки? Спасибо за внимание.",
+			"formattedText": "Здравствуйте, я хочу задать длинный вопрос. У меня возникла проблема с доставкой заказа №123456, который я оформила 15 октября. Трек-номер: TR123456789RU. Согласно информации на сайте, посылка должна была прийти 18 октября, но до сих пор не доставлена. Я звонила в службу доставки, но мне не смогли ничего толком объяснить. Мой номер телефона для связи: +7 (987) 654-32-10. Также могу предоставить фото квитанции об оплате. Пожалуйста, помогите разобраться. В заказе были важные документы. Могу ли я как-то ускорить процесс поиска посылки? Спасибо за внимание.",
+			"receivedDate": "2023-10-20T15:30:00.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "87654321-0987-6543-2109-456789012345",
+			"operator": {
+				"id": 9,
+				"name": "Оператор Елена",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "FEMALE",
+				"organizationUnit": "Skill Debet",
+				"role": "OPERATOR"
+			},
+			"text": "Добрый день! Спасибо за обращение. Мы проверим статус вашего заказа. Для уточнения информации по доставке, пожалуйста, пришлите трек-номер и ваш e-mail, указанный при оформлении. Также вы можете отследить посылку по ссылке: https://www.pochta.ru/tracking. В ближайшее время мы свяжемся с вами по телефону +7 (987) 654-32-10. Просьба быть на связи.",
+			"formattedText": "Добрый день! Спасибо за обращение. Мы проверим статус вашего заказа. Для уточнения информации по доставке, пожалуйста, пришлите трек-номер и ваш e-mail, указанный при оформлении. Также вы можете отследить посылку по ссылке: https://www.pochta.ru/tracking. В ближайшее время мы свяжемся с вами по телефону +7 (987) 654-32-10. Просьба быть на связи.",
+			"receivedDate": "2023-10-20T15:45:00.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "76543210-fedc-ba98-7654-567890abcdef",
+			"text": "Привет! Вот ссылка на инструкцию по настройке: https://example.com/setup-guide.pdf. Также мой контакт: 8 (800) 100-20-30. Пожалуйста, свяжитесь со мной в рабочее время.",
+			"formattedText": "Привет! Вот ссылка на инструкцию по настройке: https://example.com/setup-guide.pdf. Также мой контакт: 8 (800) 100-20-30. Пожалуйста, свяжитесь со мной в рабочее время.",
+			"receivedDate": "2023-10-21T09:15:00.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "65432109-abcdef-1234-5678-90abcdef1234",
+			"operator": {
+				"id": 9,
+				"name": "Оператор Елена",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "FEMALE",
+				"organizationUnit": "Skill Debet",
+				"role": "OPERATOR"
+			},
+			"text": "Спасибо! Инструкцию посмотрю. Номер 8-800-100-20-30 записала. Планирую связаться в течение дня.",
+			"formattedText": "Спасибо! Инструкцию посмотрю. Номер 8-800-100-20-30 записала. Планирую связаться в течение дня.",
+			"receivedDate": "2023-10-21T09:20:00.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "54321098-8765-4321-fedc-ba9876543210",
+			"text": "К сожалению, не могу сейчас говорить. Пожалуйста, перезвоните позже. Мой мобильный: +79123456789.",
+			"formattedText": "К сожалению, не могу сейчас говорить. Пожалуйста, перезвоните позже. Мой мобильный: +79123456789.",
+			"receivedDate": "2023-10-21T14:00:00.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "43210987-9876-5432-1098-765432109876",
+			"operator": {
+				"id": 9,
+				"name": "Оператор Елена",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "FEMALE",
+				"organizationUnit": "Skill Debet",
+				"role": "OPERATOR"
+			},
+			"text": "Хорошо, мы свяжемся с вами по номеру +7 912 345 67 89 в удобное для вас время. Когда лучше перезвонить?",
+			"formattedText": "Хорошо, мы свяжемся с вами по номеру +7 912 345 67 89 в удобное для вас время. Когда лучше перезвонить?",
+			"receivedDate": "2023-10-21T14:05:00.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "32109876-0123-4567-89ab-cdef01234567",
+			"text": "После 18:00 по московскому времени. Или напишите сюда, если будет возможность. Вот ссылка на форму обратной связи на всякий случай: https://forms.example.com/обратная_связь/заполнить",
+			"formattedText": "После 18:00 по московскому времени. Или напишите сюда, если будет возможность. Вот ссылка на форму обратной связи на всякий случай: https://forms.example.com/обратная_связь/заполнить",
+			"receivedDate": "2023-10-21T14:10:00.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "21098765-1234-5678-9012-345678901234",
+			"operator": {
+				"id": 9,
+				"name": "Оператор Елена",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "FEMALE",
+				"organizationUnit": "Skill Debet",
+				"role": "OPERATOR"
+			},
+			"text": "Принято! Позвоним после 18:00 по Москве. Спасибо за информацию.",
+			"formattedText": "Принято! Позвоним после 18:00 по Москве. Спасибо за информацию.",
+			"receivedDate": "2023-10-21T14:15:00.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
+			"uuid": "10987654-2345-6789-0123-456789012345",
+			"text": "Огромное спасибо за помощь! Вы очень выручили. Всего доброго!",
+			"formattedText": "Огромное спасибо за помощь! Вы очень выручили. Всего доброго!",
+			"receivedDate": "2023-10-21T19:30:00.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		}
+	],
+	"agentInfo": {
+		"action": "AGENT_LOOKUP",
+		"actionDate": "2023-03-22T08:51:43.124Z",
+		"thread": {
+			"id": 304,
+			"state": "UNASSIGNED"
+		},
+		"agent": null
+	},
+	"allowedToSendMessages": true
 }

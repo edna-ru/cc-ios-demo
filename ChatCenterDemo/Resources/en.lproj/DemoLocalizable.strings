@@ -1,0 +1,95 @@
+"action.title_ok" = "OK";
+"action.title_yes" = "Yes";
+"action.title_no" = "No";
+"action.title_cancel" = "Cancel";
+"action.title_repeat" = "Repeat";
+"action.title_connect" = "Connect";
+"action.alert_send" = "Send";
+
+"chat.available_readonly_text" = "This chat is available for viewing only";
+"chat.client_name" = "Me";
+
+"chat.title.waiting" = "Please wait...";
+"chat.title.connecting" = "Connecting...";
+"chat.title.opened" = "Contact center";
+"chat.title.waiting_for_specialist" = "Searching for operator...";
+"chat.title.working" = "Operator";
+"chat.title.typing" = "operator typing";
+
+"operator.bot" = "Bot";
+"operator.external.bot" = "Bot";
+"operator.operator" = "Operator";
+"operator.supervisor" = "Operator";
+"operator.system" = "Operator";
+"operator.integration" = "Operator";
+
+"loading.title" = "Loading";
+
+"input.placeholder" = "Message";
+
+"input.voice_recording_hint" = "Hold to start recording";
+
+"empty_chat.placeholder_title" = "Welcome to the contact center";
+"empty_chat.placeholder_desc" = "Send your question, the first available operator will answer it.";
+
+"alert.resend_failed_message.title" = "";
+"alert.resend_failed_message.desc" = "The message was not sent. Click \"retry sending\" to send";
+"alert.resend_failed_message.retry_btn" = "Retry sending";
+"alert.resend_failed_message.delete_btn" = "Delete";
+"alert.access_denied_title" = "No access";
+"alert.file_sending_denied_desc" = "File sending is disabled on the server";
+"alert.unlock_photos_access" = "Unlock access to photos in the app settings to continue";
+"alert.send_selected_file_to_chat" = "Send the selected file \"%@\" to chat?";
+"alert.picker_files_btn" = "Files";
+"alert.camera_not_found" = "No camera found on your device";
+"alert.unlock_camera_access" = "Unlock access to the camera in the app settings to continue";
+"alert.cant_take_photo" = "Couldn't take a photo";
+"alert.app_settings" = "Settings";
+"alert.voice_recording_denied" = "Microphone access denied, to record voice messages, please allow access in settings";
+"alert.text_copied_message" = "Text copied to clipboard";
+
+"message.status.not_delivered" = "Not delivered";
+"message.status.validation_error" = "Not delivered";
+
+"message.deleted_text" = "Message deleted";
+"message.send_file_limit_alert_title" = "File size";
+"message.send_file_limit_alert_message" = "Maximum file size limit for sending is exceeded (%.0f Mb)";
+"message.incorrect_url_for_opening" = "Unable to open link";
+"message.photo_title" = "PHOTO";
+"message.voice_title" = "VOICE MESSAGE";
+"message.voice_play_error" = "Error while playing";
+"message.unsupported_file_format" = "Unsupported format";
+
+"message.system.join_chat_unknown" = "joined the conversation in %@";
+"message.system.join_chat_male" = "joined the conversation in %@";
+"message.system.join_chat_female" = "joined the conversation in %@";
+"message.system.leave_chat_unknown" = "left the conversation in %@";
+"message.system.leave_chat_male" = "left the conversation in %@";
+"message.system.leave_chat_female" = "left the conversation in %@";
+
+"menu.response_title" = "Reply";
+"menu.copy_title" = "Copy";
+
+"search.placeholder_title" = "Search";
+"search.not_found_title" = "No results found";
+"search.more_btn" = "Search more";
+"search.image_attachment_title" = "image";
+"search.audio_attachment_title" = "audio file";
+
+"survey.message_vote_from_title" = "from";
+"survey.message_thanks.title" = "Thank you for your vote";
+"survey.request_close_thread_message" = "The specialist answered all your questions, continue the consultation?";
+
+"errors.init_failed_title" = "There was a problem initializing the chat:";
+"errors.connection_timeout" = "Timed out waiting for connection to the server";
+"errors.load_config" = "Failed to load chat settings";
+"errors.voice_message" = "Failed to complete file upload";
+"errors.code_from_400_to_500_title" = "Sorry for the inconvenience, the chat is currently unavailable. Please try again later.";
+"errors.code_from_400_to_500_desc" = "";
+"errors.disallowed_file_loading" = "File loading failed.\nFailed to verify file";
+"errors.timeout_during_load_file" = "Failed to complete file loading, timeout expired.\nPlease try loading file later";
+"errors.unexpected_error_during_load_file" = "Failed to complete loading file.\nPlease try sending the file later";
+"errors.during_load_file" = "An error occurred while loading or verifying the file";
+
+"attachments.menu.my_albums" = "My albums";
+"attachments.menu.take_photo" = "Take a photo";

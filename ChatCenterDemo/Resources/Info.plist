@@ -2,8 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>en</string>
+		<string>ru</string>
+		<string>kz</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>CFBundleURLIconFile</key>
+			<string>forest</string>
+			<key>CFBundleURLName</key>
+			<string>io.advisa.chatcenter.demo</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>webview</string>
+			</array>
+		</dict>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -14,5 +33,7 @@
 		<key>UISceneConfigurations</key>
 		<dict/>
 	</dict>
+	<key>UIDesignRequiresCompatibility</key>
+	<true/>
 </dict>
 </plist>

@@ -1,11 +1,11 @@
 [
 {
-    "name": "server",
-	"isSelected": true,
-	"webSocketURL": "wss://host/socket",
-	"providerUid": "NzTBr5nwnTGIGJ9ehYRI1HXtqDhRWNx6mJSgLN",
-	"restURL": "https://host",
-	"dataStoreURL": "https://host/files"
-	"apiVersion": 17
+    "name": "mobile1",
+    "isSelected": false,
+    "webSocketURL": "ws://mobile1.chc.dte/socket",
+    "providerUid": "MOBILE1_NzTBr5nwnTGIGJ9ehYRI1HXtqDhRWNx6mJSgLN",
+    "restURL": "http://mobile1.chc.dte",
+    "dataStoreURL": "http://mobile1.chc.dte",
+    "apiVersion": 17
 }
 ]

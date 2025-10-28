@@ -10,18 +10,18 @@
             "attachments": [
                 {
                     "id": 70,
-                    "result": "sound1.wav",
+                    "result": "client1.wav",
                     "optional": {
                         "size": 52095,
-                        "name": "sound1.wav",
+                        "name": "client1.wav",
                         "type": "audio/wav"
                     },
                     "state": "READY",
-                    "name": "sound1.wav",
+                    "name": "client1.wav",
                     "type": "audio/wav",
                     "size": 52095,
                     "wellDefined": true,
-                    "url": "sound1.wav"
+                    "url": "client1.wav"
                 }
             ],
             "quotes": [],
@@ -42,15 +42,15 @@
             "uuid": "0bbb66c3-fbf4-4190-a714-ea84ee570234",
             "operator": {
                 "id": 4,
-                "name": "Оператор Елена",
+                "name": "Оператор Анна",
                 "alias": null,
                 "status": null,
                 "photoUrl": null,
                 "gender": "FEMALE",
-                "organizationUnit": "Skill Credit",
+                "organizationUnit": "Поддержка пользователей",
                 "role": "OPERATOR"
             },
-            "text": "Вам ответит Оператор Елена",
+            "text": "Вам ответит Оператор Анна",
             "receivedDate": "2023-04-05T10:29:44.364Z",
             "display": true,
             "authorized": true,
@@ -65,31 +65,31 @@
             "uuid": "1c1df1af-1a21-49be-9421-f2d846ae493c",
             "operator": {
                 "id": 4,
-                "name": "Оператор Елена",
+                "name": "Оператор Анна",
                 "alias": null,
                 "status": null,
                 "photoUrl": null,
                 "gender": "FEMALE",
-                "organizationUnit": "Skill Credit",
+                "organizationUnit": "Поддержка пользователей",
                 "role": "OPERATOR"
             },
             "text": "",
-            "receivedDate": "2023-04-05T10:36:12.443Z",
+            "receivedDate": "2023-04-05T10:30:12.443Z",
             "attachments": [
                 {
                     "id": 71,
-                    "result": "sound1.wav",
+                    "result": "operator1.wav",
                     "optional": {
                         "size": 31183,
-                        "name": "sound1.wav",
+                        "name": "operator1.wav",
                         "type": "audio/wav"
                     },
                     "state": "READY",
-                    "name": "sound1.wav",
+                    "name": "operator1.wav",
                     "type": "audio/wav",
                     "size": 31183,
                     "wellDefined": true,
-                    "url": "sound1.wav"
+                    "url": "operator1.wav"
                 }
             ],
             "quotes": [],
@@ -109,22 +109,22 @@
             "providerIds": [],
             "uuid": "e13a6b3c-8686-4279-8256-4a521ee82e4e",
             "text": "",
-            "receivedDate": "2023-04-05T10:36:18.153Z",
+            "receivedDate": "2023-04-05T10:32:18.153Z",
             "attachments": [
                 {
                     "id": 72,
-                    "result": "sound1.wav",
+                    "result": "client2.wav",
                     "optional": {
                         "size": 36792,
-                        "name": "sound1.wav",
-                        "type": "sound1.wav"
+                        "name": "client2.wav",
+                        "type": "client2.wav"
                     },
                     "state": "READY",
-                    "name": "sound1.wav",
+                    "name": "client2.wav",
                     "type": "audio/wav",
                     "size": 36792,
                     "wellDefined": true,
-                    "url": "sound1.wav"
+                    "url": "client2.wav"
                 }
             ],
             "quotes": [],
@@ -145,31 +145,31 @@
             "uuid": "bd50a2a0-f3cf-48ec-a601-5b2318e75f54",
             "operator": {
                 "id": 4,
-                "name": "Оператор Елена",
+                "name": "Оператор Анна",
                 "alias": null,
                 "status": null,
                 "photoUrl": null,
                 "gender": "FEMALE",
-                "organizationUnit": "Skill Credit",
+                "organizationUnit": "Поддержка пользователей",
                 "role": "OPERATOR"
             },
             "text": "",
-            "receivedDate": "2023-04-05T10:36:38.903Z",
+            "receivedDate": "2023-04-05T10:34:38.903Z",
             "attachments": [
                 {
                     "id": 73,
-                    "result": "sound1.wav",
+                    "result": "operator2.wav",
                     "optional": {
                         "size": 33080,
-                        "name": "sound1.wav",
+                        "name": "operator2.wav",
                         "type": "audio/wav"
                     },
                     "state": "READY",
-                    "name": "sound1.wav",
+                    "name": "operator2.wav",
                     "type": "audio/wav",
                     "size": 33080,
                     "wellDefined": true,
-                    "url": "sound1.wav"
+                    "url": "operator2.wav"
                 }
             ],
             "quotes": [],
@@ -183,28 +183,73 @@
             "massPushMessage": false,
             "origin": "threads"
         },
+		{
+			"type": "MESSAGE",
+			"threadId": 182,
+			"providerIds": [],
+			"uuid": "026372ab-8283-4d0a-9381-54bea4673d8e",
+			"operator": {
+				"id": 4,
+				"name": "Оператор Анна",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "FEMALE",
+				"organizationUnit": "Поддержка пользователей",
+				"role": "OPERATOR"
+			},
+			"text": "",
+			"receivedDate": "2023-04-05T10:35:05.134Z",
+			"attachments": [
+				{
+					"id": 75,
+					"result": "operator3.wav",
+					"optional": {
+						"size": 44407,
+						"name": "operator3.wav",
+						"type": "audio/wav"
+					},
+					"state": "READY",
+					"name": "operator3.wav",
+					"type": "audio/wav",
+					"size": 44407,
+					"wellDefined": true,
+					"url": "operator3.wav"
+				}
+			],
+			"quotes": [],
+			"quickReplies": [],
+			"read": false,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
         {
             "type": "MESSAGE",
             "threadId": 182,
             "providerIds": [],
             "uuid": "d37a57c7-840e-422a-9298-b52b91455a2b",
             "text": "",
-            "receivedDate": "2023-04-05T10:36:48.650Z",
+            "receivedDate": "2023-04-05T10:35:48.650Z",
             "attachments": [
                 {
                     "id": 74,
-                    "result": "sound1.wav",
+                    "result": "client3.wav",
                     "optional": {
                         "size": 27039,
-                        "name": "sound1.wav",
+                        "name": "client3.wav",
                         "type": "audio/wav"
                     },
                     "state": "READY",
-                    "name": "sound1.wav",
+                    "name": "client3.wav",
                     "type": "audio/wav",
                     "size": 27039,
                     "wellDefined": true,
-                    "url": "sound1.wav"
+                    "url": "client3.wav"
                 }
             ],
             "quotes": [],
@@ -222,54 +267,9 @@
             "type": "MESSAGE",
             "threadId": 182,
             "providerIds": [],
-            "uuid": "026372ab-8283-4d0a-9381-54bea4673d8e",
-            "operator": {
-                "id": 4,
-                "name": "Оператор Елена",
-                "alias": null,
-                "status": null,
-                "photoUrl": null,
-                "gender": "FEMALE",
-                "organizationUnit": "Skill Credit",
-                "role": "OPERATOR"
-            },
-            "text": "",
-            "receivedDate": "2023-04-05T10:37:05.134Z",
-            "attachments": [
-                {
-                    "id": 75,
-                    "result": "sound1.wav",
-                    "optional": {
-                        "size": 44407,
-                        "name": "sound1.wav",
-                        "type": "audio/wav"
-                    },
-                    "state": "READY",
-                    "name": "sound1.wav",
-                    "type": "audio/wav",
-                    "size": 44407,
-                    "wellDefined": true,
-                    "url": "sound1.wav"
-                }
-            ],
-            "quotes": [],
-            "quickReplies": [],
-            "read": false,
-            "settings": {
-                "blockInput": false,
-                "masked": false
-            },
-            "authorized": true,
-            "massPushMessage": false,
-            "origin": "threads"
-        },
-        {
-            "type": "MESSAGE",
-            "threadId": 182,
-            "providerIds": [],
             "uuid": "17277ece-4aa6-47a0-b7ae-8debb11faa20",
             "text": "",
-            "receivedDate": "2023-04-05T10:37:13.421Z",
+            "receivedDate": "2023-04-05T10:38:13.421Z",
             "attachments": [
                 {
                     "id": 76,
@@ -298,6 +298,41 @@
             "massPushMessage": false,
             "origin": "threads"
         },
+		{
+			"type": "MESSAGE",
+			"threadId": 182,
+			"providerIds": [],
+			"uuid": "17277ece-4aa6-47a0-b7ae-8debb11faa21",
+			"text": "",
+			"receivedDate": "2023-04-05T10:42:14.421Z",
+			"attachments": [
+				{
+					"id": 76,
+					"result": "client4.wav",
+					"optional": {
+						"size": 13279,
+						"name": "client4.wav",
+						"type": "audio/wav"
+					},
+					"state": "READY",
+					"name": "client4.wav",
+					"type": "audio/wav",
+					"size": 13279,
+					"wellDefined": true,
+					"url": "client4.wav"
+				}
+			],
+			"quotes": [],
+			"quickReplies": [],
+			"read": false,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
         {
             "type": "MESSAGE",
             "threadId": 182,
@@ -305,31 +340,31 @@
             "uuid": "b5137fec-a101-449e-aee3-15f9c4a49550",
             "operator": {
                 "id": 4,
-                "name": "Оператор Елена",
+                "name": "Оператор Анна",
                 "alias": null,
                 "status": null,
                 "photoUrl": null,
                 "gender": "FEMALE",
-                "organizationUnit": "Skill Credit",
+                "organizationUnit": "Поддержка пользователей",
                 "role": "OPERATOR"
             },
             "text": "",
-            "receivedDate": "2023-04-05T10:37:31.277Z",
+            "receivedDate": "2023-04-05T10:41:31.277Z",
             "attachments": [
                 {
                     "id": 77,
-                    "result": "sound1.wav",
+                    "result": "operator4.wav",
                     "optional": {
                         "size": 15718,
-                        "name": "sound1.wav",
+                        "name": "operator4.wav",
                         "type": "audio/wav"
                     },
                     "state": "READY",
-                    "name": "sound1.wav",
+                    "name": "operator4.wav",
                     "type": "audio/wav",
                     "size": 15718,
                     "wellDefined": true,
-                    "url": "sound1.wav"
+                    "url": "operator4.wav"
                 }
             ],
             "quotes": [],
@@ -365,7 +400,7 @@
 			"preRegister" : false,
 			"attachments" : [
 				{
-					"result" : "https:\/\/edna.io\/beta3\/files\/20250918-2b192316-27fd-45ed-8f85-efaa90798d39.wav",
+					"result" : "https:\/\/edna.io\/files\/20250918-2b192316-27fd-45ed-8f85-efaa90798d39.wav",
 					"optional" : {
 						"name" : "voice18.09.2025.10:26:45.729.wav",
 						"size" : 446300,
@@ -378,7 +413,7 @@
 					"type" : "audio\/wav",
 					"error" : false,
 					"state" : "READY",
-					"url" : "https:\/\/edna.io\/beta3\/files\/20250918-2b192316-27fd-45ed-8f85-efaa90798d39.wav"
+					"url" : "https:\/\/edna.io\/files\/20250918-2b192316-27fd-45ed-8f85-efaa90798d39.wav"
 				}
 			],
 			"threadId" : 7501,
@@ -400,7 +435,7 @@
 			},
 			"type" : "MESSAGE",
 			"speechStatus" : "processing",
-			"text" : "ghjdth",
+			"text" : "текст",
 			"operator" : {
 				"status" : null,
 				"alias" : null,
@@ -408,8 +443,8 @@
 				"id" : 14,
 				"role" : "OPERATOR",
 				"photoUrl" : "20250425-cmn-a4b47af3-d45f-48e6-9959-b449530d7a31.jpg",
-				"organizationUnit" : "Skill Credit",
-				"name" : "Ковбой Мальборо"
+				"organizationUnit" : "Поддержка пользователей",
+				"name" : "Оператор Анна"
 			},
 			"threadId" : 5630,
 			"attachments" : [
@@ -455,6 +490,51 @@
 			],
 			"isPersonalOffer" : false
 		},
+		{
+			"type": "MESSAGE",
+			"threadId": 182,
+			"providerIds": [],
+			"uuid": "b5137fec-a101-449e-ae23-15f9c4a49551",
+			"operator": {
+				"id": 4,
+				"name": "Оператор Анна",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "FEMALE",
+				"organizationUnit": "Поддержка пользователей",
+				"role": "OPERATOR"
+			},
+			"text": "",
+			"receivedDate" : "2025-06-18T07:40:47.664Z",
+			"attachments": [
+				{
+					"id": 77,
+					"result": "operator5.wav",
+					"optional": {
+						"size": 15718,
+						"name": "operator5.wav",
+						"type": "audio/wav"
+					},
+					"state": "READY",
+					"name": "operator5.wav",
+					"type": "audio/wav",
+					"size": 15718,
+					"wellDefined": true,
+					"url": "operator5.wav"
+				}
+			],
+			"quotes": [],
+			"quickReplies": [],
+			"read": false,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
         {
             "type": "REQUEST_CLOSE_THREAD",
             "threadId": 182,
@@ -478,12 +558,12 @@
         },
         "agent": {
             "id": 4,
-            "name": "Оператор Елена",
+            "name": "Оператор Анна",
             "alias": null,
             "status": null,
             "photoUrl": null,
             "gender": "FEMALE",
-            "organizationUnit": "Skill Credit",
+            "organizationUnit": "Поддержка пользователей",
             "role": "OPERATOR"
         }
     },

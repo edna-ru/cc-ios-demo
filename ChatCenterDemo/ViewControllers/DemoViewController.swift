@@ -63,7 +63,7 @@ final class DemoViewController: UIViewController, UINavigationControllerDelegate
                                     networkConfig: ChatNetworkConfig(sslPinning: ChatNetworkConfig.SSLPinningConfig(allowUntrustedSSLCertificate: true)))
         chatCenterSdk = ChatCenterUISDK(providerUid: "edna_demo",
                                         chatConfig: chatConfig,
-                                        loggerConfig: ChatLoggerConfig(logLevel: .off))
+                                        loggerConfig: ChatLoggerConfig(logLevel: .all))
 
         if let lightTheme {
             chatCenterSdk?.theme = lightTheme

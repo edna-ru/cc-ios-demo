@@ -1,0 +1,463 @@
+{
+	"messages": [
+		{
+			"type": "MESSAGE",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+			"text": "Здравствуйте! Подскажите, пожалуйста, как связаться со службой поддержки?",
+			"receivedDate": "2023-03-23T10:00:00.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "AVERAGE_WAIT_TIME",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+			"text": "Среднее время ожидания ответа составляет 1 минуту",
+			"receivedDate": "2023-03-23T10:00:02.000Z",
+			"display": true,
+			"authorized": true,
+			"massPushMessage": false,
+			"aps/sound": "default",
+			"origin": "threads"
+		},
+		{
+			"type": "OPERATOR_JOINED",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f",
+			"operator": {
+				"id": 10,
+				"name": "Оператор Евгений",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "MALE",
+				"organizationUnit": "Support Team A",
+				"role": "OPERATOR"
+			},
+			"text": "Вам ответит Оператор Евгений",
+			"receivedDate": "2023-03-23T10:00:30.000Z",
+			"display": true,
+			"authorized": true,
+			"massPushMessage": false,
+			"aps/sound": "default",
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a",
+			"operator": {
+				"id": 10,
+				"name": "Оператор Евгений",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "MALE",
+				"organizationUnit": "Support Team A",
+				"role": "OPERATOR"
+			},
+			"text": "Добрый день! Вы можете связаться с нами по любому из следующих номеров:\n\n+79148001002,\n89148001002,\n8(914)0010021,\n8 953 827 38 49,\n7-953-853-83-74,\n+7 912 345 67 89,\n+79123456789,\n8 (800) 100-20-30,\n+7 (987) 654-32-10,\n79538538374,\n+7(914)0010022.",
+			"receivedDate": "2023-03-23T10:01:15.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c52de7f8a",
+			"operator": {
+				"id": 10,
+				"name": "Оператор Евгений",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "MALE",
+				"organizationUnit": "Support Team A",
+				"role": "OPERATOR"
+			},
+			"text": "+79148001002 наш основной номер, также доступен 89148001003",
+			"receivedDate": "2023-03-23T10:01:16.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a9b",
+			"text": "Спасибо! А есть ли международные номера для связи?",
+			"receivedDate": "2023-03-23T10:02:05.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b0c",
+			"operator": {
+				"id": 10,
+				"name": "Оператор Евгений",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "MALE",
+				"organizationUnit": "Support Team A",
+				"role": "OPERATOR"
+			},
+			"text": "Да, конечно! Для международных звонков доступны:\n\n+44 20 7946 0958 (Великобритания),\n+1 800-555-1234 (США),\n+49 (30) 123456 (Германия),\n+33 1 23 45 67 89 (Франция),\n+81-3-1234-5678 (Япония),\n+61 (2) 9876 5432 (Австралия),\n+49 151 12345678 (мобильный в Германии).",
+			"receivedDate": "2023-03-23T10:03:10.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d",
+			"text": "Отлично! А можно несколько номеров указать в одном сообщении? Например, 79538573849\n\n79538538374\n\n89538273849 — это всё рабочие?",
+			"receivedDate": "2023-03-23T10:04:20.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "b8c9d0e1-f2a3-4b4c-5d6e-7f8a9b0c1d2e",
+			"operator": {
+				"id": 10,
+				"name": "Оператор Евгений",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "MALE",
+				"organizationUnit": "Support Team A",
+				"role": "OPERATOR"
+			},
+			"text": "Да, все эти номера активны и корректны:\n\n79538573849\n+79538538374\n89538273849\n\nВы можете использовать любой из них для связи с региональным офисом.",
+			"receivedDate": "2023-03-23T10:05:05.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f",
+			"text": "Понял. А вот в таком тексте: «Звоните +7 999 123-45-67 или 8 (812) 555-66-77, а также 8 953 827 38 49.» — сколько номеров распознаёт система?",
+			"receivedDate": "2023-03-23T10:06:15.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a",
+			"operator": {
+				"id": 10,
+				"name": "Оператор Евгений",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "MALE",
+				"organizationUnit": "Support Team A",
+				"role": "OPERATOR"
+			},
+			"text": "В этом сообщении корректно распознаются три номера:\n\n- +7 999 123-45-67\n- 8 (812) 555-66-77\n- 8 953 827 38 49\n\nНаши системы парсят номера вне зависимости от форматирования — главное, чтобы цифры соответствовали стандартам.",
+			"receivedDate": "2023-03-23T10:07:20.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b",
+			"text": "А если номера перечислены через перенос строки? Например:\nЗвоните +7 999 123-45-67\n8 (812) 555-66-77, а также +7(914)0010022.\nРаботает?",
+			"receivedDate": "2023-03-23T10:08:30.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "f2a3b4c5-d6e7-4f8a-9b0c-1d2e3f4a5b6c",
+			"operator": {
+				"id": 10,
+				"name": "Оператор Евгений",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "MALE",
+				"organizationUnit": "Support Team A",
+				"role": "OPERATOR"
+			},
+			"text": "Абсолютно верно! Система корректно обрабатывает номера даже при разрыве строк. В вашем примере будут найдены:\n\n- +7 999 123-45-67\n- 8 (812) 555-66-77\n- +7(914)0010022\n\nЭто удобно для массовой обработки данных.",
+			"receivedDate": "2023-03-23T10:09:10.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d",
+			"text": "А если указать несколько сразу, например: «Позвоните +7 999 123-45-67 или 8 (812) 555-66-77» — тоже нормально?",
+			"receivedDate": "2023-03-23T10:10:00.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "b4c5d6e7-f8a9-4b0c-1d2e-3f4a5b6c7d8e",
+			"operator": {
+				"id": 10,
+				"name": "Оператор Евгений",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "MALE",
+				"organizationUnit": "Support Team A",
+				"role": "OPERATOR"
+			},
+			"text": "Да, никаких проблем. Такой формат часто используется в рассылках и на сайтах. Оба номера будут распознаны корректно.",
+			"receivedDate": "2023-03-23T10:10:30.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "c5d6e7f8-a9b0-4c1d-2e3f-4a5b6c7d8e9f",
+			"text": "И последний вопрос: если я напишу «Наши номера: +1 800-555-1234, +44 20 7946 0958 и 8 953 827 38 49.» — вы получите все три?",
+			"receivedDate": "2023-03-23T10:11:20.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "d6e7f8a9-b0c1-4d2e-3f4a-5b6c7d8e9f0a",
+			"operator": {
+				"id": 10,
+				"name": "Оператор Евгений",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "MALE",
+				"organizationUnit": "Support Team A",
+				"role": "OPERATOR"
+			},
+			"text": "Конечно! Все три номера будут успешно распознаны:\n\n- +1 800-555-1234\n- +44 20 7946 0958\n- 8 953 827 38 49\n\nНаша система умеет работать с любыми распространенными форматами записи телефонов — главное, чтобы цифры были полными и соответствовали международным стандартам.",
+			"receivedDate": "2023-03-23T10:12:15.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "e7f8a9b0-c1d2-4e3f-4a5b-6c7d8e9f0a1b",
+			"text": "Благодарю за подробный ответ!",
+			"receivedDate": "2023-03-23T10:13:00.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 305,
+			"providerIds": [],
+			"uuid": "f8a9b0c1-d2e3-4f4a-5b6c-7d8e9f0a1b2c",
+			"operator": {
+				"id": 10,
+				"name": "Оператор Евгений",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "MALE",
+				"organizationUnit": "Support Team A",
+				"role": "OPERATOR"
+			},
+			"text": "Обращайтесь! Всегда рады помочь.",
+			"receivedDate": "2023-03-23T10:13:20.000Z",
+			"attachments": [],
+			"quotes": [],
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		}
+	],
+	"agentInfo": {
+		"action": "AGENT_LOOKUP",
+		"actionDate": "2023-03-23T10:15:00.000Z",
+		"thread": {
+			"id": 305,
+			"state": "CLOSED"
+		},
+		"agent": null
+	},
+	"allowedToSendMessages": false
+}

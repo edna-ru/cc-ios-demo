@@ -1,0 +1,104 @@
+// Кнопки
+"action.title_ok" = "OK";
+"action.title_yes" = "Да";
+"action.title_no" = "Нет";
+"action.title_cancel" = "Отмена";
+"action.title_repeat" = "Повторить";
+"action.title_connect" = "Подключиться";
+"action.alert_send" = "Отправить";
+
+"chat.available_readonly_text" = "Данный чат доступен только для просмотра";
+"chat.client_name" = "Вы"; // Обращение к клиенту (цитаты, собственные сообщения в поиске и т.д)
+
+"chat.title.waiting" = "Пожалуйста, подождите..."; // Ожидание подключения оператора
+"chat.title.connecting" = "Подключение..."; // Подключение к серверу
+"chat.title.opened" = "Демо контакт центр"; // Открыт чат
+"chat.title.waiting_for_specialist" = "Поиск оператора..."; // Ожидание подключения оператора
+"chat.title.working" = "Оператор"; // Оператор подключился к диалогу
+"chat.title.typing" = "оператор набирает";
+
+// Заголовок специалиста (Роль)
+"operator.bot" = "Бот";
+"operator.external.bot" = "Бот";
+"operator.operator" = "Оператор";
+"operator.supervisor" = "Оператор";
+"operator.system" = "Оператор";
+"operator.integration" = "Оператор";
+
+"loading.title" = "Загрузка"; // Индикатор загрузки чата
+
+"input.placeholder" = "Сообщение"; // Плэйсхолдер в панели ввода
+"input.voice_recording_hint" = "Удерживайте, чтобы начать запись"; // Подсказка о записи голосового
+
+"empty_chat.placeholder_title" = "Добро пожаловать в контакт центр"; // Заглушка в пустом чате
+"empty_chat.placeholder_desc" = "Отправьте ваш вопрос, первый освободившийся оператор на него ответит."; // Описание заглушки в пустом чате
+
+"alert.resend_failed_message.title" = "";
+"alert.resend_failed_message.desc" = "Сообщение не было отправлено. Нажмите «повторить отправку», чтобы отправить";
+"alert.resend_failed_message.retry_btn" = "Повторить отправку";
+"alert.resend_failed_message.delete_btn" = "Удалить";
+"alert.access_denied_title" = "Нет доступа";
+"alert.file_sending_denied_desc" = "Отправка файлов отключена на сервере";
+"alert.unlock_photos_access" = "Разблокируйте доступ к фотографиям в настройках приложения, чтобы продолжить";
+"alert.send_selected_file_to_chat" = "Отправить выбранный файл \"%@\" в чат?";
+"alert.picker_files_btn" = "Файлы";
+"alert.camera_not_found" = "На Вашем устройстве не найдена камера";
+"alert.unlock_camera_access" = "Разблокируйте доступ к камере в настройках приложения, чтобы продолжить";
+"alert.cant_take_photo" = "Не удалось сделать фотографию";
+"alert.app_settings" = "Настройки";
+"alert.voice_recording_denied" = "Доступ к микрофону запрещен, для записи голосовых сообщений разрешите доступ в настройках";
+"alert.text_copied_message" = "Текст скопирован в буфер обмена";
+
+// Статусы сообщений
+"message.status.not_delivered" = "Не доставлено";
+"message.status.validation_error" = "Не доставлено";
+
+// Сообщения
+"message.deleted_text" = "Сообщение удалено";
+"message.send_file_limit_alert_title" = "Размер файла";
+"message.send_file_limit_alert_message" = "Превышен максимально допустимый для отправки размера файла (%.0f Мб)";
+"message.incorrect_url_for_opening" = "Не удалось открыть ссылку";
+"message.photo_title" = "ФОТО";
+"message.voice_title" = "ГОЛОСОВОЕ СООБЩЕНИЕ";
+"message.voice_play_error" = "Ошибка при воспроизведении";
+"message.unsupported_file_format" = "Неподдерживаемый формат";
+
+// Системные сообщения
+"message.system.join_chat_unknown" = "подключился(-ась) к диалогу в %@";
+"message.system.join_chat_male" = "подключился к диалогу в %@";
+"message.system.join_chat_female" = "подключилась к диалогу в %@";
+"message.system.leave_chat_unknown" = "покинул(а) диалог в %@";
+"message.system.leave_chat_male" = "покинул диалог в %@";
+"message.system.leave_chat_female" = "покинула диалог в %@";
+
+// Меню цитирования
+"menu.response_title" = "Ответить";
+"menu.copy_title" = "Копировать";
+
+// Поиск
+"search.placeholder_title" = "Поиск"; // Плэйсхолдер в строке поиска
+"search.not_found_title" = "Результатов не найдено";
+"search.more_btn" = "Искать еще";
+"search.image_attachment_title" = "изображение";
+"search.audio_attachment_title" = "аудио файл";
+
+// Опросы
+"survey.message_vote_from_title" = "из";
+"survey.message_thanks.title" = "Спасибо за вашу оценку";
+"survey.request_close_thread_message" = "Специалист ответил на все ваши вопросы, продолжить консультацию?";
+
+// Ошибки в СДК
+"errors.init_failed_title" = "Возникла проблема во время инициализации чата:";
+"errors.connection_timeout" = "Истекло время ожидания подключения к серверу";
+"errors.load_config" = "Не удалось загрузить настройки чата";
+"errors.voice_message" = "Не удалось завершить загрузку файла"; // Ошибка при загрузке голосового сообщения
+"errors.code_from_400_to_500_title" = "Извините за неудобства, чат в данный момент недоступен. Пожалуйста, попробуйте позднее.";
+"errors.code_from_400_to_500_desc" = "";
+"errors.disallowed_file_loading" = "Загрузка файла не выполнена.\nНе удалось проверить файл";
+"errors.timeout_during_load_file" = "Не удалось завершить загрузку файла, истек таймаут.\nПопробуйте загрузить файл позже";
+"errors.unexpected_error_during_load_file" = "Не удалось завершить загрузку файла.\nПопробуйте отправить файл позже";
+"errors.during_load_file" = "Произошла ошибка при загрузке или проверке файла";
+
+// Меню вложений
+"attachments.menu.my_albums" = "Мои альбомы";
+"attachments.menu.take_photo" = "Сделать снимок";

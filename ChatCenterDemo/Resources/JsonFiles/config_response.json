@@ -95,5 +95,17 @@
         ]
       }
     }
+  },
+  "channel" : {
+	  "updateAlertEnabled" : false,
+	  "searchEnabled" : true,
+	  "surveyCompletionDelay" : 0,
+	  "keepSocketActive" : false,
+	  "voiceRecordingEnabled" : true,
+	  "historyLoadingCount" : 50,
+	  "keepSocketActiveDuringOperatorSession" : false,
+	  "linkPreviewEnabled" : false,
+	  "latestVersion" : "5.0",
+	  "scrollToLatest" : true
   }
 }
