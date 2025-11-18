@@ -16,24 +16,42 @@ extension MainViewController {
             components.searchBarStyle.cancelButtonStyle.tintColor = .black
             components.loadingChatStyle.indicatorStyle.backgroundColor = .systemGray3
             components.loadingChatStyle.indicatorStyle.cornerRadius = 20.0
-            components.audioPlayerStyle.playButtonStyle.image = ChatImage(system: "play.fill", tintColor: .red)
-            components.audioPlayerStyle.pauseButtonStyle.image = ChatImage(system: "pause.fill", tintColor: .green)
+            components.audioPlayerStyle.playButtonStyle.image = ChatImage(system: "play.fill", tintColor: .black)
+            components.audioPlayerStyle.pauseButtonStyle.image = ChatImage(system: "pause.fill", tintColor: .gray)
             components.audioPlayerStyle.progressViewStyle.color = .black
-            components.audioPlayerStyle.progressViewStyle.backgroundColor = .yellow
+            components.audioPlayerStyle.progressViewStyle.backgroundColor = .white
         }
 
         // Создание темы
         let theme = ChatTheme(components: components)
 
+        let authorText = ChatTextStyle(font: UIFont.systemFont(ofSize: 10), color: .black)
+        let quoteText = ChatTextStyle(font: UIFont.systemFont(ofSize: 10), color: .darkGray)
+
         // Применение настроек для экрана чата
         theme.flows.chatFlow.apply { chatFlow in
             chatFlow.pullToRefreshColor = .systemBlue
-            chatFlow.outcomeMessages.imageMessageStyle.timeBackgroundColor = .white
-            chatFlow.incomeMessages.showAvatar = showIncomeAvatar
-            chatFlow.outcomeMessages.apply { messagesStyle in
-                messagesStyle.textMessageStyle.textStyle.color = .black
-                messagesStyle.showAvatar = showOutcomeAvatar
-                messagesStyle.bubbleErrorColor = .red
+            // настройки входящих сообщений через создание нового стиля
+            chatFlow.incomeMessages = .build(with: components, configure: { style in
+                style.quoteStyle = .build(with: components, configure: { quote in
+                    quote.authorTextStyle = authorText
+                    quote.messageTextStyle = quoteText
+                    quote.separatorColor = .green
+                    quote.showFullName = true
+                    quote.backgroundColor = .lightText
+                })
+                style.textMessageStyle.openGraphStyle.urlTextStyle.color = .gray
+                style.showAvatar = showIncomeAvatar
+                style.textMessageStyle.textStyle.color = .black
+                style.bubbleTintColor = .lightText
+            })
+            // настройки существующего стиля для исходящих сообщений
+            chatFlow.outcomeMessages.apply { style in
+                style.textMessageStyle.textStyle.color = .black
+                style.showAvatar = showOutcomeAvatar
+                style.textMessageStyle.openGraphStyle.urlTextStyle.color = .link
+                style.bubbleErrorColor = .red
+                style.imageMessageStyle.timeBackgroundColor = .white
             }
         }
 

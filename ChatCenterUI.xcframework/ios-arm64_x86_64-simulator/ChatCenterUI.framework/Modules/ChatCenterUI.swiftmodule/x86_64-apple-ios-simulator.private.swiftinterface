@@ -76,7 +76,6 @@ import os
     @objc get
     @objc set
   }
-  @objc final public var bubbleMaskImage: ChatCenterUI.ChatImage
   @objc final public var bubbleMaskInsets: UIKit.UIEdgeInsets
   @objc final public var bubbleErrorColor: UIKit.UIColor {
     @objc get
@@ -93,7 +92,11 @@ import os
     @objc get
     @objc set
   }
-  @objc final public var isIncome: Swift.Bool {
+  @objc final public var bubbleMaskImage: ChatCenterUI.ChatImage {
+    @objc get
+    @objc set
+  }
+  @objc final public var bubbleTintColor: UIKit.UIColor {
     @objc get
     @objc set
   }
@@ -287,7 +290,6 @@ extension ChatCenterUI.CCChatModel {
   case clientInfo
   case clientOffline
   case operatorJoined
-  case operatorLeft
   case typing
   case survey
   case surveyQuestionAnswer
@@ -296,6 +298,8 @@ extension ChatCenterUI.CCChatModel {
   case reopenThread
   case operatorLookupStarted
   case clientBlocked
+  case clientBlockRejected
+  case clientUnblocked
   case threadOpened
   case threadClosed
   case scenario
@@ -347,10 +351,8 @@ extension ChatCenterUI.CCChatModel {
   @objc public var text: Swift.String?
   @objc public var formattedText: Swift.String?
   @objc public var speechText: Swift.String?
-  @objc public var ogData: LinkPresentation.LPLinkMetadata?
-  @objc public var ogUrl: Foundation.URL?
+  @objc public var ogData: ChatCenterUI.CCLinkMetadata?
   @objc public var ogLoading: Swift.Bool
-  @objc public var ogImage: UIKit.UIImage?
   @objc public var rawType: Swift.String?
   @objc public var media: (any ChatCenterUI.THRJSQMessageMediaData)?
   @objc public var status: ChatCenterUI.THRMessageStatus
@@ -498,6 +500,7 @@ public struct ChatConfig : Swift.CustomDebugStringConvertible {
   public init(transportConfig: ChatCenterUI.ChatTransportConfig, networkConfig: ChatCenterUI.ChatNetworkConfig = .init())
   public let transportConfig: ChatCenterUI.ChatTransportConfig
   public var networkConfig: ChatCenterUI.ChatNetworkConfig
+  public var shouldUseRemoteConfig: Swift.Bool
   public var searchEnabled: Swift.Bool
   public var userInputEnabled: Swift.Bool
   public var keepSocketActive: Swift.Bool
@@ -604,11 +607,13 @@ public protocol ChatCenterUISDKDelegate : AnyObject {
   func chatCenterUI(chatCenter: ChatCenterUI.ChatCenterUISDK, didChangeUnreadMessages count: Swift.Int)
   func chatCenterUI(chatCenter: ChatCenterUI.ChatCenterUISDK, didReceiveNetwork error: any Swift.Error)
   func chatCenterUI(chatCenter: ChatCenterUI.ChatCenterUISDK, didOpen url: Foundation.URL)
+  func chatCenterUI(chatCenter: ChatCenterUI.ChatCenterUISDK, didLog event: Swift.String)
 }
 extension ChatCenterUI.ChatCenterUISDKDelegate {
   public func chatCenterUI(chatCenter _: ChatCenterUI.ChatCenterUISDK, didChangeUnreadMessages _: Swift.Int)
   public func chatCenterUI(chatCenter _: ChatCenterUI.ChatCenterUISDK, didReceiveNetwork _: any Swift.Error)
   public func chatCenterUI(chatCenter _: ChatCenterUI.ChatCenterUISDK, didOpen _: Foundation.URL)
+  public func chatCenterUI(chatCenter _: ChatCenterUI.ChatCenterUISDK, didLog _: Swift.String)
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class ChatUserFlow : ObjectiveC.NSObject, ChatCenterUI.Applicable {
   @objc public var navigationBarStyle: ChatCenterUI.NavigationBarStyle {
@@ -633,10 +638,6 @@ extension ChatCenterUI.Applicable where Self : AnyObject {
   @objc final public var loadingChatStyle: ChatCenterUI.ChatLoadingStyle
   @objc final public var errorPlaceholderStyle: ChatCenterUI.ChatPlaceholderErrorStyle
   @objc final public var chatPlaceholderStyle: ChatCenterUI.ChatPlaceholderStyle
-  @objc final public var incomeMessages: ChatCenterUI.ChatMessagesStyles {
-    @objc get
-    @objc set
-  }
   @objc final public var outcomeMessages: ChatCenterUI.ChatMessagesStyles {
     @objc get
     @objc set
@@ -665,6 +666,10 @@ extension ChatCenterUI.Applicable where Self : AnyObject {
     @objc set
   }
   @objc final public var pullToRefreshColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc final public var incomeMessages: ChatCenterUI.ChatMessagesStyles {
     @objc get
     @objc set
   }
@@ -795,6 +800,15 @@ public struct MultipartFormData {
   @objc final public var fileViewerStyle: ChatCenterUI.FileViewerStyle {
     @objc get
     @objc set
+  }
+  @objc final public var images: ChatCenterUI.ChatImages {
+    get
+  }
+  @objc final public var colors: ChatCenterUI.ChatColors {
+    get
+  }
+  @objc final public var typography: ChatCenterUI.ChatTypography {
+    get
   }
   @objc public static func build(images: ChatCenterUI.ChatImages = .init(), colors: ChatCenterUI.ChatColors = .init(), typography: ChatCenterUI.ChatTypography = .init(), configure: (ChatCenterUI.ChatComponents) -> Swift.Void) -> ChatCenterUI.ChatComponents
   @objc deinit
@@ -1049,6 +1063,18 @@ public typealias InputChatVoiceStyle = ChatCenterUI.ChatInputVoiceStyle
   @objc required public init(components: ChatCenterUI.ChatComponents)
   @objc deinit
 }
+@objc @_inheritsConvenienceInitializers final public class OpenGraphViewStyle : ChatCenterUI.ChatStyle {
+  @objc required public init(components: ChatCenterUI.ChatComponents)
+  @objc final public var titleTextStyle: ChatCenterUI.ChatTextStyle {
+    @objc get
+    @objc set
+  }
+  @objc final public var urlTextStyle: ChatCenterUI.ChatTextStyle {
+    @objc get
+    @objc set
+  }
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers @objcMembers final public class ChatImages : ObjectiveC.NSObject, ChatCenterUI.Applicable {
   @objc final public var backButtonImage: ChatCenterUI.ChatImage
   @objc final public var closeButtonImage: ChatCenterUI.ChatImage
@@ -1297,6 +1323,7 @@ public typealias IconButtonChatStyle = ChatCenterUI.IconButtonStyle
   @objc public init(dataProvider: ChatCenterUI.CCDataProvider)
   @objc deinit
   @objc weak public var viewDelegate: (any ChatCenterUI.CCChatModelDelegate)?
+  weak public var sdkInstance: ChatCenterUI.ChatCenterUISDK?
   @objc public var historyIsLoaded: Swift.Bool
   @objc public var cellSizeCache: Foundation.NSMutableDictionary
   @objc public var stateModel: ChatCenterUI.CCChatState
@@ -1305,9 +1332,6 @@ public typealias IconButtonChatStyle = ChatCenterUI.IconButtonStyle
   @objc public var messages: [ChatCenterUI.THRMessage]
   @objc weak public var dataProvider: ChatCenterUI.CCDataProvider?
   @objc public var typingMessagesIntervalSeconds: Swift.Int {
-    @objc get
-  }
-  @objc public var unreadMessages: [ChatCenterUI.THRMessage] {
     @objc get
   }
   @objc public func initChat()
@@ -1438,6 +1462,7 @@ extension ChatCenterUI.CCChatModel {
   @objc final public var defaultErrorImage: ChatCenterUI.ChatImage
   @objc final public var serverErrorImage: ChatCenterUI.ChatImage
   @objc final public var repeatButtonStyle: ChatCenterUI.TextButtonStyle
+  @objc final public var imageSize: CoreFoundation.CGSize
   @objc deinit
 }
 public typealias Completion<T> = (T?, (any Swift.Error)?) -> Swift.Void
@@ -1447,8 +1472,6 @@ public typealias Completion<T> = (T?, (any Swift.Error)?) -> Swift.Void
   final public func closeConnections()
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class THRSystemMessageFactory : ObjectiveC.NSObject {
-  @objc public static func messageConnectedSpecialist(_ specialist: ChatCenterUI.THRSpecialist?, date: Foundation.Date) -> ChatCenterUI.THRMessage?
-  @objc public static func messageDisconnectedSpecialist(_ specialist: ChatCenterUI.THRSpecialist?, date: Foundation.Date) -> ChatCenterUI.THRMessage?
   @objc public static func messageSchedule(_ schedule: ChatCenterUI.THRSchedule) -> ChatCenterUI.THRMessage
   @objc public static func messageRequestCloseThread(hideAfter: Swift.Int) -> ChatCenterUI.THRMessage
   @objc public static func messageSystemText(_ text: Swift.String, date: Foundation.Date, type: ChatCenterUI.THRMessageType) -> ChatCenterUI.THRMessage
@@ -1505,6 +1528,7 @@ public struct ChatTransportConfig : Swift.CustomDebugStringConvertible {
     case api17
     case api18
     case api19
+    case api20
     public init?(rawValue: Swift.UInt)
     public typealias RawValue = Swift.UInt
     public var rawValue: Swift.UInt {
@@ -1656,10 +1680,17 @@ public struct ChatTransportConfig : Swift.CustomDebugStringConvertible {
   @objc var isImageDownloadFailed: Swift.Bool { get set }
   @objc var image: UIKit.UIImage? { get set }
 }
-public typealias CCOGProviderCompletion = (LinkPresentation.LPLinkMetadata?, (any Swift.Error)?) -> Swift.Void
-@_hasMissingDesignatedInitializers public class CCOGDataProvider {
-  public func fetchOGData(URL url: Foundation.URL, completion: @escaping ChatCenterUI.CCOGProviderCompletion)
-  public func cancelFetchOGData(URL urlString: Swift.String)
+public typealias CCOGProviderCompletion = (ChatCenterUI.CCLinkMetadata?, (any Swift.Error)?) -> Swift.Void
+@objc @objcMembers final public class CCLinkMetadata : ObjectiveC.NSObject {
+  @objc public init(url: Foundation.URL?, title: Swift.String? = nil, image: UIKit.UIImage? = nil)
+  @objc final public let url: Foundation.URL?
+  @objc final public let title: Swift.String?
+  @objc final public let image: UIKit.UIImage?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class CCOGDataProvider {
+  final public func fetchOGData(URL url: Foundation.URL, completion: @escaping ChatCenterUI.CCOGProviderCompletion)
+  final public func cancelFetchOGData(URL urlString: Swift.String)
   @objc deinit
 }
 extension Foundation.NSURL {
@@ -1777,6 +1808,16 @@ extension UIKit.UIView {
   @objc final public func fetchOGData(URL url: Foundation.URL, completion: @escaping ChatCenterUI.CCOGProviderCompletion)
   @objc deinit
 }
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class CCLinkView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public init()
+  @objc @_Concurrency.MainActor @preconcurrency final public var onTap: ((Foundation.URL) -> Swift.Void)?
+  @objc @_Concurrency.MainActor @preconcurrency final public var isOutgoing: Swift.Bool
+  @objc @_Concurrency.MainActor @preconcurrency final public var metadata: ChatCenterUI.CCLinkMetadata? {
+    @objc get
+    @objc set
+  }
+  @objc deinit
+}
 @objc public enum ChatAlignment : Swift.UInt {
   case center
   case left
@@ -1835,6 +1876,10 @@ public typealias TextMessageStyle = ChatCenterUI.TextChatMessageStyle
   }
   @objc final public var textViewInsets: UIKit.UIEdgeInsets
   @objc final public var textInsets: UIKit.UIEdgeInsets
+  @objc final public var openGraphStyle: ChatCenterUI.OpenGraphViewStyle {
+    @objc get
+    @objc set
+  }
   @objc deinit
 }
 extension Foundation.URLRequest {
@@ -1983,9 +2028,6 @@ final public class ChatCenterUISDK {
   weak final public var delegate: (any ChatCenterUI.ChatCenterUISDKDelegate)? {
     get
     set
-  }
-  final public var unreadMessagesCount: Swift.Int {
-    get
   }
   final public var theme: ChatCenterUI.ChatTheme {
     get
