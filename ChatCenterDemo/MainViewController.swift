@@ -43,10 +43,10 @@ final class MainViewController: UIViewController {
             selectServerButton.setTitle(selectedServer.name, for: .normal)
             selectServerButton.isValue = true
 
-            /// Вызываем тут, т.к меняется сервер и нужно переинициализировать СДК с новыми данными
+            // Вызываем тут, т.к меняется сервер и нужно переинициализировать СДК с новыми данными
             setupSDK()
 
-            /// Если меняется сервер при уже выбранном пользователе
+            // Если меняется сервер при уже выбранном пользователе
             if let selectedUser {
                 authUser(user: selectedUser)
             }
@@ -74,8 +74,8 @@ final class MainViewController: UIViewController {
 
         DispatchQueue.global().async {
             UNUserNotificationCenter.current().requestAuthorization(
-                options: [.alert, .badge, .sound])
-            { success, error in
+                options: [.alert, .badge, .sound]
+            ) { success, error in
                 guard success else {
                     print(error?.localizedDescription ?? "")
                     return

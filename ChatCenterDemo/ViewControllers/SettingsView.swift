@@ -11,7 +11,9 @@ struct BooleanSetting: Identifiable {
     let title: String
     let key: String
 
-    var id: String { key }
+    var id: String {
+        key
+    }
 }
 
 struct ToggleRow: View {
@@ -72,7 +74,9 @@ struct SettingsView: View {
             }
         }
 
-        var id: Self { self }
+        var id: Self {
+            self
+        }
     }
 
     let settings: [BooleanSetting] = [

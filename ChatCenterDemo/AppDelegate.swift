@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        /// Передача токена  устройства для отправки пуш уведомлений из СДК
+        // Передача токена  устройства для отправки пуш уведомлений из СДК
         ChatCenterUISDK.setDeviceToken(deviceToken)
     }
 }

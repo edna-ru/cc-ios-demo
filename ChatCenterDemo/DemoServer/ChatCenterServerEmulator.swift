@@ -182,8 +182,7 @@ final class ChatCenterServerEmulator: @unchecked Sendable {
             ) {
                 do {
                     let data = try Data(contentsOf: url)
-                    let response = HttpResponse.ok(.data(data, contentType: "application/json"))
-                    return response
+                    return HttpResponse.ok(.data(data, contentType: "application/json"))
                 } catch {
                     print("error:\(error)")
                 }
@@ -205,8 +204,7 @@ final class ChatCenterServerEmulator: @unchecked Sendable {
             if let url = Bundle.main.url(forResource: "config_response", withExtension: "json") {
                 do {
                     let data = try Data(contentsOf: url)
-                    let response = HttpResponse.ok(.data(data, contentType: "application/json"))
-                    return response
+                    return HttpResponse.ok(.data(data, contentType: "application/json"))
                 } catch {
                     print("error:\(error)")
                 }

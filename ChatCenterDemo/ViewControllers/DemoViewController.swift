@@ -95,8 +95,13 @@ extension DemoViewController: UITableViewDataSource {
         }
     }
 
-    func tableView(_: UITableView, heightForRowAt _: IndexPath) -> CGFloat { 44 }
-    func tableView(_: UITableView, titleForHeaderInSection _: Int) -> String? { "ПРИМЕРЫ ДИАЛОГОВ" }
+    func tableView(_: UITableView, heightForRowAt _: IndexPath) -> CGFloat {
+        44
+    }
+
+    func tableView(_: UITableView, titleForHeaderInSection _: Int) -> String? {
+        "ПРИМЕРЫ ДИАЛОГОВ"
+    }
 }
 
 // MARK: UITableViewDelegate

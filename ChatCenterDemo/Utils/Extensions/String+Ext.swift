@@ -8,13 +8,12 @@
 import UIKit
 
 extension String {
-    func parse<T>(to type: T.Type) -> T? where T: Decodable {
+    func parse<T: Decodable>(to type: T.Type) -> T? {
         let data: Data = data(using: .utf8)!
         let decoder = JSONDecoder()
 
         do {
-            let object = try decoder.decode(type, from: data)
-            return object
+            return try decoder.decode(type, from: data)
 
         } catch {
             return nil

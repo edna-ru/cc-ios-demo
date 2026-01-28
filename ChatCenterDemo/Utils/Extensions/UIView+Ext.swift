@@ -8,7 +8,9 @@
 import UIKit
 
 public extension UIView {
-    var safeArea: UILayoutGuide { safeAreaLayoutGuide }
+    var safeArea: UILayoutGuide {
+        safeAreaLayoutGuide
+    }
 
     func roundView(radius: CGFloat, borderColor: UIColor = .clear, borderWidth: CGFloat = 0) {
         layer.borderWidth = borderWidth

@@ -28,7 +28,9 @@ final class TextFieldTabelViewCell: UITableViewCell {
 
     // MARK: Internal
 
-    override var canBecomeFirstResponder: Bool { true }
+    override var canBecomeFirstResponder: Bool {
+        true
+    }
 
     func setupCell(type: TypeField, text: String? = "", placeholder: String = "") {
         switch type {

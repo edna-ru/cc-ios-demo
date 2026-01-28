@@ -160,7 +160,7 @@ extension ContainerTableView: UITableViewDataSource {
     }
 
     func tableView(_: UITableView, numberOfRowsInSection: Int) -> Int {
-        /// экран добавления/редактирования
+        // экран добавления/редактирования
         if !isSelectedViewController {
             if type == .user {
                 return 7
@@ -170,7 +170,7 @@ extension ContainerTableView: UITableViewDataSource {
             }
             return 6
         }
-        /// экран выбора - количество серверов/пользователей
+        // экран выбора - количество серверов/пользователей
         switch type {
         case .server:
             return servers.count
@@ -179,11 +179,13 @@ extension ContainerTableView: UITableViewDataSource {
         }
     }
 
-    func tableView(_: UITableView, heightForRowAt _: IndexPath) -> CGFloat { 44 }
+    func tableView(_: UITableView, heightForRowAt _: IndexPath) -> CGFloat {
+        44
+    }
 
     fileprivate func editList(_ indexPath: IndexPath, _ cell: TextFieldTabelViewCell) {
         if tableView.numberOfSections > 1 {
-            /// server
+            // server
             if indexPath.section == 0 {
                 cell.setupCell(type: .text, text: servers[index].name, placeholder: "Name")
             } else {
@@ -205,7 +207,7 @@ extension ContainerTableView: UITableViewDataSource {
                 }
             }
         } else {
-            /// user
+            // user
             switch indexPath.row {
             case 0:
                 cell.setupCell(type: .text, text: users[index].id, placeholder: "ID обязательный параметр")
@@ -231,7 +233,7 @@ extension ContainerTableView: UITableViewDataSource {
 
     fileprivate func createList(_ indexPath: IndexPath, _ cell: TextFieldTabelViewCell) {
         if tableView.numberOfSections > 1 {
-            /// server
+            // server
             if indexPath.section == 0 {
                 cell.setupCell(type: .text, placeholder: "Name")
             } else {
@@ -253,7 +255,7 @@ extension ContainerTableView: UITableViewDataSource {
                 }
             }
         } else {
-            /// user
+            // user
             switch indexPath.row {
             case 0:
                 cell.setupCell(type: .text, placeholder: "ID обязательный параметр")
@@ -281,7 +283,7 @@ extension ContainerTableView: UITableViewDataSource {
                 return UITableViewCell()
             }
             let isEdit = index > -1 ? true : false
-            /// редактирование
+            // редактирование
             if isEdit {
                 editList(indexPath, cell)
             } else {
