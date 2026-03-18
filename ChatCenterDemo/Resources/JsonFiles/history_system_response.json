@@ -1,109 +1,9 @@
 {
   "messages": [
     {
-      "attachments": [],
-      "display": false,
-      "quickReplies": [],
-      "quotes": [],
-      "read": true,
-      "receivedDate": "2023-03-24T11:40:00.694Z",
-      "settings": {
-        "blockInput": false
-      },
-      "simple": false,
-      "text": "Тестовый вопрос",
-      "threadId": 137,
-      "type": "MESSAGE",
-      "uuid": "58791494-fd93-44db-8e37-f72c80fecb3d"
-    },
-    {
-      "attachments": [],
-      "display": false,
-      "operator": {
-        "gender": "FEMALE",
-        "id": 4,
-        "name": "Оператор Елена",
-        "role": "OPERATOR"
-      },
-      "quickReplies": [],
-      "quotes": [],
-      "read": false,
-      "receivedDate": "2023-03-24T11:40:26.643Z",
-      "settings": {
-        "blockInput": false
-      },
-      "simple": false,
-      "text": "Тестовый ответ",
-      "threadId": 137,
-      "type": "MESSAGE",
-      "uuid": "a750714b-e1fc-4f80-b807-cd7696b078dc"
-    },
-    {
-      "clientId": "987525",
-      "display": false,
-      "questionId": 1,
-      "rate": 1,
-      "read": false,
-      "receivedDate": "2023-03-24T11:40:34.324Z",
-      "scale": 1,
-      "sendingId": 136,
-      "simple": true,
-      "text": "Оцените наше обслуживание",
-      "threadId": 137,
-      "type": "SURVEY_QUESTION_ANSWER",
-      "uuid": "3a84a1c8-5f2e-4e31-abcb-6fc8559b2dc9"
-    },
-    {
-      "clientId": "987525",
-      "display": false,
-      "questionId": 3,
-      "rate": 3,
-      "read": false,
-      "receivedDate": "2023-03-24T11:40:36.218Z",
-      "scale": 5,
-      "sendingId": 136,
-      "simple": false,
-      "text": "Оцените насколько мы решили ваш вопрос",
-      "threadId": 137,
-      "type": "SURVEY_QUESTION_ANSWER",
-      "uuid": "0ee9607d-e444-4a4a-8fec-a2d928c7e40f"
-    },
-    {
-      "clientId": "987525",
-      "display": false,
-      "questionId": 4,
-      "rate": 4,
-      "read": false,
-      "receivedDate": "2023-03-24T11:40:39.066Z",
-      "scale": 5,
-      "sendingId": 136,
-      "simple": false,
-      "text": "Оцените насколько внимательным был наш сотрудник",
-      "threadId": 137,
-      "type": "SURVEY_QUESTION_ANSWER",
-      "uuid": "7c919dc8-8c10-4432-9bdf-88707b56d02d"
-    },
-    {
-      "attachments": [],
-      "display": false,
-      "quickReplies": [],
-      "quotes": [],
-      "read": true,
-      "receivedDate": "2023-03-24T11:40:56.238Z",
-      "settings": {
-        "blockInput": false
-      },
-      "simple": false,
-      "text": "Еще вопрос",
-      "threadId": 138,
-      "type": "MESSAGE",
-      "uuid": "ce6369bc-6163-4a1a-ad0b-f22b5e05aba7"
-    },
-    {
       "type": "SURVEY",
       "providerIds": [],
       "uuid": "7f95eb98-bc74-490a-9426-9888abb68947",
-      "text": "{\"id\":1,\"sendingId\":139,\"uuid\":\"7f95eb98-bc74-490a-9426-9888abb68947\",\"questions\":[{\"id\":1,\"sendingId\":139,\"text\":\"Оцените наше обслуживание\",\"scale\":1,\"simple\":true,\"displayText\":\"Качество обслуживания\",\"kpi\":3.0,\"int\":true},{\"id\":3,\"sendingId\":139,\"text\":\"Оцените насколько мы решили ваш вопрос\",\"scale\":5,\"simple\":false,\"displayText\":\"Качество обслуживания\",\"minValue\":1,\"maxValue\":5,\"kpi\":3.0,\"int\":true},{\"id\":4,\"sendingId\":139,\"text\":\"Оцените насколько внимательным был наш сотрудник\",\"scale\":5,\"simple\":false,\"displayText\":\"Качество обслуживания\",\"minValue\":1,\"maxValue\":5,\"kpi\":3.0,\"int\":true}],\"created\":\"2016-10-15T00:00:00.000Z\",\"status\":\"CREATED\",\"sendStatus\":\"CLOSED\",\"hideAfter\":999999999999999}",
       "receivedDate": "2023-03-24T12:52:13.667Z",
       "read": true,
       "content": {
@@ -142,19 +42,112 @@
             "displayText": "Качество обслуживания",
             "minValue": 1,
             "maxValue": 5,
+			"clientCommentThreshold" : 0,
             "kpi": 3.0,
             "int": true
-          }
+          },
+		  {
+			  "sendingId" : 2171,
+			  "id" : 4,
+			  "clientCommentThreshold" : 1,
+			  "buttons" : [
+				  {
+					  "value" : 1,
+					  "text" : "Да"
+				  },
+				  {
+					  "value" : 2,
+					  "text" : "Нет"
+				  }
+			  ],
+			  "displayText" : "Качество обслуживания",
+			  "text" : "FCR опрос"
+		  },
+		  {
+			  "sendingId" : 2171,
+			  "id" : 6,
+			  "clientCommentThreshold" : 1,
+			  "buttons" : [
+				  {
+					  "value" : 1,
+					  "text" : "Отлично"
+				  },
+				  {
+					  "value" : 2,
+					  "text" : "Хорошо"
+				  },
+				  {
+					  "value" : 3,
+					  "text" : "Плохо"
+				  }
+			  ],
+			  "displayText" : "Качество обслуживания",
+			  "text" : "CSI опрос"
+		  },
+		  {
+			  "sendingId" : 2170,
+			  "id" : 3,
+			  "clientCommentThreshold" : 1,
+			  "buttons" : [
+				  {
+					  "value" : 1,
+					  "text" : "1"
+				  },
+				  {
+					  "value" : 3,
+					  "text" : "2"
+				  },
+				  {
+					  "value" : 5,
+					  "text" : "3"
+				  },
+				  {
+					  "value" : 7,
+					  "text" : "4"
+				  },
+				  {
+					  "value" : 9,
+					  "text" : "5"
+				  }
+			  ],
+			  "displayText" : "Оцените работу оператора",
+			  "text" : "Доброжелательность"
+		  },
+		  {
+			  "uuid" : "4d4efc19-3cf5-4690-9117-582ca2a5d918",
+			  "receivedDate" : "2025-11-06T08:05:53.506Z",
+			  "display" : true,
+			  "massPushMessage" : false,
+			  "providerIds" : [
+
+			  ],
+			  "authorized" : true,
+			  "type" : "CLIENT_BLOCKED",
+			  "personalOffer" : false,
+			  "text" : "Вы заблокированы, дальнейшее общение с оператором ограничено",
+			  "threadId" : 1905,
+		  },
+		  {
+			  "uuid" : "606a9357-be20-4464-a87b-2abba25673e8",
+			  "receivedDate" : "2025-11-06T08:06:54.092Z",
+			  "display" : true,
+			  "massPushMessage" : false,
+			  "providerIds" : [
+
+			  ],
+			  "authorized" : true,
+			  "type" : "CLIENT_UNBLOCKED",
+			  "personalOffer" : false,
+			  "text" : "Вы разблокированы, общение с оператором снова доступно",
+			  "threadId" : 1906,
+		  }
         ],
         "created": "2016-10-15T00:00:00.000Z",
         "status": "CREATED",
         "sendStatus": "CLOSED",
-        "hideAfter": 9999999999999
+        "hideAfter": 5
       },
       "authorized": true,
-      "massPushMessage": false,
-      "aps/sound": "default",
-      "origin": "threads"
     }
   ]
 }

@@ -2,12 +2,13 @@
 // MainViewController.swift
 // ChatCenterDemo
 //
-// Copyright © 2025 edna. All rights reserved.
+// Copyright © 2026 edna. All rights reserved.
 //
 
 import ChatCenterUI
 import SwiftUI
 import UIKit
+import SafariServices
 
 /// Главный экран демо приложения
 final class MainViewController: UIViewController {
@@ -19,11 +20,17 @@ final class MainViewController: UIViewController {
     @AppStorage(SettingsKeys.showIncomeAvatar.rawValue)
     var showIncomeAvatar: Bool = false
 
+    @AppStorage(SettingsKeys.keyboardControlVisible.rawValue)
+    var keyboardControlVisible: Bool = false
+
     @AppStorage(SettingsKeys.showOutcomeAvatar.rawValue)
     var showOutcomeAvatar: Bool = false
 
     @AppStorage(SettingsKeys.inputAlignment.rawValue)
     var inputAlignment: Int = 0
+
+    @AppStorage(SettingsKeys.sdkTheme.rawValue)
+    var sdkTheme: SDKTheme = .system
 
     let imageView = UIImageView()
     let titleLabel = UILabel()
@@ -31,6 +38,10 @@ final class MainViewController: UIViewController {
     let selectUserButton = SelectedButton()
     let mainButton = MainButton()
     let demoButton = DemoButton()
+    var chatUser: ChatUser?
+
+    /// Экземпляр СДК
+    var chatCenterSDK: ChatCenterUISDK?
 
     var selectedServer: Server? {
         didSet {
@@ -118,6 +129,7 @@ final class MainViewController: UIViewController {
         // 3. Настройка параметров работы чата
         var chatConfig = ChatConfig(transportConfig: chatTransportConfig,
                                     networkConfig: chatNetworkConfig)
+        chatConfig.shouldUseRemoteConfig = shouldUseRemoteConfig
         chatConfig.searchEnabled = searchEnabled
         chatConfig.voiceRecordingEnabled = voiceRecordingEnabled
         chatConfig.linkPreviewEnabled = linkPreviewEnabled
@@ -131,12 +143,21 @@ final class MainViewController: UIViewController {
                                             loggerConfig: ChatLoggerConfig(logLevel: .all))
 
         // 5. Настройка тем оформления
-        chatCenterSdk.theme = makeLightTheme()
-        chatCenterSdk.darkTheme = makeDarkTheme()
-        chatCenterSdk.localizationConfig = ChatLocalizationConfig(bundle: Bundle.main, tableName: "DemoLocalizable")
+        if sdkTheme == .system {
+            // берутся дефолтные настройки
+        } else if sdkTheme == .full {
+            chatCenterSdk.theme = makeFullTheme()
+        } else {
+            chatCenterSdk.theme = makeTheme()
+        }
 
         // 6. Подписка на события делегата (если нужно, в этом примере для обработки счетчика непрочитанных)
         chatCenterSdk.delegate = self
+
+        // Предзаполненное сообщение (если используется)
+        if let prefilledMessage {
+            chatCenterSdk.prefill(message: prefilledMessage)
+        }
 
         // 7. Сохранение экземпляра для дальнейшего использования
         chatCenterSDK = chatCenterSdk
@@ -152,23 +173,50 @@ final class MainViewController: UIViewController {
         // Создание модели пользователя
         let chatUser = ChatUser(identifier: selectedUser.id,
                                 name: selectedUser.name,
-                                data: selectedUser.data)
+                                data: sendUserDataBeforeOpenChat ? nil : selectedUser.data)
 
         // Установка пользователя в СДК
+        self.chatUser = chatUser
         chatCenterSDK.authorize(user: chatUser)
     }
 
     /// Открытие чата
-    func openChat() {
+    func openChat(with userInfo: [AnyHashable: Any]? = nil) {
         guard let chatCenterSDK else {
             return
         }
 
+        // Проверяем что переход по пушу и экран чата уже открыт
+        if let userInfo, navigationController?.topViewController == chatController {
+            // Пытаемся обработать пуш в чате
+            try? chatCenterSDK.handleNotification(userInfo: userInfo)
+            return
+        }
+
+        // Повторно устанавливаем тему, т.к в демке можно менять динамически
+        if sdkTheme == .system {
+            chatCenterSDK.theme = ChatTheme(components: ChatComponents())
+        } else if sdkTheme == .full {
+            chatCenterSDK.theme = makeFullTheme()
+        } else {
+            chatCenterSDK.theme = makeTheme()
+        }
+
+        if let path = Bundle.main.path(forResource: appLanguage.rawValue, ofType: "lproj"), let bundle = Bundle(path: path) {
+            let locale = Locale(identifier: appLanguage.id)
+            chatCenterSDK.localizationConfig = ChatLocalizationConfig(bundle: bundle, tableName: "DemoLocalizable", locale: locale)
+        }
+
         // Получение контроллера чата
-        let result = Result { try chatCenterSDK.getChat() }
+        let result = Result { try chatCenterSDK.getChat(userInfo: userInfo) }
 
         switch result {
         case let .success(chatController):
+            self.chatController = chatController
+
+            if sendUserDataBeforeOpenChat {
+                chatUser?.updateData(data: selectedUser?.data)
+            }
             // Открытие экрана чата
             navigationController?.pushViewController(chatController, animated: true)
         case let .failure(error):
@@ -194,6 +242,12 @@ final class MainViewController: UIViewController {
 
     // MARK: Private
 
+    @AppStorage(SettingsKeys.language.rawValue)
+    private var appLanguage: AppLanguage = .russian
+
+    @AppStorage(SettingsKeys.shouldUseRemoteConfig.rawValue)
+    private var shouldUseRemoteConfig: Bool = false
+
     @AppStorage(SettingsKeys.searchEnabled.rawValue)
     private var searchEnabled: Bool = false
 
@@ -209,12 +263,34 @@ final class MainViewController: UIViewController {
     @AppStorage(SettingsKeys.keepSocketActiveDuringOperatorSession.rawValue)
     private var keepSocketActiveDuringOperatorSession: Bool = false
 
-    /// Экземпляр СДК
-    private var chatCenterSDK: ChatCenterUISDK?
+    @AppStorage(SettingsKeys.prefilledMessage.rawValue)
+    private var prefilledMessage: String?
+
+    @AppStorage(SettingsKeys.openURLAppEnabled.rawValue)
+    private var openURLAppEnabled: Bool = false
+
+    @AppStorage(SettingsKeys.sendUserDataBeforeOpenChat.rawValue)
+    private var sendUserDataBeforeOpenChat: Bool = false
+
+    /// Текущий контроллер чата
+    private weak var chatController: UIViewController?
 }
 
 /// Реализация делегата ChatCenterUI SDK
 extension MainViewController: @preconcurrency ChatCenterUISDKDelegate {
+
+    /// Реализация метода oбработки открытия ссылки
+    func chatCenterUI(chatCenter _: ChatCenterUISDK, didOpen url: URL) -> Bool {
+        if openURLAppEnabled {
+            let controller = SFSafariViewController(url: url)
+            controller.modalPresentationStyle = .formSheet
+            navigationController?.present(controller, animated: true)
+
+        }
+
+        return openURLAppEnabled
+    }
+
     /// Реализация метода оповещения о новых сообщениях
     func chatCenterUI(chatCenter _: ChatCenterUI.ChatCenterUISDK, didChangeUnreadMessages count: Int) {
         mainButton.setBadgeCount(count)

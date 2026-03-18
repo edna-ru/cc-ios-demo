@@ -2,7 +2,7 @@
 // BaseButtons.swift
 // ChatCenterDemo
 //
-// Copyright © 2025 edna. All rights reserved.
+// Copyright © 2026 edna. All rights reserved.
 //
 
 import UIKit
@@ -34,7 +34,7 @@ open class MainButton: BaseButton {
             badgeCountLabel.leftAnchor.constraint(equalTo: rightAnchor, constant: -15),
             badgeCountLabel.topAnchor.constraint(equalTo: topAnchor, constant: -10),
             badgeCountLabel.widthAnchor.constraint(equalToConstant: 30),
-            badgeCountLabel.heightAnchor.constraint(equalToConstant: 30),
+            badgeCountLabel.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 

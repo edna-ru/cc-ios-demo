@@ -4,13 +4,11 @@
 "action.title_no" = "Нет";
 "action.title_cancel" = "Отмена";
 "action.title_repeat" = "Повторить";
-"action.title_connect" = "Подключиться";
 "action.alert_send" = "Отправить";
 
 "chat.available_readonly_text" = "Данный чат доступен только для просмотра";
 "chat.client_name" = "Вы"; // Обращение к клиенту (цитаты, собственные сообщения в поиске и т.д)
 
-"chat.title.waiting" = "Пожалуйста, подождите..."; // Ожидание подключения оператора
 "chat.title.connecting" = "Подключение..."; // Подключение к серверу
 "chat.title.opened" = "Демо контакт центр"; // Открыт чат
 "chat.title.waiting_for_specialist" = "Поиск оператора..."; // Ожидание подключения оператора
@@ -63,14 +61,6 @@
 "message.voice_play_error" = "Ошибка при воспроизведении";
 "message.unsupported_file_format" = "Неподдерживаемый формат";
 
-// Системные сообщения
-"message.system.join_chat_unknown" = "подключился(-ась) к диалогу в %@";
-"message.system.join_chat_male" = "подключился к диалогу в %@";
-"message.system.join_chat_female" = "подключилась к диалогу в %@";
-"message.system.leave_chat_unknown" = "покинул(а) диалог в %@";
-"message.system.leave_chat_male" = "покинул диалог в %@";
-"message.system.leave_chat_female" = "покинула диалог в %@";
-
 // Меню цитирования
 "menu.response_title" = "Ответить";
 "menu.copy_title" = "Копировать";
@@ -78,7 +68,6 @@
 // Поиск
 "search.placeholder_title" = "Поиск"; // Плэйсхолдер в строке поиска
 "search.not_found_title" = "Результатов не найдено";
-"search.more_btn" = "Искать еще";
 "search.image_attachment_title" = "изображение";
 "search.audio_attachment_title" = "аудио файл";
 

@@ -2,7 +2,7 @@
 // Preferences.swift
 // ChatCenterDemo
 //
-// Copyright © 2025 edna. All rights reserved.
+// Copyright © 2026 edna. All rights reserved.
 //
 
 import Foundation
@@ -24,8 +24,7 @@ public final class Preferences {
     func get<T: Decodable>(type _: T.Type, forKey key: PreferencesKeys) -> T? {
         let decoder = JSONDecoder()
         if let data = UserDefaults.standard.object(forKey: key.rawValue) as? Data,
-           let object = try? decoder.decode(T.self, from: data)
-        {
+           let object = try? decoder.decode(T.self, from: data) {
             return object
         }
 

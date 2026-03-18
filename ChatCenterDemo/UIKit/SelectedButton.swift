@@ -2,7 +2,7 @@
 // SelectedButton.swift
 // ChatCenterDemo
 //
-// Copyright © 2025 edna. All rights reserved.
+// Copyright © 2026 edna. All rights reserved.
 //
 
 import UIKit
@@ -109,7 +109,7 @@ open class SelectedButton: UIButton {
             rightImageView.widthAnchor.constraint(equalToConstant: 16),
             rightImageView.heightAnchor.constraint(equalToConstant: 16),
             rightImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            rightImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            rightImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
     }
 }

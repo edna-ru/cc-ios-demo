@@ -2,7 +2,7 @@
 // ChatCenterServerEmulator.swift
 // ChatCenterDemo
 //
-// Copyright © 2025 edna. All rights reserved.
+// Copyright © 2026 edna. All rights reserved.
 //
 
 import Foundation
@@ -67,7 +67,7 @@ final class ChatCenterServerEmulator: @unchecked Sendable {
         case errorConfig
         case expiredFiles
         case chatStates
-        case emptyFile
+        case emptyHistory
 
         // MARK: Internal
 
@@ -79,7 +79,7 @@ final class ChatCenterServerEmulator: @unchecked Sendable {
             case .images:
                 "Картинки"
             case .system:
-                "Системные сообщения"
+                "Опросы"
             case .text:
                 "Текстовые сообщения"
             case .longHistory:
@@ -98,7 +98,7 @@ final class ChatCenterServerEmulator: @unchecked Sendable {
                 "Ошибка загрузки конфигурации"
             case .expiredFiles:
                 "Статусы expired"
-            case .emptyFile:
+            case .emptyHistory:
                 "Пустая история"
             case .chatStates:
                 "Состояния чата"
@@ -130,7 +130,7 @@ final class ChatCenterServerEmulator: @unchecked Sendable {
                 "history_text_response"
             case .expiredFiles:
                 "history_expired_response"
-            case .emptyFile:
+            case .emptyHistory:
                 "history_empty_response"
             case .chatStates:
                 "history_text_response"
@@ -233,6 +233,10 @@ final class ChatCenterServerEmulator: @unchecked Sendable {
             }
             if self.selectedUseCase == .system, model.action == Actions.sendMessage.rawValue {
                 session.writeText(ConstantsResponse.messageResponse.getResponse(correlationId: model.correlationId))
+            }
+
+            if self.selectedUseCase == .emptyHistory {
+                session.writeText(ConstantsResponse.testMesage.getResponse())
             }
         })
     }

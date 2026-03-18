@@ -2,7 +2,7 @@
 // UIViewController+Ext.swift
 // ChatCenterDemo
 //
-// Copyright © 2025 edna. All rights reserved.
+// Copyright © 2026 edna. All rights reserved.
 //
 
 import UIKit

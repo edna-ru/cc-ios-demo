@@ -2,14 +2,17 @@
 // AppDelegate.swift
 // ChatCenterDemo
 //
-// Copyright © 2025 edna. All rights reserved.
+// Copyright © 2026 edna. All rights reserved.
 //
 
 import ChatCenterUI
+import SwiftUI
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    // MARK: Internal
+
     var window: UIWindow?
 
     /**
@@ -36,8 +39,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .secondarySystemBackground
-        window?.rootViewController = UINavigationController(rootViewController: MainViewController())
+        window?.rootViewController = UINavigationController(rootViewController: mainController)
         window?.makeKeyAndVisible()
+
+        if showFpsRam {
+            DebugOverlay.shared.show()
+        }
 
         return true
     }
@@ -50,4 +57,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Передача токена  устройства для отправки пуш уведомлений из СДК
         ChatCenterUISDK.setDeviceToken(deviceToken)
     }
+
+    func application(_: UIApplication,
+                     didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+                     fetchCompletionHandler _: @escaping (UIBackgroundFetchResult) -> Void) {
+        mainController.openChat(with: userInfo)
+    }
+
+    // MARK: Private
+
+    @AppStorage(SettingsKeys.showFpsRam.rawValue)
+    private var showFpsRam: Bool = false
+
+    private let mainController = MainViewController()
 }

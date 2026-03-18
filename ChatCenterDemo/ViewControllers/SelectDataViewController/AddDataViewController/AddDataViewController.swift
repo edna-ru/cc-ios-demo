@@ -2,7 +2,7 @@
 // AddDataViewController.swift
 // ChatCenterDemo
 //
-// Copyright © 2025 edna. All rights reserved.
+// Copyright © 2026 edna. All rights reserved.
 //
 
 import UIKit
@@ -80,7 +80,7 @@ private extension AddDataViewController {
             containerTableView.topAnchor.constraint(equalTo: view.safeArea.topAnchor, constant: 0),
             containerTableView.leadingAnchor.constraint(equalTo: view.safeArea.leadingAnchor, constant: 0),
             containerTableView.trailingAnchor.constraint(equalTo: view.safeArea.trailingAnchor, constant: 0),
-            containerTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            containerTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         ])
     }
 }

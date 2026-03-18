@@ -2,7 +2,7 @@
 // ContainerTableView.swift
 // ChatCenterDemo
 //
-// Copyright © 2025 edna. All rights reserved.
+// Copyright © 2026 edna. All rights reserved.
 //
 
 import UIKit
@@ -20,8 +20,7 @@ final class ContainerTableView: UIView {
                index: Int = -1,
                viewController: UIViewController? = nil,
                isSelected: Bool = false,
-               removeOutput: RemoveActionOutput? = nil)
-    {
+               removeOutput: RemoveActionOutput? = nil) {
         self.isSelectedViewController = isSelectedViewController
         self.type = type
         self.index = index
@@ -48,7 +47,7 @@ final class ContainerTableView: UIView {
             tableView.topAnchor.constraint(equalTo: topAnchor, constant: 0),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0)
         ])
     }
 
@@ -60,8 +59,7 @@ final class ContainerTableView: UIView {
         switch type {
         case .server:
             if allCells[1].getTextFieldValue().isEmpty, allCells[2].getTextFieldValue().isEmpty,
-               allCells[3].getTextFieldValue().isEmpty, allCells[4].getTextFieldValue().isEmpty
-            {
+               allCells[3].getTextFieldValue().isEmpty, allCells[4].getTextFieldValue().isEmpty {
                 viewController?.validErrorFields()
                 return
             }

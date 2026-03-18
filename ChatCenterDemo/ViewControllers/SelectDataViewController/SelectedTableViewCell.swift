@@ -2,7 +2,7 @@
 // SelectedTableViewCell.swift
 // ChatCenterDemo
 //
-// Copyright © 2025 edna. All rights reserved.
+// Copyright © 2026 edna. All rights reserved.
 //
 
 import UIKit
@@ -51,7 +51,7 @@ final class SelectedTableViewCell: UITableViewCell {
             isSelectedImageView.widthAnchor.constraint(equalToConstant: 16),
             isSelectedImageView.heightAnchor.constraint(equalToConstant: 16),
             isSelectedImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            isSelectedImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            isSelectedImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
     }
 

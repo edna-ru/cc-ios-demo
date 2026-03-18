@@ -2,7 +2,7 @@
 // MainViewController+UI.swift
 // ChatCenterDemo
 //
-// Copyright © 2025 edna. All rights reserved.
+// Copyright © 2026 edna. All rights reserved.
 //
 
 import ChatCenterUI
@@ -53,7 +53,7 @@ extension MainViewController {
             imageView.widthAnchor.constraint(equalToConstant: 185),
             imageView.heightAnchor.constraint(equalToConstant: 185),
             imageView.centerXAnchor.constraint(equalTo: view.safeArea.centerXAnchor),
-            imageView.topAnchor.constraint(equalTo: view.safeArea.topAnchor, constant: 58),
+            imageView.topAnchor.constraint(equalTo: view.safeArea.topAnchor, constant: 58)
         ])
 
         guard
@@ -78,7 +78,7 @@ extension MainViewController {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 24),
             titleLabel.leadingAnchor.constraint(equalTo: view.safeArea.leadingAnchor, constant: 24),
-            titleLabel.trailingAnchor.constraint(equalTo: view.safeArea.trailingAnchor, constant: -24),
+            titleLabel.trailingAnchor.constraint(equalTo: view.safeArea.trailingAnchor, constant: -24)
         ])
     }
 
@@ -95,7 +95,7 @@ extension MainViewController {
         NSLayoutConstraint.activate([
             selectServerButton.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 24),
             selectServerButton.leadingAnchor.constraint(equalTo: view.safeArea.leadingAnchor, constant: 24),
-            selectServerButton.trailingAnchor.constraint(equalTo: view.safeArea.trailingAnchor, constant: -24),
+            selectServerButton.trailingAnchor.constraint(equalTo: view.safeArea.trailingAnchor, constant: -24)
         ])
     }
 
@@ -112,7 +112,7 @@ extension MainViewController {
         NSLayoutConstraint.activate([
             selectUserButton.topAnchor.constraint(equalTo: selectServerButton.bottomAnchor, constant: 16),
             selectUserButton.leadingAnchor.constraint(equalTo: view.safeArea.leadingAnchor, constant: 24),
-            selectUserButton.trailingAnchor.constraint(equalTo: view.safeArea.trailingAnchor, constant: -24),
+            selectUserButton.trailingAnchor.constraint(equalTo: view.safeArea.trailingAnchor, constant: -24)
         ])
     }
 
@@ -129,7 +129,7 @@ extension MainViewController {
         NSLayoutConstraint.activate([
             mainButton.topAnchor.constraint(equalTo: selectUserButton.bottomAnchor, constant: 24),
             mainButton.leadingAnchor.constraint(equalTo: view.safeArea.leadingAnchor, constant: 24),
-            mainButton.trailingAnchor.constraint(equalTo: view.safeArea.trailingAnchor, constant: -24),
+            mainButton.trailingAnchor.constraint(equalTo: view.safeArea.trailingAnchor, constant: -24)
         ])
     }
 
@@ -144,8 +144,15 @@ extension MainViewController {
             }
 
             let controller = DemoViewController()
-            controller.lightTheme = makeLightTheme()
-            controller.darkTheme = makeDarkTheme()
+
+            if sdkTheme == .system {
+                // берутся дефолтные настройки
+            } else if sdkTheme == .full {
+                controller.theme = makeFullTheme()
+            } else {
+                controller.theme = makeTheme()
+            }
+
             navigationController?.pushViewController(controller, animated: true)
         }), for: .touchUpInside)
         view.addSubview(demoButton)
@@ -153,7 +160,7 @@ extension MainViewController {
         NSLayoutConstraint.activate([
             demoButton.topAnchor.constraint(equalTo: mainButton.bottomAnchor, constant: 16),
             demoButton.leadingAnchor.constraint(equalTo: view.safeArea.leadingAnchor, constant: 24),
-            demoButton.trailingAnchor.constraint(equalTo: view.safeArea.trailingAnchor, constant: -24),
+            demoButton.trailingAnchor.constraint(equalTo: view.safeArea.trailingAnchor, constant: -24)
         ])
     }
 
@@ -174,7 +181,7 @@ extension MainViewController {
         NSLayoutConstraint.activate([
             infoLabel.bottomAnchor.constraint(equalTo: view.safeArea.bottomAnchor, constant: -16),
             infoLabel.leadingAnchor.constraint(equalTo: view.safeArea.leadingAnchor, constant: 24),
-            infoLabel.trailingAnchor.constraint(equalTo: view.safeArea.trailingAnchor, constant: -24),
+            infoLabel.trailingAnchor.constraint(equalTo: view.safeArea.trailingAnchor, constant: -24)
         ])
     }
 

@@ -506,6 +506,44 @@
 			"type": "MESSAGE",
 			"threadId": 304,
 			"providerIds": [],
+			"uuid": "21098765-1234-5678-9212-345678901234",
+			"operator": {
+				"id": 9,
+				"name": "Оператор Елена",
+				"alias": null,
+				"status": null,
+				"photoUrl": null,
+				"gender": "FEMALE",
+				"organizationUnit": "Skill Debet",
+				"role": "OPERATOR"
+			},
+			"text": "Принято! Позвоним после 18:00 по Москве. Спасибо за информацию.",
+			"receivedDate": "2023-10-21T14:14:59.000Z",
+			"attachments": [],
+			"quotes": [],
+			"editor": {
+				"id": 3,
+				"name": "Оператор0 Иванович",
+				"alias": "",
+				"role": "OPERATOR",
+				"maxThreads": 6,
+				"photoUrl": ""
+			},
+			"modified": "DELETED",
+			"quickReplies": [],
+			"read": true,
+			"settings": {
+				"blockInput": false,
+				"masked": false
+			},
+			"authorized": true,
+			"massPushMessage": false,
+			"origin": "threads"
+		},
+		{
+			"type": "MESSAGE",
+			"threadId": 304,
+			"providerIds": [],
 			"uuid": "21098765-1234-5678-9012-345678901234",
 			"operator": {
 				"id": 9,

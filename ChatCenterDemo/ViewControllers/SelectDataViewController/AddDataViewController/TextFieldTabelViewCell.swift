@@ -2,7 +2,7 @@
 // TextFieldTabelViewCell.swift
 // ChatCenterDemo
 //
-// Copyright © 2025 edna. All rights reserved.
+// Copyright © 2026 edna. All rights reserved.
 //
 
 import UIKit
@@ -63,7 +63,7 @@ final class TextFieldTabelViewCell: UITableViewCell {
             textField.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
             textField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             textField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-            textField.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
+            textField.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0)
         ])
     }
 

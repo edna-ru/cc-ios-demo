@@ -2,7 +2,7 @@
 // UIImage+Ext.swift
 // ChatCenterDemo
 //
-// Copyright © 2025 edna. All rights reserved.
+// Copyright © 2026 edna. All rights reserved.
 //
 
 import UIKit
@@ -16,8 +16,8 @@ extension UIImage {
         let frameCount = CGImageSourceGetCount(source)
         var images: [UIImage] = []
 
-        for idx in 0 ..< frameCount {
-            if let cgImage = CGImageSourceCreateImageAtIndex(source, idx, nil) {
+        for i in 0 ..< frameCount {
+            if let cgImage = CGImageSourceCreateImageAtIndex(source, i, nil) {
                 let image = UIImage(cgImage: cgImage)
                 images.append(image)
             }

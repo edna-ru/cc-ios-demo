@@ -2,7 +2,7 @@
 // UIView+Ext.swift
 // ChatCenterDemo
 //
-// Copyright © 2025 edna. All rights reserved.
+// Copyright © 2026 edna. All rights reserved.
 //
 
 import UIKit
@@ -22,8 +22,7 @@ public extension UIView {
     func setShadow(offset: CGSize = CGSize(width: 0, height: 6),
                    nameColor: String = "Shadow",
                    shadowOpacity: Float = 1,
-                   shadowRadius: CGFloat = 2)
-    {
+                   shadowRadius: CGFloat = 2) {
         layer.shadowOffset = offset
         layer.shadowColor = UIColor(named: nameColor)?.cgColor
         layer.shadowOpacity = shadowOpacity

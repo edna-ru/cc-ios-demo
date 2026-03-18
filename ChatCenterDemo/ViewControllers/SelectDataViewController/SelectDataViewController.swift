@@ -2,7 +2,7 @@
 // SelectDataViewController.swift
 // ChatCenterDemo
 //
-// Copyright © 2025 edna. All rights reserved.
+// Copyright © 2026 edna. All rights reserved.
 //
 
 import UIKit
@@ -86,7 +86,7 @@ final class SelectDataViewController: UIViewController {
             containerView.topAnchor.constraint(equalTo: view.safeArea.topAnchor, constant: 0),
             containerView.leadingAnchor.constraint(equalTo: view.safeArea.leadingAnchor, constant: 0),
             containerView.trailingAnchor.constraint(equalTo: view.safeArea.trailingAnchor, constant: 0),
-            containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         ])
 
         setupImage()
@@ -102,7 +102,7 @@ final class SelectDataViewController: UIViewController {
             imageView.widthAnchor.constraint(equalToConstant: 274),
             imageView.heightAnchor.constraint(equalToConstant: 200),
             imageView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            imageView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 127),
+            imageView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 127)
         ])
     }
 
@@ -118,7 +118,7 @@ final class SelectDataViewController: UIViewController {
         NSLayoutConstraint.activate([
             infoLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 36),
             infoLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 28),
-            infoLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -28),
+            infoLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -28)
         ])
     }
 
@@ -133,7 +133,7 @@ final class SelectDataViewController: UIViewController {
         NSLayoutConstraint.activate([
             mainButton.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: 24),
             mainButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 24),
-            mainButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -24),
+            mainButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -24)
         ])
     }
 
@@ -146,7 +146,7 @@ final class SelectDataViewController: UIViewController {
             containerTableView.topAnchor.constraint(equalTo: view.safeArea.topAnchor, constant: 0),
             containerTableView.leadingAnchor.constraint(equalTo: view.safeArea.leadingAnchor, constant: 0),
             containerTableView.trailingAnchor.constraint(equalTo: view.safeArea.trailingAnchor, constant: 0),
-            containerTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            containerTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         ])
     }
 

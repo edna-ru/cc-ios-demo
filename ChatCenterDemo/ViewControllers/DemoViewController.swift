@@ -2,10 +2,11 @@
 // DemoViewController.swift
 // ChatCenterDemo
 //
-// Copyright © 2025 edna. All rights reserved.
+// Copyright © 2026 edna. All rights reserved.
 //
 
 import ChatCenterUI
+import SwiftUI
 import UIKit
 
 final class DemoViewController: UIViewController, UINavigationControllerDelegate {
@@ -17,7 +18,7 @@ final class DemoViewController: UIViewController, UINavigationControllerDelegate
 
     // MARK: Internal
 
-    var lightTheme: ChatTheme?
+    var theme: ChatTheme?
     var darkTheme: ChatTheme?
 
     let demoServer = ChatCenterServerEmulator()
@@ -50,27 +51,38 @@ final class DemoViewController: UIViewController, UINavigationControllerDelegate
             tableView.topAnchor.constraint(equalTo: view.safeArea.topAnchor, constant: 0),
             tableView.leadingAnchor.constraint(equalTo: view.safeArea.leadingAnchor, constant: 0),
             tableView.trailingAnchor.constraint(equalTo: view.safeArea.trailingAnchor, constant: 0),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         ])
     }
 
     func configureThreads() {
         let chatTransportConfig = ChatTransportConfig(rest: ChatCenterServerEmulator.URLS.rest,
                                                       webSocket: ChatCenterServerEmulator.URLS.websocket,
-                                                      dataStore: ChatCenterServerEmulator.URLS.dataStore)
+                                                      dataStore: ChatCenterServerEmulator.URLS.dataStore,
+                                                      apiVersion: .api21)
 
-        let chatConfig = ChatConfig(transportConfig: chatTransportConfig,
+        var chatConfig = ChatConfig(transportConfig: chatTransportConfig,
                                     networkConfig: ChatNetworkConfig(sslPinning: ChatNetworkConfig.SSLPinningConfig(allowUntrustedSSLCertificate: true)))
+        chatConfig.shouldUseRemoteConfig = false
+        chatConfig.searchEnabled = true
+        chatConfig.voiceRecordingEnabled = false
+//        chatConfig.linkPreviewEnabled = true
+        chatConfig.showAttachButton = false
+
         chatCenterSdk = ChatCenterUISDK(providerUid: "edna_demo",
                                         chatConfig: chatConfig,
                                         loggerConfig: ChatLoggerConfig(logLevel: .all))
 
-        if let lightTheme {
-            chatCenterSdk?.theme = lightTheme
+        if let theme {
+            chatCenterSdk?.theme = theme
         }
         if let darkTheme {
             chatCenterSdk?.darkTheme = darkTheme
         }
+        if let path = Bundle.main.path(forResource: appLanguage.rawValue, ofType: "lproj"), let bundle = Bundle(path: path) {
+            chatCenterSdk?.localizationConfig = ChatLocalizationConfig(bundle: bundle, tableName: "DemoLocalizable")
+        }
+
         navigationController?.delegate = self
     }
 
@@ -79,6 +91,11 @@ final class DemoViewController: UIViewController, UINavigationControllerDelegate
             try? chatCenterSdk?.logout()
         }
     }
+
+    // MARK: Private
+
+    @AppStorage(SettingsKeys.language.rawValue)
+    private var appLanguage: AppLanguage = .russian
 }
 
 // MARK: UITableViewDataSource

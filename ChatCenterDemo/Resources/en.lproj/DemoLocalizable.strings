@@ -3,13 +3,11 @@
 "action.title_no" = "No";
 "action.title_cancel" = "Cancel";
 "action.title_repeat" = "Repeat";
-"action.title_connect" = "Connect";
 "action.alert_send" = "Send";
 
 "chat.available_readonly_text" = "This chat is available for viewing only";
 "chat.client_name" = "Me";
 
-"chat.title.waiting" = "Please wait...";
 "chat.title.connecting" = "Connecting...";
 "chat.title.opened" = "Contact center";
 "chat.title.waiting_for_specialist" = "Searching for operator...";
@@ -60,19 +58,11 @@
 "message.voice_play_error" = "Error while playing";
 "message.unsupported_file_format" = "Unsupported format";
 
-"message.system.join_chat_unknown" = "joined the conversation in %@";
-"message.system.join_chat_male" = "joined the conversation in %@";
-"message.system.join_chat_female" = "joined the conversation in %@";
-"message.system.leave_chat_unknown" = "left the conversation in %@";
-"message.system.leave_chat_male" = "left the conversation in %@";
-"message.system.leave_chat_female" = "left the conversation in %@";
-
 "menu.response_title" = "Reply";
 "menu.copy_title" = "Copy";
 
 "search.placeholder_title" = "Search";
 "search.not_found_title" = "No results found";
-"search.more_btn" = "Search more";
 "search.image_attachment_title" = "image";
 "search.audio_attachment_title" = "audio file";
 
