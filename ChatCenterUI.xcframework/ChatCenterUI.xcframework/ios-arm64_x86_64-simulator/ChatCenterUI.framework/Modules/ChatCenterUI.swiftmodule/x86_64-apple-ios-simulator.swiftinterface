@@ -504,6 +504,7 @@ public struct ChatConfig : Swift.CustomDebugStringConvertible {
   public var surveyCompletionDelay: Swift.Int
   public var voiceRecordingEnabled: Swift.Bool
   public var historyLoadingCount: Swift.Int
+  public var unreadMessageCountDelay: Swift.Int
   public var showAttachButton: Swift.Bool
   public var debugDescription: Swift.String {
     get
@@ -1287,6 +1288,7 @@ public typealias AudioPlayerChatStyle = ChatCenterUI.AudioPlayerStyle
 }
 public struct ChatUser {
   public init(identifier: Swift.String, name: Swift.String? = nil, data: [Swift.String : Swift.String]? = nil)
+  public func updateData(data: [Swift.String : Swift.String]?)
 }
 @objc public protocol SurveyViewControllerDelegate {
   @objc optional func ratingViewControllerDidClose()
@@ -1963,6 +1965,7 @@ final public class ChatCenterUISDK {
   final public func deauthorizeUser()
   final public func logout() throws(ChatCenterUI.ChatCenterUIError)
   final public func getChat(userInfo: [Swift.AnyHashable : Any]? = nil) throws(ChatCenterUI.ChatCenterUIError) -> UIKit.UIViewController
+  final public func getUnreadMessagesCount(completion: @escaping (Swift.Result<Swift.Int, any Swift.Error>) -> Swift.Void) throws(ChatCenterUI.ChatCenterUIError)
   final public func prefill(message: Swift.String)
   final public func send(message: ChatCenterUI.ChatMessage) throws(ChatCenterUI.ChatCenterUISendMessageError)
   final public func handleNotification(userInfo: [Swift.AnyHashable : Any]) throws(ChatCenterUI.ChatCenterUIError)

@@ -22185,6 +22185,93 @@
           },
           {
             "kind": "Var",
+            "name": "unreadMessageCountDelay",
+            "printedName": "unreadMessageCountDelay",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ChatCenterUI0A6ConfigV23unreadMessageCountDelaySivp",
+            "mangledName": "$s12ChatCenterUI0A6ConfigV23unreadMessageCountDelaySivp",
+            "moduleName": "ChatCenterUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ChatCenterUI0A6ConfigV23unreadMessageCountDelaySivg",
+                "mangledName": "$s12ChatCenterUI0A6ConfigV23unreadMessageCountDelaySivg",
+                "moduleName": "ChatCenterUI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ChatCenterUI0A6ConfigV23unreadMessageCountDelaySivs",
+                "mangledName": "$s12ChatCenterUI0A6ConfigV23unreadMessageCountDelaySivs",
+                "moduleName": "ChatCenterUI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ChatCenterUI0A6ConfigV23unreadMessageCountDelaySivM",
+                "mangledName": "$s12ChatCenterUI0A6ConfigV23unreadMessageCountDelaySivM",
+                "moduleName": "ChatCenterUI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "showAttachButton",
             "printedName": "showAttachButton",
             "children": [
@@ -54609,6 +54696,55 @@
               "RawDocComment"
             ],
             "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "updateData",
+            "printedName": "updateData(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ChatCenterUI0A4UserV10updateData4dataySDyS2SGSg_tF",
+            "mangledName": "$s12ChatCenterUI0A4UserV10updateData4dataySDyS2SGSg_tF",
+            "moduleName": "ChatCenterUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
@@ -72706,6 +72842,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ChatCenterUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "LinkPresentation",
         "printedName": "LinkPresentation",
         "declKind": "Import",
@@ -83313,6 +83459,61 @@
           },
           {
             "kind": "Function",
+            "name": "getUnreadMessagesCount",
+            "printedName": "getUnreadMessagesCount(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<Swift.Int, any Swift.Error>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<Swift.Int, any Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ChatCenterUI0aB5UISDKC22getUnreadMessagesCount10completionyys6ResultOySis5Error_pGc_tAA0aB7UIErrorOYKF",
+            "mangledName": "$s12ChatCenterUI0aB5UISDKC22getUnreadMessagesCount10completionyys6ResultOySis5Error_pGc_tAA0aB7UIErrorOYKF",
+            "moduleName": "ChatCenterUI",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "prefill",
             "printedName": "prefill(message:)",
             "children": [
@@ -89046,15 +89247,22 @@
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5004,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 5095,
+      "offset": 5367,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 5538,
+      "offset": 5810,
       "length": 4,
       "value": "4000"
     },
@@ -90293,63 +90501,63 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2585,
+      "offset": 2625,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "Dictionary",
-      "offset": 2741,
+      "offset": 2781,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "Array",
-      "offset": 2933,
+      "offset": 2973,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 4301,
+      "offset": 4371,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "Array",
-      "offset": 23602,
+      "offset": 24177,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 29102,
+      "offset": 29642,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 29275,
+      "offset": 29815,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 29776,
+      "offset": 30316,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 32399,
+      "offset": 33019,
       "length": 5,
       "value": "false"
     },
@@ -90419,7 +90627,7 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/CCWebSocketDataProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 17013,
+      "offset": 17096,
       "length": 4,
       "value": "true"
     },
@@ -90517,7 +90725,7 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/CCRestDataProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 11251,
+      "offset": 12305,
       "length": 4,
       "value": "true"
     },
@@ -90951,7 +91159,7 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/CCWebSocketDataProvider+WebSocket.swift",
       "kind": "BooleanLiteral",
-      "offset": 14641,
+      "offset": 14254,
       "length": 5,
       "value": "false"
     },
@@ -91686,14 +91894,14 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/ChatCenterUISDK.swift",
       "kind": "StringLiteral",
-      "offset": 12695,
+      "offset": 13724,
       "length": 42,
       "value": "\"CCUIDeviceTokenDidChangeNotificationName\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/ChatCenterUISDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 14274,
+      "offset": 15303,
       "length": 5,
       "value": "false"
     },
