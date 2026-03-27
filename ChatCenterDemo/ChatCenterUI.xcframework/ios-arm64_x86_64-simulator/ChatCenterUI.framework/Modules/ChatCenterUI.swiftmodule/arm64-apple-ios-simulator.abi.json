@@ -8889,6 +8889,66 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "clientName",
+            "printedName": "clientName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ChatCenterUI@objc(cs)MigrationServiceLocator(py)clientName",
+            "mangledName": "$s12ChatCenterUI23MigrationServiceLocatorC10clientNameSSSgvp",
+            "moduleName": "ChatCenterUI",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ChatCenterUI@objc(cs)MigrationServiceLocator(im)clientName",
+                "mangledName": "$s12ChatCenterUI23MigrationServiceLocatorC10clientNameSSSgvg",
+                "moduleName": "ChatCenterUI",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "open",
             "printedName": "open(url:)",
@@ -32586,6 +32646,104 @@
           },
           {
             "kind": "Var",
+            "name": "inputSearchTextStyle",
+            "printedName": "inputSearchTextStyle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ChatInputTextStyle",
+                "printedName": "ChatCenterUI.ChatInputTextStyle",
+                "usr": "c:@M@ChatCenterUI@objc(cs)ChatInputTextStyle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ChatCenterUI@objc(cs)ChatComponents(py)inputSearchTextStyle",
+            "mangledName": "$s12ChatCenterUI0A10ComponentsC20inputSearchTextStyleAA0a5InputgH0Cvp",
+            "moduleName": "ChatCenterUI",
+            "declAttributes": [
+              "Final",
+              "Lazy",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ChatInputTextStyle",
+                    "printedName": "ChatCenterUI.ChatInputTextStyle",
+                    "usr": "c:@M@ChatCenterUI@objc(cs)ChatInputTextStyle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ChatCenterUI@objc(cs)ChatComponents(im)inputSearchTextStyle",
+                "mangledName": "$s12ChatCenterUI0A10ComponentsC20inputSearchTextStyleAA0a5InputgH0Cvg",
+                "moduleName": "ChatCenterUI",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ChatInputTextStyle",
+                    "printedName": "ChatCenterUI.ChatInputTextStyle",
+                    "usr": "c:@M@ChatCenterUI@objc(cs)ChatInputTextStyle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ChatCenterUI@objc(cs)ChatComponents(im)setInputSearchTextStyle:",
+                "mangledName": "$s12ChatCenterUI0A10ComponentsC20inputSearchTextStyleAA0a5InputgH0Cvs",
+                "moduleName": "ChatCenterUI",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ChatCenterUI0A10ComponentsC20inputSearchTextStyleAA0a5InputgH0CvM",
+                "mangledName": "$s12ChatCenterUI0A10ComponentsC20inputSearchTextStyleAA0a5InputgH0CvM",
+                "moduleName": "ChatCenterUI",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "audioPlayerStyle",
             "printedName": "audioPlayerStyle",
             "children": [
@@ -54741,10 +54899,11 @@
             "mangledName": "$s12ChatCenterUI0A4UserV10updateData4dataySDyS2SGSg_tF",
             "moduleName": "ChatCenterUI",
             "declAttributes": [
+              "Mutating",
               "AccessControl",
               "RawDocComment"
             ],
-            "funcSelfKind": "NonMutating"
+            "funcSelfKind": "Mutating"
           }
         ],
         "declKind": "Struct",
@@ -89619,14 +89778,14 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/JSQMessages\/Cells\/Survey\/CCQuestionView.swift",
       "kind": "Array",
-      "offset": 13992,
+      "offset": 13882,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/JSQMessages\/Cells\/Survey\/CCQuestionView.swift",
       "kind": "Array",
-      "offset": 14033,
+      "offset": 13923,
       "length": 2,
       "value": "[]"
     },
@@ -89787,14 +89946,14 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/JSQMessages\/Cells\/Survey\/CCRatingView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2374,
+      "offset": 2370,
       "length": 2,
       "value": "44"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/JSQMessages\/Cells\/Survey\/CCRatingView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2462,
+      "offset": 2458,
       "length": 1,
       "value": "1"
     },
@@ -89885,56 +90044,56 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/JSQMessages\/Cells\/QuoteViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2587,
+      "offset": 2659,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/JSQMessages\/Cells\/QuoteViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2621,
+      "offset": 2693,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/JSQMessages\/Cells\/QuoteViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2650,
+      "offset": 2722,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/JSQMessages\/Cells\/QuoteViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5573,
+      "offset": 5645,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/JSQMessages\/Cells\/QuoteViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5655,
+      "offset": 5727,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/JSQMessages\/Cells\/QuoteViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5661,
+      "offset": 5733,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/JSQMessages\/Cells\/QuoteViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 6135,
+      "offset": 6207,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/JSQMessages\/Cells\/QuoteViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9616,
+      "offset": 9688,
       "length": 5,
       "value": "false"
     },
@@ -90422,6 +90581,13 @@
       "value": "8"
     },
     {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatUser.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2453,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/Controllers\/SurveyViewController.swift",
       "kind": "IntegerLiteral",
       "offset": 2465,
@@ -90529,35 +90695,35 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "Array",
-      "offset": 24177,
+      "offset": 24547,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 29642,
+      "offset": 30012,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 29815,
+      "offset": 30185,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 30316,
+      "offset": 30686,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 33019,
+      "offset": 33389,
       "length": 5,
       "value": "false"
     },
@@ -90627,7 +90793,7 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/CCWebSocketDataProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 17096,
+      "offset": 17178,
       "length": 4,
       "value": "true"
     },
@@ -91889,7 +92055,7 @@
       "kind": "StringLiteral",
       "offset": 2212,
       "length": 7,
-      "value": "\"5.7.0\""
+      "value": "\"5.7.3\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/ChatCenterUISDK.swift",

@@ -246,6 +246,9 @@ extension ChatCenterUI.CCChatModel {
   @objc public var currentTheme: ChatCenterUI.ChatTheme {
     @objc get
   }
+  @objc public var clientName: Swift.String? {
+    @objc get
+  }
   @objc public func open(url: Foundation.URL) -> Swift.Bool
   @objc deinit
 }
@@ -777,6 +780,10 @@ extension ChatCenterUI.THRSearchViewController : UIKit.UISearchBarDelegate {
     @objc get
     @objc set
   }
+  @objc final public var inputSearchTextStyle: ChatCenterUI.ChatInputTextStyle {
+    @objc get
+    @objc set
+  }
   @objc final public var audioPlayerStyle: ChatCenterUI.AudioPlayerStyle {
     @objc get
     @objc set
@@ -1288,7 +1295,7 @@ public typealias AudioPlayerChatStyle = ChatCenterUI.AudioPlayerStyle
 }
 public struct ChatUser {
   public init(identifier: Swift.String, name: Swift.String? = nil, data: [Swift.String : Swift.String]? = nil)
-  public func updateData(data: [Swift.String : Swift.String]?)
+  public mutating func updateData(data: [Swift.String : Swift.String]?)
 }
 @objc public protocol SurveyViewControllerDelegate {
   @objc optional func ratingViewControllerDidClose()
