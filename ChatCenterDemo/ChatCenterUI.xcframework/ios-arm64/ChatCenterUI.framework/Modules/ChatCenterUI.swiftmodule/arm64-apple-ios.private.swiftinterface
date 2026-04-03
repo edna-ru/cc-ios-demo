@@ -131,13 +131,13 @@ import os
   @objc final public var subtitleVisible: Swift.Bool
   @objc final public var subtitleShowOrgUnit: Swift.Bool
   @objc final public var subtitleTextStyle: ChatCenterUI.ChatTextStyle?
-  @objc final public var searchButtonStyle: ChatCenterUI.IconButtonStyle {
+  @objc final public var searchButtonStyle: ChatCenterUI.NavigationBarButtonStyle {
     @objc get
     @objc set
   }
   @objc final public var searchBarStyle: ChatCenterUI.SearchBarStyle
   @objc final public var keyboardControlVisible: Swift.Bool
-  @objc final public var keyboardShowButtonStyle: ChatCenterUI.IconButtonStyle
+  @objc final public var keyboardShowButtonStyle: ChatCenterUI.NavigationBarButtonStyle
   @objc final public var keyboardHideButtonStyle: ChatCenterUI.IconButtonStyle
   @objc deinit
 }
@@ -1246,6 +1246,21 @@ public typealias PlaceholderChatStyle = ChatCenterUI.ChatPlaceholderStyle
   @objc deinit
   @objc @_Concurrency.MainActor @preconcurrency public func show()
 }
+@objc public enum NavigationBarButtonPosition : Swift.Int {
+  case right
+  case left
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @objcMembers public class NavigationBarButtonStyle : ChatCenterUI.IconButtonStyle {
+  @objc public init(image: ChatCenterUI.ChatImage, position: ChatCenterUI.NavigationBarButtonPosition = .right, components: ChatCenterUI.ChatComponents)
+  @objc required public init(components: ChatCenterUI.ChatComponents)
+  @objc public var position: ChatCenterUI.NavigationBarButtonPosition
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers @_Concurrency.MainActor @preconcurrency public class EDNAPreloadView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame _: CoreFoundation.CGRect)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
@@ -2064,6 +2079,9 @@ extension ChatCenterUI.ChatInputAlignment : Swift.RawRepresentable {}
 extension ChatCenterUI.Position : Swift.Equatable {}
 extension ChatCenterUI.Position : Swift.Hashable {}
 extension ChatCenterUI.Position : Swift.RawRepresentable {}
+extension ChatCenterUI.NavigationBarButtonPosition : Swift.Equatable {}
+extension ChatCenterUI.NavigationBarButtonPosition : Swift.Hashable {}
+extension ChatCenterUI.NavigationBarButtonPosition : Swift.RawRepresentable {}
 extension ChatCenterUI.CCChatModelConfigState : Swift.Equatable {}
 extension ChatCenterUI.CCChatModelConfigState : Swift.Hashable {}
 extension ChatCenterUI.CCChatModelConfigState : Swift.RawRepresentable {}
