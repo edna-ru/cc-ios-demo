@@ -91270,7 +91270,7 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 33397,
+      "offset": 33433,
       "length": 5,
       "value": "false"
     },
@@ -92602,7 +92602,7 @@
       "kind": "StringLiteral",
       "offset": 2212,
       "length": 7,
-      "value": "\"5.7.3\""
+      "value": "\"5.8.1\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/ChatCenterUISDK.swift",
