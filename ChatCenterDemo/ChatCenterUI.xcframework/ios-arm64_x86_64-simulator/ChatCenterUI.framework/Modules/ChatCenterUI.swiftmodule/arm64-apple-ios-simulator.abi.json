@@ -91872,7 +91872,7 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/CCWebSocketDataProvider+WebSocket.swift",
       "kind": "BooleanLiteral",
-      "offset": 14254,
+      "offset": 14348,
       "length": 5,
       "value": "false"
     },
@@ -92602,7 +92602,7 @@
       "kind": "StringLiteral",
       "offset": 2212,
       "length": 7,
-      "value": "\"5.8.1\""
+      "value": "\"5.8.2\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/ChatCenterUISDK.swift",
