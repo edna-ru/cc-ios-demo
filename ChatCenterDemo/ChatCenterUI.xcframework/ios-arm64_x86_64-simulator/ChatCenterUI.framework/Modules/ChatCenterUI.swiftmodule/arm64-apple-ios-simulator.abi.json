@@ -6419,6 +6419,47 @@
           },
           {
             "kind": "Var",
+            "name": "reconnecting",
+            "printedName": "reconnecting",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ChatCenterUI.CCState.Type) -> ChatCenterUI.CCState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CCState",
+                    "printedName": "ChatCenterUI.CCState",
+                    "usr": "c:@M@ChatCenterUI@E@CCState"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ChatCenterUI.CCState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CCState",
+                        "printedName": "ChatCenterUI.CCState",
+                        "usr": "c:@M@ChatCenterUI@E@CCState"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@ChatCenterUI@E@CCState@CCStateReconnecting",
+            "mangledName": "$s12ChatCenterUI7CCStateO12reconnectingyA2CmF",
+            "moduleName": "ChatCenterUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
             "name": "ready",
             "printedName": "ready",
             "children": [
@@ -6456,7 +6497,7 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 3
+            "fixedbinaryorder": 4
           },
           {
             "kind": "Var",
@@ -6497,7 +6538,7 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 4
+            "fixedbinaryorder": 5
           },
           {
             "kind": "Var",
@@ -6538,7 +6579,7 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 5
+            "fixedbinaryorder": 6
           },
           {
             "kind": "Var",
@@ -6579,7 +6620,7 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 6
+            "fixedbinaryorder": 7
           },
           {
             "kind": "Var",
@@ -6620,7 +6661,7 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 7
+            "fixedbinaryorder": 8
           },
           {
             "kind": "Constructor",
@@ -9289,6 +9330,104 @@
                 "declKind": "Accessor",
                 "usr": "s:12ChatCenterUI15TextButtonStyleC05titledF0AA0adF0CvM",
                 "mangledName": "$s12ChatCenterUI15TextButtonStyleC05titledF0AA0adF0CvM",
+                "moduleName": "ChatCenterUI",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "titleTextInsets",
+            "printedName": "titleTextInsets",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIEdgeInsets",
+                "printedName": "UIKit.UIEdgeInsets",
+                "usr": "c:@S@UIEdgeInsets"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ChatCenterUI@objc(cs)TextButtonStyle(py)titleTextInsets",
+            "mangledName": "$s12ChatCenterUI15TextButtonStyleC05titleD6InsetsSo06UIEdgeH0Vvp",
+            "moduleName": "ChatCenterUI",
+            "declAttributes": [
+              "Final",
+              "Lazy",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIEdgeInsets",
+                    "printedName": "UIKit.UIEdgeInsets",
+                    "usr": "c:@S@UIEdgeInsets"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ChatCenterUI@objc(cs)TextButtonStyle(im)titleTextInsets",
+                "mangledName": "$s12ChatCenterUI15TextButtonStyleC05titleD6InsetsSo06UIEdgeH0Vvg",
+                "moduleName": "ChatCenterUI",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIEdgeInsets",
+                    "printedName": "UIKit.UIEdgeInsets",
+                    "usr": "c:@S@UIEdgeInsets"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ChatCenterUI@objc(cs)TextButtonStyle(im)setTitleTextInsets:",
+                "mangledName": "$s12ChatCenterUI15TextButtonStyleC05titleD6InsetsSo06UIEdgeH0Vvs",
+                "moduleName": "ChatCenterUI",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ChatCenterUI15TextButtonStyleC05titleD6InsetsSo06UIEdgeH0VvM",
+                "mangledName": "$s12ChatCenterUI15TextButtonStyleC05titleD6InsetsSo06UIEdgeH0VvM",
                 "moduleName": "ChatCenterUI",
                 "implicit": true,
                 "declAttributes": [
@@ -21210,7 +21349,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(transportConfig:networkConfig:)",
+            "printedName": "init(transportConfig:networkConfig:isReconnectEnabled:maxReconnectAttempts:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -21230,17 +21369,121 @@
                 "printedName": "ChatCenterUI.ChatNetworkConfig",
                 "hasDefaultArg": true,
                 "usr": "s:12ChatCenterUI0A13NetworkConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12ChatCenterUI0A6ConfigV09transportD007networkD0AcA0a9TransportD0V_AA0a7NetworkD0Vtcfc",
-            "mangledName": "$s12ChatCenterUI0A6ConfigV09transportD007networkD0AcA0a9TransportD0V_AA0a7NetworkD0Vtcfc",
+            "usr": "s:12ChatCenterUI0A6ConfigV09transportD007networkD018isReconnectEnabled03maxH8AttemptsAcA0a9TransportD0V_AA0a7NetworkD0VSbSitcfc",
+            "mangledName": "$s12ChatCenterUI0A6ConfigV09transportD007networkD018isReconnectEnabled03maxH8AttemptsAcA0a9TransportD0V_AA0a7NetworkD0VSbSitcfc",
             "moduleName": "ChatCenterUI",
             "declAttributes": [
               "AccessControl",
               "RawDocComment"
             ],
             "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "isReconnectEnabled",
+            "printedName": "isReconnectEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ChatCenterUI0A6ConfigV18isReconnectEnabledSbvp",
+            "mangledName": "$s12ChatCenterUI0A6ConfigV18isReconnectEnabledSbvp",
+            "moduleName": "ChatCenterUI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ChatCenterUI0A6ConfigV18isReconnectEnabledSbvg",
+                "mangledName": "$s12ChatCenterUI0A6ConfigV18isReconnectEnabledSbvg",
+                "moduleName": "ChatCenterUI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "maxReconnectAttempts",
+            "printedName": "maxReconnectAttempts",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ChatCenterUI0A6ConfigV20maxReconnectAttemptsSivp",
+            "mangledName": "$s12ChatCenterUI0A6ConfigV20maxReconnectAttemptsSivp",
+            "moduleName": "ChatCenterUI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ChatCenterUI0A6ConfigV20maxReconnectAttemptsSivg",
+                "mangledName": "$s12ChatCenterUI0A6ConfigV20maxReconnectAttemptsSivg",
+                "moduleName": "ChatCenterUI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
           },
           {
             "kind": "Var",
@@ -28898,6 +29141,16 @@
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "ChatCenterUI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ChatCenterUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -57440,6 +57693,36 @@
             "declKind": "Func",
             "usr": "c:@M@ChatCenterUI@objc(pl)CCChatModelDelegate(im)checkLaunchViewVisibility:",
             "mangledName": "$s12ChatCenterUI19CCChatModelDelegateP25checkLaunchViewVisibilityyySbF",
+            "moduleName": "ChatCenterUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : ChatCenterUI.CCChatModelDelegate>",
+            "sugared_genericSig": "<Self where Self : ChatCenterUI.CCChatModelDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setToolbarDisabledButtons",
+            "printedName": "setToolbarDisabledButtons(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ChatCenterUI@objc(pl)CCChatModelDelegate(im)setToolbarDisabledButtons:",
+            "mangledName": "$s12ChatCenterUI19CCChatModelDelegateP25setToolbarDisabledButtonsyySbF",
             "moduleName": "ChatCenterUI",
             "genericSig": "<τ_0_0 where τ_0_0 : ChatCenterUI.CCChatModelDelegate>",
             "sugared_genericSig": "<Self where Self : ChatCenterUI.CCChatModelDelegate>",
@@ -88590,97 +88873,104 @@
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatState.swift",
       "kind": "IntegerLiteral",
       "offset": 255,
-      "length": 5,
+      "length": 12,
       "value": "3"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatState.swift",
       "kind": "IntegerLiteral",
-      "offset": 270,
-      "length": 20,
+      "offset": 277,
+      "length": 5,
       "value": "4"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatState.swift",
       "kind": "IntegerLiteral",
-      "offset": 300,
-      "length": 7,
+      "offset": 292,
+      "length": 20,
       "value": "5"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatState.swift",
       "kind": "IntegerLiteral",
-      "offset": 317,
-      "length": 12,
+      "offset": 322,
+      "length": 7,
       "value": "6"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatState.swift",
       "kind": "IntegerLiteral",
       "offset": 339,
-      "length": 6,
+      "length": 12,
       "value": "7"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 361,
+      "length": 6,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatState.swift",
       "kind": "StringLiteral",
-      "offset": 2740,
+      "offset": 2777,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatState.swift",
       "kind": "StringLiteral",
-      "offset": 3035,
+      "offset": 3072,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatState.swift",
       "kind": "StringLiteral",
-      "offset": 3077,
+      "offset": 3114,
       "length": 5,
       "value": "\"BOT\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatState.swift",
       "kind": "StringLiteral",
-      "offset": 3146,
+      "offset": 3183,
       "length": 14,
       "value": "\"EXTERNAL_BOT\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatState.swift",
       "kind": "StringLiteral",
-      "offset": 3232,
+      "offset": 3269,
       "length": 10,
       "value": "\"OPERATOR\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatState.swift",
       "kind": "StringLiteral",
-      "offset": 3311,
+      "offset": 3348,
       "length": 12,
       "value": "\"SUPERVISOR\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatState.swift",
       "kind": "StringLiteral",
-      "offset": 3394,
+      "offset": 3431,
       "length": 8,
       "value": "\"SYSTEM\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatState.swift",
       "kind": "StringLiteral",
-      "offset": 3469,
+      "offset": 3506,
       "length": 13,
       "value": "\"INTEGRATION\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatState.swift",
       "kind": "StringLiteral",
-      "offset": 3577,
+      "offset": 3614,
       "length": 2,
       "value": "\"\""
     },
@@ -88938,8 +89228,36 @@
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Theme\/ChatComponents\/ButtonsStyles\/TextButtonStyle.swift",
+      "kind": "IntegerLiteral",
+      "offset": 804,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Theme\/ChatComponents\/ButtonsStyles\/TextButtonStyle.swift",
+      "kind": "IntegerLiteral",
+      "offset": 813,
+      "length": 2,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Theme\/ChatComponents\/ButtonsStyles\/TextButtonStyle.swift",
+      "kind": "IntegerLiteral",
+      "offset": 825,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Theme\/ChatComponents\/ButtonsStyles\/TextButtonStyle.swift",
+      "kind": "IntegerLiteral",
+      "offset": 835,
+      "length": 2,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Theme\/ChatComponents\/ButtonsStyles\/TextButtonStyle.swift",
       "kind": "FloatLiteral",
-      "offset": 759,
+      "offset": 927,
       "length": 3,
       "value": "0.0"
     },
@@ -89659,92 +89977,57 @@
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/Controllers\/LoadingChatViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 3685,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/Controllers\/LoadingChatViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 4124,
+      "offset": 4134,
       "length": 3,
       "value": "4.0"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/Controllers\/LoadingChatViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4384,
+      "offset": 4394,
       "length": 20,
       "value": "\"loading_chat_image\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/Controllers\/LoadingChatViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4542,
+      "offset": 4552,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/Controllers\/LoadingChatViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4624,
+      "offset": 4634,
       "length": 20,
       "value": "\"loading_chat_title\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/Controllers\/LoadingChatViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4782,
+      "offset": 4792,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/Controllers\/LoadingChatViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4864,
+      "offset": 4874,
       "length": 23,
       "value": "\"loading_chat_subtitle\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/Controllers\/LoadingChatViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5050,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/Controllers\/LoadingChatViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5059,
-      "length": 2,
-      "value": "24"
-    },
-    {
-      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/Controllers\/LoadingChatViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5071,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/Controllers\/LoadingChatViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5081,
-      "length": 2,
-      "value": "24"
-    },
-    {
-      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/Controllers\/LoadingChatViewController.swift",
-      "kind": "FloatLiteral",
-      "offset": 5122,
-      "length": 3,
-      "value": "8.0"
+      "kind": "BooleanLiteral",
+      "offset": 5070,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/Controllers\/LoadingChatViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5244,
+      "offset": 5193,
       "length": 25,
       "value": "\"loading_chat_repeat_btn\""
     },
@@ -89877,91 +90160,105 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 1178,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1462,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1830,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2225,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2725,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3088,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3496,
+      "offset": 955,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 3948,
+      "offset": 1006,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2763,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3047,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3415,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3810,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4310,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4673,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5081,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5533,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 4348,
+      "offset": 5933,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 4731,
+      "offset": 6316,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 5004,
+      "offset": 6589,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 5367,
+      "offset": 6952,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 5810,
+      "offset": 7395,
       "length": 4,
       "value": "4000"
     },
@@ -90101,49 +90398,49 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Caches\/AvatarService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2148,
+      "offset": 2619,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Caches\/AvatarService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2153,
+      "offset": 2624,
       "length": 4,
       "value": "1024"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Caches\/AvatarService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2160,
+      "offset": 2631,
       "length": 4,
       "value": "1024"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Caches\/AvatarService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2477,
+      "offset": 2948,
       "length": 2,
       "value": "40"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Caches\/AvatarService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2489,
+      "offset": 2960,
       "length": 2,
       "value": "40"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Caches\/AvatarService.swift",
       "kind": "Dictionary",
-      "offset": 4122,
+      "offset": 4593,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Caches\/AvatarService.swift",
       "kind": "StringLiteral",
-      "offset": 1758,
+      "offset": 2229,
       "length": 13,
       "value": "\"ChatCenterUI.AvatarService\""
     },
@@ -90293,6 +90590,13 @@
       "offset": 1307,
       "length": 5,
       "value": "\"UTC\""
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Utils\/Extensions\/DateFormatter+Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1439,
+      "length": 13,
+      "value": "\"en_US_POSIX\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/JSQMessages\/Cells\/Survey\/CCQuestionView.swift",
@@ -90468,6 +90772,13 @@
       "offset": 5110,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/Networking\/CCReachability.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1999,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/Networking\/UploadDataRequest.swift",
@@ -91214,63 +91525,70 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2625,
+      "offset": 2678,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "Dictionary",
-      "offset": 2781,
+      "offset": 2834,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "Array",
-      "offset": 2973,
+      "offset": 3026,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 4371,
+      "offset": 4424,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "Array",
-      "offset": 24555,
+      "offset": 24697,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
+      "kind": "Array",
+      "offset": 30488,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 30020,
+      "offset": 30620,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 30193,
+      "offset": 30793,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 30694,
+      "offset": 31294,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 33433,
+      "offset": 34514,
       "length": 5,
       "value": "false"
     },
@@ -91319,28 +91637,63 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/CCWebSocketDataProvider.swift",
       "kind": "Dictionary",
-      "offset": 2819,
+      "offset": 3218,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/CCWebSocketDataProvider.swift",
       "kind": "Dictionary",
-      "offset": 3570,
+      "offset": 3969,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/CCWebSocketDataProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 3607,
+      "offset": 4006,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/CCWebSocketDataProvider.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4041,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/CCWebSocketDataProvider.swift",
+      "kind": "IntegerLiteral",
+      "offset": 17451,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/CCWebSocketDataProvider.swift",
+      "kind": "IntegerLiteral",
+      "offset": 17771,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/CCWebSocketDataProvider.swift",
+      "kind": "FloatLiteral",
+      "offset": 17816,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/CCWebSocketDataProvider.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17863,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/CCWebSocketDataProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 17178,
+      "offset": 20293,
       "length": 4,
       "value": "true"
     },
@@ -91424,21 +91777,21 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Theme\/ChatComponents\/ChatPlaceholderErrorStyle.swift",
       "kind": "IntegerLiteral",
-      "offset": 1689,
+      "offset": 1690,
       "length": 3,
       "value": "140"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Theme\/ChatComponents\/ChatPlaceholderErrorStyle.swift",
       "kind": "IntegerLiteral",
-      "offset": 1702,
+      "offset": 1703,
       "length": 3,
       "value": "140"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/CCRestDataProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 12305,
+      "offset": 13026,
       "length": 4,
       "value": "true"
     },
@@ -91872,7 +92225,7 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Data Providers\/CCWebSocketDataProvider+WebSocket.swift",
       "kind": "BooleanLiteral",
-      "offset": 14348,
+      "offset": 15016,
       "length": 5,
       "value": "false"
     },
@@ -92602,19 +92955,19 @@
       "kind": "StringLiteral",
       "offset": 2212,
       "length": 7,
-      "value": "\"5.8.2\""
+      "value": "\"5.9.0\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/ChatCenterUISDK.swift",
       "kind": "StringLiteral",
-      "offset": 13724,
+      "offset": 13711,
       "length": 42,
       "value": "\"CCUIDeviceTokenDidChangeNotificationName\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/ChatCenterUISDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 15303,
+      "offset": 15290,
       "length": 5,
       "value": "false"
     },

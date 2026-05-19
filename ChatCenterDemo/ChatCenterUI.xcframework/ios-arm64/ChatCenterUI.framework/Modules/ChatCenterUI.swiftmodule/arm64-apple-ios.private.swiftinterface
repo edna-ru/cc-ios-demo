@@ -163,6 +163,7 @@ import os
   case notConnected = 0
   case loadingHistory
   case connecting
+  case reconnecting
   case ready
   case waitingForSpecialist
   case working
@@ -258,6 +259,10 @@ extension Foundation.NSString {
 @objc @_inheritsConvenienceInitializers final public class TextButtonStyle : ChatCenterUI.ButtonStyle {
   @objc required public init(components: ChatCenterUI.ChatComponents)
   @objc final public var titleTextStyle: ChatCenterUI.ChatTextStyle {
+    @objc get
+    @objc set
+  }
+  @objc final public var titleTextInsets: UIKit.UIEdgeInsets {
     @objc get
     @objc set
   }
@@ -494,7 +499,9 @@ extension UIKit.UIColor {
   @objc deinit
 }
 public struct ChatConfig : Swift.CustomDebugStringConvertible {
-  public init(transportConfig: ChatCenterUI.ChatTransportConfig, networkConfig: ChatCenterUI.ChatNetworkConfig = .init())
+  public init(transportConfig: ChatCenterUI.ChatTransportConfig, networkConfig: ChatCenterUI.ChatNetworkConfig = .init(), isReconnectEnabled: Swift.Bool = false, maxReconnectAttempts: Swift.Int = 10)
+  public let isReconnectEnabled: Swift.Bool
+  public let maxReconnectAttempts: Swift.Int
   public let transportConfig: ChatCenterUI.ChatTransportConfig
   public var networkConfig: ChatCenterUI.ChatNetworkConfig
   public var userInputEnabled: Swift.Bool
@@ -1367,6 +1374,7 @@ public typealias IconButtonChatStyle = ChatCenterUI.IconButtonStyle
   @objc func finishReceivingMessage()
   @objc func preloadChatViewControllerSet(error: (any Swift.Error)?)
   @objc func checkLaunchViewVisibility(_ isLoadedHistory: Swift.Bool)
+  @objc func setToolbarDisabledButtons(_ disabled: Swift.Bool)
   @objc func showPreloadChatError(_ error: Foundation.NSError)
   @objc func addFile(_ file: ChatCenterUI.THRJSQFile)
 }
