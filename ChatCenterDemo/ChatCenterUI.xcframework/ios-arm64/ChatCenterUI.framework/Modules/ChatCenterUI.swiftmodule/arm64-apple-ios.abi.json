@@ -91553,42 +91553,42 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "Array",
-      "offset": 24697,
+      "offset": 24792,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "Array",
-      "offset": 30488,
+      "offset": 30583,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 30620,
+      "offset": 30715,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 30793,
+      "offset": 30888,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 31294,
+      "offset": 31389,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 34514,
+      "offset": 34609,
       "length": 5,
       "value": "false"
     },
@@ -92955,7 +92955,7 @@
       "kind": "StringLiteral",
       "offset": 2212,
       "length": 7,
-      "value": "\"5.9.0\""
+      "value": "\"5.9.1\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/ChatCenterUISDK.swift",
