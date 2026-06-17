@@ -1993,7 +1993,9 @@ final public class ChatCenterUISDK {
   public static func setDeviceToken(_ deviceToken: Foundation.Data)
   final public func authorize(user: ChatCenterUI.ChatUser, auth: ChatCenterUI.ChatAuth = ChatAuth())
   final public func deauthorizeUser()
+  @available(*, deprecated, message: "Будет удален в следующих версиях, рекомендуется использовать func logout(completion: @escaping ((Result<Bool, ChatCenterUIError>) -> Void))")
   final public func logout() throws(ChatCenterUI.ChatCenterUIError)
+  final public func logout(completion: @escaping (Swift.Result<Swift.Bool, ChatCenterUI.ChatCenterUIError>) -> Swift.Void)
   final public func getChat(userInfo: [Swift.AnyHashable : Any]? = nil) throws(ChatCenterUI.ChatCenterUIError) -> UIKit.UIViewController
   final public func getUnreadMessagesCount(completion: @escaping (Swift.Result<Swift.Int, any Swift.Error>) -> Swift.Void) throws(ChatCenterUI.ChatCenterUIError)
   final public func prefill(message: Swift.String)
@@ -2015,14 +2017,11 @@ public enum ChatCenterUISendMessageError : Swift.Error {
     get
   }
 }
-public enum ChatCenterUIError : Swift.Error {
+public enum ChatCenterUIError : Swift.Error, Swift.Equatable {
   case userNotAuthorized
   case chatNotOpened
-  public static func == (a: ChatCenterUI.ChatCenterUIError, b: ChatCenterUI.ChatCenterUIError) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
+  case webSocketError((any Swift.Error)?)
+  public static func == (lhs: ChatCenterUI.ChatCenterUIError, rhs: ChatCenterUI.ChatCenterUIError) -> Swift.Bool
 }
 @objc @_inheritsConvenienceInitializers @objcMembers final public class ChatInputQuoteStyle : ChatCenterUI.ChatStyle {
   @objc final public var titleTextStyle: ChatCenterUI.ChatTextStyle {
@@ -2115,5 +2114,3 @@ extension ChatCenterUI.THRAlertAction : Swift.Hashable {}
 extension ChatCenterUI.THRAlertAction : Swift.RawRepresentable {}
 extension ChatCenterUI.ChatCenterUISendMessageError : Swift.Equatable {}
 extension ChatCenterUI.ChatCenterUISendMessageError : Swift.Hashable {}
-extension ChatCenterUI.ChatCenterUIError : Swift.Equatable {}
-extension ChatCenterUI.ChatCenterUIError : Swift.Hashable {}
