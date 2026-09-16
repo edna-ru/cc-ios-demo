@@ -253,6 +253,17 @@ extension ChatCenterUI.CCChatModel {
   @objc public func open(url: Foundation.URL) -> Swift.Bool
   @objc deinit
 }
+@objc @_hasMissingDesignatedInitializers @objcMembers public class THRMessageSettings : ObjectiveC.NSObject {
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc final public let blockInput: Swift.Bool
+  @objc final public let masked: Swift.Bool
+  @objc deinit
+}
+extension ChatCenterUI.THRMessageSettings {
+  @objc public static let `default`: ChatCenterUI.THRMessageSettings
+}
 extension Foundation.NSString {
   @objc dynamic public func getAttributedString(withAttributes flow: ChatCenterUI.ChatFlow, isOutgoing: Swift.Bool) -> Foundation.NSAttributedString
 }
@@ -390,6 +401,7 @@ extension Foundation.NSString {
   @objc public var isOutgoing: Swift.Bool
   @objc public var isPersonalOffer: Swift.Bool
   @objc public var isSystemFlag: Swift.Bool
+  @objc public var settings: ChatCenterUI.THRMessageSettings?
   @objc public var containsLinkMetadata: Swift.Bool {
     @objc get
   }

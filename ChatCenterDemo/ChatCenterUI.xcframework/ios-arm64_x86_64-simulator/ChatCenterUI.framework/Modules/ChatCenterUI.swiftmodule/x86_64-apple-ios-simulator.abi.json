@@ -9120,6 +9120,325 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "THRMessageSettings",
+        "printedName": "THRMessageSettings",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ChatCenterUI@objc(cs)THRMessageSettings(py)description",
+            "mangledName": "$s12ChatCenterUI18THRMessageSettingsC11descriptionSSvp",
+            "moduleName": "ChatCenterUI",
+            "overriding": true,
+            "objc_name": "description",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ChatCenterUI@objc(cs)THRMessageSettings(im)description",
+                "mangledName": "$s12ChatCenterUI18THRMessageSettingsC11descriptionSSvg",
+                "moduleName": "ChatCenterUI",
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "blockInput",
+            "printedName": "blockInput",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ChatCenterUI@objc(cs)THRMessageSettings(py)blockInput",
+            "mangledName": "$s12ChatCenterUI18THRMessageSettingsC10blockInputSbvp",
+            "moduleName": "ChatCenterUI",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ChatCenterUI@objc(cs)THRMessageSettings(im)blockInput",
+                "mangledName": "$s12ChatCenterUI18THRMessageSettingsC10blockInputSbvg",
+                "moduleName": "ChatCenterUI",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "masked",
+            "printedName": "masked",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ChatCenterUI@objc(cs)THRMessageSettings(py)masked",
+            "mangledName": "$s12ChatCenterUI18THRMessageSettingsC6maskedSbvp",
+            "moduleName": "ChatCenterUI",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ChatCenterUI@objc(cs)THRMessageSettings(im)masked",
+                "mangledName": "$s12ChatCenterUI18THRMessageSettingsC6maskedSbvg",
+                "moduleName": "ChatCenterUI",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "THRMessageSettings",
+                "printedName": "ChatCenterUI.THRMessageSettings",
+                "usr": "c:@M@ChatCenterUI@objc(cs)THRMessageSettings"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ChatCenterUI@objc(cs)THRMessageSettings(im)init",
+            "mangledName": "$s12ChatCenterUI18THRMessageSettingsCACycfc",
+            "moduleName": "ChatCenterUI",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "default",
+            "printedName": "default",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "THRMessageSettings",
+                "printedName": "ChatCenterUI.THRMessageSettings",
+                "usr": "c:@M@ChatCenterUI@objc(cs)THRMessageSettings"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@ChatCenterUI@objc(cs)THRMessageSettings(cpy)default",
+            "mangledName": "$s12ChatCenterUI18THRMessageSettingsC7defaultACvpZ",
+            "moduleName": "ChatCenterUI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "THRMessageSettings",
+                    "printedName": "ChatCenterUI.THRMessageSettings",
+                    "usr": "c:@M@ChatCenterUI@objc(cs)THRMessageSettings"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@ChatCenterUI@objc(cs)THRMessageSettings(cm)default",
+                "mangledName": "$s12ChatCenterUI18THRMessageSettingsC7defaultACvgZ",
+                "moduleName": "ChatCenterUI",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ChatCenterUI@objc(cs)THRMessageSettings",
+        "mangledName": "$s12ChatCenterUI18THRMessageSettingsC",
+        "moduleName": "ChatCenterUI",
+        "declAttributes": [
+          "AccessControl",
+          "ObjCMembers",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -16022,6 +16341,123 @@
                 "declKind": "Accessor",
                 "usr": "s:12ChatCenterUI10THRMessageC12isSystemFlagSbvM",
                 "mangledName": "$s12ChatCenterUI10THRMessageC12isSystemFlagSbvM",
+                "moduleName": "ChatCenterUI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "settings",
+            "printedName": "settings",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ChatCenterUI.THRMessageSettings?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "THRMessageSettings",
+                    "printedName": "ChatCenterUI.THRMessageSettings",
+                    "usr": "c:@M@ChatCenterUI@objc(cs)THRMessageSettings"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@ChatCenterUI@objc(cs)THRMessage(py)settings",
+            "mangledName": "$s12ChatCenterUI10THRMessageC8settingsAA0D8SettingsCSgvp",
+            "moduleName": "ChatCenterUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ChatCenterUI.THRMessageSettings?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "THRMessageSettings",
+                        "printedName": "ChatCenterUI.THRMessageSettings",
+                        "usr": "c:@M@ChatCenterUI@objc(cs)THRMessageSettings"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ChatCenterUI@objc(cs)THRMessage(im)settings",
+                "mangledName": "$s12ChatCenterUI10THRMessageC8settingsAA0D8SettingsCSgvg",
+                "moduleName": "ChatCenterUI",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ChatCenterUI.THRMessageSettings?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "THRMessageSettings",
+                        "printedName": "ChatCenterUI.THRMessageSettings",
+                        "usr": "c:@M@ChatCenterUI@objc(cs)THRMessageSettings"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@ChatCenterUI@objc(cs)THRMessage(im)setSettings:",
+                "mangledName": "$s12ChatCenterUI10THRMessageC8settingsAA0D8SettingsCSgvs",
+                "moduleName": "ChatCenterUI",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ChatCenterUI10THRMessageC8settingsAA0D8SettingsCSgvM",
+                "mangledName": "$s12ChatCenterUI10THRMessageC8settingsAA0D8SettingsCSgvM",
                 "moduleName": "ChatCenterUI",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -89801,6 +90237,34 @@
       "value": "0"
     },
     {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/THRMessageSettings.swift",
+      "kind": "StringLiteral",
+      "offset": 405,
+      "length": 48,
+      "value": "\"blockInput = \""
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/THRMessageSettings.swift",
+      "kind": "StringLiteral",
+      "offset": 432,
+      "length": 1,
+      "value": "\", masked = \""
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/THRMessageSettings.swift",
+      "kind": "StringLiteral",
+      "offset": 452,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/THRMessageSettings.swift",
+      "kind": "Dictionary",
+      "offset": 621,
+      "length": 3,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Theme\/ChatComponents\/ButtonsStyles\/TextButtonStyle.swift",
       "kind": "IntegerLiteral",
       "offset": 804,
@@ -90251,51 +90715,37 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "BooleanLiteral",
-      "offset": 8482,
+      "offset": 8527,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "BooleanLiteral",
-      "offset": 8622,
+      "offset": 8667,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 16761,
+      "offset": 16806,
       "length": 6,
       "value": "\"uuid\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 16787,
+      "offset": 16832,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 16842,
+      "offset": 16887,
       "length": 15,
       "value": "\"correlationId\""
-    },
-    {
-      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
-      "kind": "StringLiteral",
-      "offset": 16876,
-      "length": 5,
-      "value": "\"nil\""
-    },
-    {
-      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
-      "kind": "StringLiteral",
-      "offset": 16895,
-      "length": 11,
-      "value": "\"messageId\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
@@ -90308,258 +90758,272 @@
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
       "offset": 16940,
+      "length": 11,
+      "value": "\"messageId\""
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 16966,
+      "length": 5,
+      "value": "\"nil\""
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 16985,
       "length": 8,
       "value": "\"author\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 16990,
+      "offset": 17035,
       "length": 5,
       "value": "\"nil\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17009,
+      "offset": 17054,
       "length": 6,
       "value": "\"date\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17035,
+      "offset": 17080,
       "length": 16,
       "value": "\"isMediaMessage\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17081,
+      "offset": 17126,
       "length": 6,
       "value": "\"text\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17097,
+      "offset": 17142,
       "length": 5,
       "value": "\"nil\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17116,
+      "offset": 17161,
       "length": 15,
       "value": "\"formattedText\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17150,
+      "offset": 17195,
       "length": 5,
       "value": "\"nil\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17169,
+      "offset": 17214,
       "length": 12,
       "value": "\"speechText\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17197,
+      "offset": 17242,
       "length": 5,
       "value": "\"nil\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17216,
+      "offset": 17261,
       "length": 7,
       "value": "\"ogUrl\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17256,
+      "offset": 17301,
       "length": 5,
       "value": "\"nil\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17275,
+      "offset": 17320,
       "length": 9,
       "value": "\"rawType\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17297,
+      "offset": 17342,
       "length": 5,
       "value": "\"nil\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17316,
+      "offset": 17361,
       "length": 7,
       "value": "\"media\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17340,
+      "offset": 17385,
       "length": 57,
       "value": "\"THRJSQMessageMediaData(type: \""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17395,
+      "offset": 17440,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17400,
+      "offset": 17445,
       "length": 5,
       "value": "\"nil\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17419,
+      "offset": 17464,
       "length": 8,
       "value": "\"status\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17469,
+      "offset": 17514,
       "length": 10,
       "value": "\"modified\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17523,
+      "offset": 17568,
       "length": 15,
       "value": "\"quotedMessage\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17563,
+      "offset": 17608,
       "length": 42,
       "value": "\"THRMessage(uuid: \""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17603,
+      "offset": 17648,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17608,
+      "offset": 17653,
       "length": 5,
       "value": "\"nil\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17627,
+      "offset": 17672,
       "length": 14,
       "value": "\"quickReplies\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17659,
+      "offset": 17704,
       "length": 5,
       "value": "\"nil\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17678,
+      "offset": 17723,
       "length": 14,
       "value": "\"isQuickReply\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17720,
+      "offset": 17765,
       "length": 19,
       "value": "\"loadedFromHistory\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17772,
+      "offset": 17817,
       "length": 12,
       "value": "\"blockInput\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17810,
+      "offset": 17855,
       "length": 7,
       "value": "\"error\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17858,
+      "offset": 17903,
       "length": 5,
       "value": "\"nil\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17877,
+      "offset": 17922,
       "length": 12,
       "value": "\"isOutgoing\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17915,
+      "offset": 17960,
       "length": 17,
       "value": "\"isPersonalOffer\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 17963,
+      "offset": 18008,
       "length": 14,
       "value": "\"isSystemFlag\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 18018,
+      "offset": 18063,
       "length": 53,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 18026,
+      "offset": 18071,
       "length": 1,
       "value": "\":\n\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/Models\/Messages\/THRMessage.swift",
       "kind": "StringLiteral",
-      "offset": 18070,
+      "offset": 18115,
       "length": 1,
       "value": "\"\""
     },
@@ -90853,42 +91317,42 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatNetworkConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 1341,
+      "offset": 1377,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatNetworkConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 1397,
+      "offset": 1433,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatNetworkConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 1451,
+      "offset": 1487,
       "length": 3,
       "value": "120"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatNetworkConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 2869,
+      "offset": 2905,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatNetworkConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 2921,
+      "offset": 2957,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatNetworkConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 4330,
+      "offset": 4712,
       "length": 5,
       "value": "false"
     },
@@ -92148,42 +92612,42 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "Array",
-      "offset": 24791,
+      "offset": 24871,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "Array",
-      "offset": 30582,
+      "offset": 31440,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 30714,
+      "offset": 31572,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 30887,
+      "offset": 31745,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 31388,
+      "offset": 32246,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/Core\/CCChatModel\/CCChatModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 34608,
+      "offset": 35466,
       "length": 5,
       "value": "false"
     },
@@ -92435,58 +92899,121 @@
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatTransportConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 1423,
+      "offset": 1482,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatTransportConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 4045,
+      "offset": 4541,
       "length": 2,
       "value": "17"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatTransportConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 4211,
+      "offset": 4707,
       "length": 2,
       "value": "18"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatTransportConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 4320,
+      "offset": 4816,
       "length": 2,
       "value": "19"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatTransportConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 4465,
+      "offset": 4961,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatTransportConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 4560,
+      "offset": 5056,
       "length": 2,
       "value": "21"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatTransportConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 4699,
+      "offset": 5195,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatTransportConfig.swift",
       "kind": "Dictionary",
-      "offset": 4924,
+      "offset": 5420,
       "length": 3,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatTransportConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 5986,
+      "length": 6,
+      "value": "\"http\""
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatTransportConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 6019,
+      "length": 4,
+      "value": "\"ws\""
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatTransportConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 6054,
+      "length": 7,
+      "value": "\"https\""
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatTransportConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 6089,
+      "length": 5,
+      "value": "\"wss\""
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatTransportConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 6125,
+      "length": 8,
+      "value": "\"socket\""
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatTransportConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 6161,
+      "length": 7,
+      "value": "\"files\""
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatTransportConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 6286,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatTransportConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 8307,
+      "length": 10,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/Configs\/ChatTransportConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 8313,
+      "length": 1,
+      "value": "\":\/\/\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/UI\/JSQMessages\/Model\/THRJSQMediaItem.swift",
@@ -93564,7 +94091,7 @@
       "kind": "StringLiteral",
       "offset": 2212,
       "length": 8,
-      "value": "\"5.12.0\""
+      "value": "\"5.13.0\""
     },
     {
       "filePath": "\/Users\/builder\/Desktop\/chatcenterui\/ChatCenterUI\/API\/ChatCenterUISDK.swift",
