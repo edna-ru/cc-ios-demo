@@ -264,6 +264,27 @@ extension ChatCenterUI.CCChatModel {
 extension ChatCenterUI.THRMessageSettings {
   @objc public static let `default`: ChatCenterUI.THRMessageSettings
 }
+@objc @_hasMissingDesignatedInitializers @objcMembers public class THRMessageFeedback : ObjectiveC.NSObject {
+  @objc public enum Grade : Swift.Int {
+    case negative
+    case positive
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  public var hideAfter: Swift.Int?
+  public var commentMaxLength: Swift.Int?
+  @objc public var messageUuid: Swift.String?
+  public var response: ChatCenterUI.THRMessageFeedback.Grade?
+  @objc public var comment: Swift.String?
+  @objc public var errorCode: Swift.String?
+  @objc deinit
+}
 extension Foundation.NSString {
   @objc dynamic public func getAttributedString(withAttributes flow: ChatCenterUI.ChatFlow, isOutgoing: Swift.Bool) -> Foundation.NSAttributedString
 }
@@ -349,6 +370,8 @@ extension Foundation.NSString {
   case thisChatIsViewableOnly
   case schedule
   case none
+  case messageFeedbackUpdated
+  case surveyClosed
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -402,6 +425,9 @@ extension Foundation.NSString {
   @objc public var isPersonalOffer: Swift.Bool
   @objc public var isSystemFlag: Swift.Bool
   @objc public var settings: ChatCenterUI.THRMessageSettings?
+  @objc public var feedback: ChatCenterUI.THRMessageFeedback?
+  @objc public var feedbackSendFailed: Swift.Bool
+  @objc public var feedbackActionsEnabled: Swift.Bool
   @objc public var containsLinkMetadata: Swift.Bool {
     @objc get
   }
@@ -684,6 +710,10 @@ extension ChatCenterUI.Applicable where Self : AnyObject {
     @objc get
     @objc set
   }
+  @objc final public var messageFeedbackStyle: ChatCenterUI.MessageFeedbackStyle {
+    @objc get
+    @objc set
+  }
   @objc final public var scrollToTopUnreadMessagesButtonStyle: ChatCenterUI.ScrollToMessageButtonStyle {
     @objc get
     @objc set
@@ -712,6 +742,50 @@ extension UIKit.UIImage {
   @objc required public init(components: ChatCenterUI.ChatComponents)
   @objc final public var textStyle: ChatCenterUI.ChatTextStyle
   @objc final public var size: CoreFoundation.CGSize
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers final public class MessageFeedbackStyle : ChatCenterUI.ChatStyle {
+  @objc required public init(components: ChatCenterUI.ChatComponents)
+  @objc final public var positiveIcon: ChatCenterUI.ChatSurveyIcon {
+    @objc get
+    @objc set
+  }
+  @objc final public var negativeIcon: ChatCenterUI.ChatSurveyIcon {
+    @objc get
+    @objc set
+  }
+  @objc final public var separatorColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc final public var selectedIconColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc final public var iconColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc final public var unselectedIconColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc final public var commentTextStyle: ChatCenterUI.ChatTextStyle {
+    @objc get
+    @objc set
+  }
+  @objc final public var addCommentTextStyle: ChatCenterUI.ChatTextStyle {
+    @objc get
+    @objc set
+  }
+  @objc final public var errorTextStyle: ChatCenterUI.ChatTextStyle {
+    @objc get
+    @objc set
+  }
+  @objc final public var errorBackgroundColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class CCFileSettings : ObjectiveC.NSObject {
@@ -856,6 +930,53 @@ extension ChatCenterUI.THRSearchViewController : UIKit.UISearchBarDelegate {
 }
 extension ChatCenterUI.CCQuestionView : ChatCenterUI.CCRatingViewDelegate {
   @_Concurrency.MainActor @preconcurrency @objc final public func valueDidChange(value: Swift.Int)
+}
+@objc public enum MessageFeedbackSelection : Swift.Int {
+  case none
+  case positive
+  case negative
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol MessageFeedbackViewDelegate {
+  @objc func messageFeedbackView(_ view: ChatCenterUI.MessageFeedbackView, didSelect selection: ChatCenterUI.MessageFeedbackSelection)
+  @objc func messageFeedbackViewDidTapAddComment(_ view: ChatCenterUI.MessageFeedbackView)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers @_Concurrency.MainActor @preconcurrency final public class MessageFeedbackView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor @preconcurrency weak final public var delegate: (any ChatCenterUI.MessageFeedbackViewDelegate)?
+  @objc @_Concurrency.MainActor @preconcurrency final public var selection: ChatCenterUI.MessageFeedbackSelection {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency final public var isReadonly: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency final public var comment: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency final public var showsError: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override final public func layoutSubviews()
+  @objc @_Concurrency.MainActor @preconcurrency final public func configure(selection: ChatCenterUI.MessageFeedbackSelection, comment: Swift.String?, isReadonly: Swift.Bool, showsError: Swift.Bool, errorText: Swift.String? = nil)
+  @objc(applyFeedback:showsSendError:) @_Concurrency.MainActor @preconcurrency final public func apply(feedback: ChatCenterUI.THRMessageFeedback?, showsSendError: Swift.Bool)
+  @objc(applyFeedback:showsSendError:allowsActions:) @_Concurrency.MainActor @preconcurrency final public func apply(feedback: ChatCenterUI.THRMessageFeedback?, showsSendError: Swift.Bool, allowsActions: Swift.Bool)
+  @objc(applyMessage:showsSendError:) @_Concurrency.MainActor @preconcurrency final public func apply(message: ChatCenterUI.THRMessage, showsSendError: Swift.Bool)
+  @objc(heightForLayoutWidth:) @_Concurrency.MainActor @preconcurrency final public func height(forLayoutWidth width: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat
+  @objc(commentLayoutWidth) @_Concurrency.MainActor @preconcurrency final public func commentLayoutWidth() -> CoreFoundation.CGFloat
+  @objc(laidOutContentMaxYInView:) @_Concurrency.MainActor @preconcurrency final public func laidOutContentMaxY(in view: UIKit.UIView) -> CoreFoundation.CGFloat
+  @discardableResult
+  @objc(prepareCommentLayoutWidth:) @_Concurrency.MainActor @preconcurrency final public func prepareCommentLayout(width: CoreFoundation.CGFloat) -> Swift.Bool
+  @objc(setRatingButtonsEnabled:) @_Concurrency.MainActor @preconcurrency final public func setRatingButtonsEnabled(_ enabled: Swift.Bool)
+  @objc deinit
 }
 @available(*, deprecated, message: "Используйте ChatInputStyle")
 public typealias InputViewStyle = ChatCenterUI.ChatInputStyle
@@ -1183,6 +1304,38 @@ public typealias InputChatVoiceStyle = ChatCenterUI.ChatInputVoiceStyle
   @objc final public var notFoundTextStyle: ChatCenterUI.ChatTextStyle
   @objc deinit
 }
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers final public class SurveyFlow : ChatCenterUI.ChatUserFlow {
+  @objc final public var closeButtonTextStyle: ChatCenterUI.ChatTextStyle {
+    @objc get
+    @objc set
+  }
+  @objc final public var sendButtonStyle: ChatCenterUI.SurveySendButtonStyle {
+    @objc get
+    @objc set
+  }
+  @objc final public var commentInputStyle: ChatCenterUI.SurveyCommentInputStyle {
+    @objc get
+    @objc set
+  }
+  @objc final public var charactersCountTextStyle: ChatCenterUI.ChatTextStyle {
+    @objc get
+    @objc set
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers final public class SurveySendButtonStyle : ChatCenterUI.ChatStyle {
+  @objc required public init(components: ChatCenterUI.ChatComponents)
+  @objc final public var textStyle: ChatCenterUI.ChatTextStyle
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers final public class SurveyCommentInputStyle : ChatCenterUI.ChatStyle {
+  @objc required public init(components: ChatCenterUI.ChatComponents)
+  @objc final public var borderColor: UIKit.UIColor
+  @objc final public var borderWidth: CoreFoundation.CGFloat
+  @objc final public var textStyle: ChatCenterUI.ChatTextStyle
+  @objc final public var placeholderTextStyle: ChatCenterUI.ChatTextStyle
+  @objc deinit
+}
 extension Foundation.NSError {
   @objc dynamic public class func applicationError(with description: Swift.String) -> Foundation.NSError
 }
@@ -1337,11 +1490,15 @@ public struct ChatUser {
 @objc @_hasMissingDesignatedInitializers @objcMembers @_Concurrency.MainActor @preconcurrency final public class SurveyViewController : UIKit.UIViewController, UIKit.UIGestureRecognizerDelegate {
   @objc deinit
   @objc @_Concurrency.MainActor @preconcurrency public init(with chatModel: ChatCenterUI.CCChatModel, survey: ChatCenterUI.THRSurvey)
+  @objc @_Concurrency.MainActor @preconcurrency public init(with chatModel: ChatCenterUI.CCChatModel, feedbackMessage: ChatCenterUI.THRMessage)
   @objc @_Concurrency.MainActor @preconcurrency weak final public var delegate: (any ChatCenterUI.SurveyViewControllerDelegate)?
   @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc final public func gestureRecognizer(_: UIKit.UIGestureRecognizer, shouldReceive touch: UIKit.UITouch) -> Swift.Bool
   @_Concurrency.MainActor @preconcurrency @objc final public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
-  @objc @_Concurrency.MainActor @preconcurrency final public func valueDidChange(value: Swift.Int, changedQuestion: ChatCenterUI.THRSurveyQuestion)
+  @objc @_Concurrency.MainActor @preconcurrency final public func valueDidChange(value _: Swift.Int, changedQuestion _: ChatCenterUI.THRSurveyQuestion)
+  @objc(dismissFeedbackCommentForMessage:) @_Concurrency.MainActor @preconcurrency final public func dismissFeedbackComment(for message: ChatCenterUI.THRMessage)
 }
 @available(*, deprecated, message: "Используйте IconButtonStyle")
 public typealias IconButtonChatStyle = ChatCenterUI.IconButtonStyle
@@ -1389,6 +1546,8 @@ public typealias IconButtonChatStyle = ChatCenterUI.IconButtonStyle
   @objc func setToolbarDisabledButtons(_ disabled: Swift.Bool)
   @objc func showPreloadChatError(_ error: Foundation.NSError)
   @objc func addFile(_ file: ChatCenterUI.THRJSQFile)
+  @objc func didUpdateMessageFeedback(_ message: ChatCenterUI.THRMessage)
+  @objc func openFeedbackComment(_ message: ChatCenterUI.THRMessage)
 }
 @objc @objcMembers public class CCChatModel : ObjectiveC.NSObject {
   @objc public init(dataProvider: ChatCenterUI.CCDataProvider)
@@ -1408,6 +1567,11 @@ public typealias IconButtonChatStyle = ChatCenterUI.IconButtonStyle
   }
   @objc public func initChat()
   @objc public func sendMessage(_ message: ChatCenterUI.THRMessage, completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
+  @objc public func sendFeedback(grade: ChatCenterUI.THRMessageFeedback.Grade, messageUuid: Swift.String, completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
+  @objc @discardableResult
+  public func submitMessageFeedback(grade: ChatCenterUI.THRMessageFeedback.Grade, message: ChatCenterUI.THRMessage) -> Swift.Bool
+  @objc public func sendFeedbackComment(_ comment: Swift.String, messageUuid: Swift.String, completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
+  @objc public func openFeedbackComment(_ message: ChatCenterUI.THRMessage)
   @objc public func openSurvey(survey: ChatCenterUI.THRSurvey)
   @objc public func sendFileMessage(_ newMessage: ChatCenterUI.THRMessage, retry: Swift.Bool = false, completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
   @objc public func connectClient()
@@ -1463,6 +1627,9 @@ public typealias InputChatTextStyle = ChatCenterUI.ChatInputTextStyle
     get
   }
   @objc final public var searchFlow: ChatCenterUI.SearchFlow {
+    get
+  }
+  @objc final public var surveyFlow: ChatCenterUI.SurveyFlow {
     get
   }
   @objc deinit
@@ -1572,14 +1739,15 @@ public typealias SearchBarChatStyle = ChatCenterUI.SearchBarStyle
   @objc deinit
 }
 public struct ChatTransportConfig : Swift.CustomDebugStringConvertible {
-  public init(rest: Swift.String, webSocket: Swift.String, dataStore: Swift.String, dataStoreHTTPHeaders: [Swift.String : Swift.String]? = nil, newRoutesEnabled: Swift.Bool = true, apiVersion: ChatCenterUI.ChatTransportConfig.APIVersion = .api17)
-  public init(cloudHost host: Swift.String, apiVersion: ChatCenterUI.ChatTransportConfig.APIVersion = .api17)
+  public init(rest: Swift.String, webSocket: Swift.String, dataStore: Swift.String, dataStoreHTTPHeaders: [Swift.String : Swift.String]? = nil, newRoutesEnabled: Swift.Bool = true, apiVersion: ChatCenterUI.ChatTransportConfig.APIVersion = .api22)
+  public init(cloudHost host: Swift.String, apiVersion: ChatCenterUI.ChatTransportConfig.APIVersion = .api22)
   public enum APIVersion : Swift.UInt {
     case api17
     case api18
     case api19
     case api20
     case api21
+    case api22
     public init?(rawValue: Swift.UInt)
     public typealias RawValue = Swift.UInt
     public var rawValue: Swift.UInt {
@@ -2080,6 +2248,9 @@ public typealias ButtonChatStyle = ChatCenterUI.ButtonStyle
 extension ChatCenterUI.CCState : Swift.Equatable {}
 extension ChatCenterUI.CCState : Swift.Hashable {}
 extension ChatCenterUI.CCState : Swift.RawRepresentable {}
+extension ChatCenterUI.THRMessageFeedback.Grade : Swift.Equatable {}
+extension ChatCenterUI.THRMessageFeedback.Grade : Swift.Hashable {}
+extension ChatCenterUI.THRMessageFeedback.Grade : Swift.RawRepresentable {}
 extension ChatCenterUI.THRMessageStatus : Swift.Equatable {}
 extension ChatCenterUI.THRMessageStatus : Swift.Hashable {}
 extension ChatCenterUI.THRMessageStatus : Swift.RawRepresentable {}
@@ -2095,6 +2266,9 @@ extension ChatCenterUI.THRParticipantSex : Swift.RawRepresentable {}
 extension ChatCenterUI.THRJSQAudioMediaStatus : Swift.Equatable {}
 extension ChatCenterUI.THRJSQAudioMediaStatus : Swift.Hashable {}
 extension ChatCenterUI.THRJSQAudioMediaStatus : Swift.RawRepresentable {}
+extension ChatCenterUI.MessageFeedbackSelection : Swift.Equatable {}
+extension ChatCenterUI.MessageFeedbackSelection : Swift.Hashable {}
+extension ChatCenterUI.MessageFeedbackSelection : Swift.RawRepresentable {}
 extension ChatCenterUI.ChatInputAlignment : Swift.Equatable {}
 extension ChatCenterUI.ChatInputAlignment : Swift.Hashable {}
 extension ChatCenterUI.ChatInputAlignment : Swift.RawRepresentable {}
